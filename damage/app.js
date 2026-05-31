@@ -1119,7 +1119,7 @@ els.sigilSlots.addEventListener("input", (event) => {
   slot.main = slotElement.querySelector(".sigil-main").value;
   slot.sub = slotElement.querySelector(".sigil-sub").value;
   slot.level = Math.max(0, Math.min(getTraitLevelCap(slot.main), numberInput(slotElement.querySelector(".sigil-level"), 0)));
-  if (!isEquippedSlot(slot)) {
+  if (slot.main === NONE || slot.main === "N/A") {
     slot.main = NONE;
     slot.sub = NONE;
     slot.level = 0;
@@ -1140,6 +1140,8 @@ els.sigilSlots.addEventListener("change", (event) => {
   if (slot.main === NONE || slot.main === "N/A") {
     slot.sub = NONE;
     slot.level = 0;
+  } else if (event.target.matches(".sigil-main") && slot.level <= 0) {
+    slot.level = Math.min(15, getTraitLevelCap(slot.main));
   }
   renderSigilSlots();
   render();
