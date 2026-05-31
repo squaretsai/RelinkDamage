@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Relink 查詢資料庫</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="全站導覽">
+      <a href="../">首頁</a>
+      <a href="../damage/">傷害計算機</a>
+      <a class="active" href="./">查詢系統</a>
+    </nav>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">Granblue Fantasy: Relink</p>
+          <h1>Relink 查詢資料庫</h1>
+          <p class="subtitle">個人用繁中資料查詢。官方繁中優先，未驗證資料會保留標記。</p>
+        </div>
+
+        <div class="view-switch" role="tablist" aria-label="查詢分頁">
+          <button class="view-button active" type="button" data-view="sigils">專屬因子</button>
+          <button class="view-button" type="button" data-view="drops">掉落查詢</button>
+        </div>
+
+        <div class="search-panel">
+          <label for="searchInput">搜尋</label>
+          <input id="searchInput" type="search" placeholder="角色、因子、素材、任務、數值..." autocomplete="off" aria-controls="searchSuggestions" aria-expanded="false" />
+          <div id="searchSuggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+
+        <div id="sigilFilters" class="filter-panel" role="group" aria-label="因子篩選">
+          <button class="filter-button active" type="button" data-sigil-filter="all">全部</button>
+          <button class="filter-button" type="button" data-sigil-filter="warpath">戰氣</button>
+          <button class="filter-button" type="button" data-sigil-filter="needs-review">待校正</button>
+        </div>
+
+        <div id="dropFilters" class="drop-filter-panel" aria-label="掉落來源篩選" hidden>
+          <label><input type="checkbox" value="clear" checked /> 通關</label>
+          <label><input type="checkbox" value="chest" checked /> 寶箱</label>
+          <label><input type="checkbox" value="rank" checked /> Rank</label>
+          <label><input type="checkbox" value="sub_mission" checked /> 副目標</label>
+          <label><input type="checkbox" value="first_clear" /> 首通</label>
+        </div>
+
+        <nav id="characterTabs" class="character-tabs" aria-label="角色分頁"></nav>
+      </aside>
+
+      <main class="content">
+        <section class="content-header">
+          <div>
+            <p id="selectedMeta" class="eyebrow">資料庫</p>
+            <h2 id="selectedTitle">讀取中</h2>
+          </div>
+          <div id="stats" class="stat-strip" aria-label="目前資料統計"></div>
+        </section>
+
+        <section id="sourceNotice" class="notice"></section>
+        <section id="resultGrid" class="sigil-grid" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script src="./data/character-sigils.js"></script>
+    <script src="./data/drop-search.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -3,190 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Relink 傷害計算</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Relink 個人工具箱</title>
+    <link rel="stylesheet" href="./home.css" />
   </head>
   <body>
-    <div class="app">
-      <main class="main">
-        <section class="character-hero">
-          <div>
-            <p id="sourceMeta" class="eyebrow">Damage Calculator</p>
-            <div class="character-title-row">
-              <h2 id="characterName">角色</h2>
-              <div class="character-picker">
-                <button id="characterPickerButton" type="button" aria-expanded="false" aria-haspopup="listbox"></button>
-                <div id="characterPickerMenu" class="character-picker-menu" role="listbox"></div>
-              </div>
-            </div>
-            <p id="characterMeta" class="muted"></p>
-          </div>
-          <img id="characterAvatar" class="hero-avatar" alt="" />
-        </section>
+    <main class="home-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Granblue Fantasy: Relink</p>
+          <h1>Relink 個人工具箱</h1>
+          <p class="subtitle">整理傷害計算、掉落來源與專屬因子資料。官方繁中名稱優先，未驗證內容會保留標記。</p>
+        </div>
+        <div class="portrait-strip" aria-hidden="true">
+          <img src="./damage/assets/characters/zeta.png" alt="" />
+          <img src="./damage/assets/characters/lancelot.png" alt="" />
+          <img src="./damage/assets/characters/io.png" alt="" />
+        </div>
+      </section>
 
-        <section class="layout">
-          <section class="panel build-panel">
-            <div class="panel-head">
-              <div>
-                <h3>因子配置</h3>
-                <p>主因子與副詞條都會列入等級合計。</p>
-              </div>
-              <button id="resetBuildButton" type="button">還原預設</button>
-            </div>
-            <div id="sigilSlots" class="sigil-slots"></div>
-          </section>
+      <section class="tool-grid" aria-label="工具分頁">
+        <a class="tool-card primary" href="./damage/">
+          <span class="tool-kicker">Calculator</span>
+          <strong>傷害計算機</strong>
+          <span>選角色、配置因子與條件，查看技能倍率、傷害上限、暴擊傷害與 AVG Total DMG。</span>
+        </a>
 
-          <section class="panel side-panel">
-            <div class="panel-head">
-              <h3>配置條件</h3>
-            </div>
-
-            <div class="config-column">
-              <div class="subsection">
-                <h4>武器加護</h4>
-                <div id="weaponGrid" class="weapon-grid"></div>
-              </div>
-
-              <div class="subsection">
-                <h4>角色額外</h4>
-                <div id="characterExtraGrid" class="toggle-grid"></div>
-              </div>
-            </div>
-
-            <div class="config-column">
-              <div class="subsection">
-                <h4>限界突破</h4>
-                <div id="limitBreakGrid" class="form-grid compact"></div>
-              </div>
-            </div>
-
-            <div class="config-column">
-              <div class="subsection">
-                <h4>其他條件</h4>
-                <div id="otherInputGrid" class="toggle-grid"></div>
-              </div>
-
-              <div class="subsection">
-                <h4>角色基礎值（唯讀）</h4>
-                <div class="base-grid compact">
-                  <label class="field">
-                    <span>基礎攻擊力</span>
-                    <input id="attackInput" type="number" min="0" step="1" value="12396" readonly />
-                  </label>
-                  <label class="field">
-                    <span>基礎暴擊率 %</span>
-                    <input id="critRateInput" type="number" min="0" max="100" step="1" value="50" readonly />
-                  </label>
-                  <label class="field">
-                    <span>基礎暴擊傷害 %</span>
-                    <input id="critDamageInput" type="number" min="0" step="1" value="100" readonly />
-                  </label>
-                  <label class="field">
-                    <span>手動傷害加成 %</span>
-                    <input id="manualDamageInput" type="number" step="1" value="0" />
-                  </label>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="panel trait-panel">
-            <div class="panel-head">
-              <h3>因子合計</h3>
-              <span id="traitCount" class="muted"></span>
-            </div>
-            <div id="traitSummary" class="trait-summary"></div>
-          </section>
-        </section>
-
-        <section class="panel data-section">
-          <div class="section-head">
-            <div>
-              <h3>技能倍率資料</h3>
-              <div class="table-tools">
-                <label>
-                  <span>Skill</span>
-                  <select id="skillFilterSelect"></select>
-                </label>
-                <label>
-                  <span>傷害% 下限</span>
-                  <input id="damageMinInput" type="number" min="0" max="100" step="1" placeholder="0" />
-                </label>
-                <label>
-                  <span>上限</span>
-                  <input id="damageMaxInput" type="number" min="0" max="100" step="1" placeholder="100" />
-                </label>
-                <label class="table-search">
-                  <span>搜尋技能</span>
-                  <input id="searchInput" type="search" placeholder="例如：亞爾貝斯、Skill、浮空" autocomplete="off" />
-                </label>
-                <div class="segmented" role="group" aria-label="表格模式">
-                  <button id="fullTableButton" type="button" class="active">完整</button>
-                  <button id="compactTableButton" type="button">精簡</button>
-                </div>
-              </div>
-            </div>
-            <span id="rowCount"></span>
-          </div>
-          <div class="skill-header">
-            <span class="col-skill important-col">Skill</span>
-            <span class="col-modifier">Modifier</span>
-            <span class="col-multiplier">技能倍率</span>
-            <span class="col-base-cap">DMG Cap</span>
-            <span class="col-class">Classification</span>
-            <span class="col-boost">倍率提升</span>
-            <span class="col-crit-rate">暴擊機率</span>
-            <span class="col-final-cap important-col">傷害上限</span>
-            <span class="col-normal">無暴擊傷害</span>
-            <span class="col-crit important-col">暴擊傷害</span>
-            <span class="col-damage-percent important-col">傷害百分比</span>
-            <span class="col-overflow">傷害溢出</span>
-            <span class="col-echo">追擊傷害</span>
-            <span class="col-total important-col">AVG Total DMG</span>
-          </div>
-          <div id="skillTable" class="skill-table"></div>
-        </section>
-
-        <section class="detail-section">
-          <section class="panel result-panel">
-            <div class="panel-head">
-              <div>
-                <h3 id="selectedSkillName">技能</h3>
-                <p id="selectedSkillMeta"></p>
-              </div>
-              <span id="selectedClass" class="badge">-</span>
-            </div>
-            <div class="result-grid">
-              <div><span>倍率</span><strong id="resultMultiplier">-</strong></div>
-              <div><span>DMG Cap</span><strong id="resultBaseCap">-</strong></div>
-              <div><span>Classification</span><strong id="resultClassification">-</strong></div>
-              <div><span>倍率提升</span><strong id="resultMultiplierBoost">-</strong></div>
-              <div><span>暴擊機率</span><strong id="resultCritRate">-</strong></div>
-              <div><span>傷害上限</span><strong id="resultFinalCap">-</strong></div>
-              <div><span>有效攻擊力</span><strong id="resultAttack">-</strong></div>
-              <div><span>無暴擊傷害</span><strong id="resultNormal">-</strong></div>
-              <div><span>暴擊傷害</span><strong id="resultCrit">-</strong></div>
-              <div><span>上限後平均</span><strong id="resultAverage">-</strong></div>
-              <div><span>追擊傷害</span><strong id="resultEcho">-</strong></div>
-              <div><span>傷害百分比</span><strong id="resultDamagePercent">-</strong></div>
-              <div><span>傷害溢出</span><strong id="resultOverflow">-</strong></div>
-              <div><span>AVG Total DMG</span><strong id="resultTotal">-</strong></div>
-            </div>
-            <p class="notice">這版已使用 Excel 的角色技能、因子、圖示與等級曲線；完整 Google Sheet 公式仍在移植中，所以目前是可操作的估算版。</p>
-            <p id="verificationNote" class="verification-note"></p>
-          </section>
-
-          <section class="panel calculator-panel">
-            <div class="panel-head">
-              <h3>計算機 - 請勿修改</h3>
-            </div>
-            <div id="calculatorGrid" class="calculator-grid"></div>
-          </section>
-        </section>
-      </main>
-    </div>
-
-    <script src="./data/damage-calculator.js"></script>
-    <script src="./app.js"></script>
+        <a class="tool-card" href="./query/">
+          <span class="tool-kicker">Database</span>
+          <strong>查詢系統</strong>
+          <span>查詢專屬因子、戰氣、素材掉落與任務來源。部分名稱仍保留待校正標記。</span>
+        </a>
+      </section>
+    </main>
   </body>
 </html>
