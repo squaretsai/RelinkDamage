@@ -363,15 +363,16 @@ function addTraitLevel(levels, name, level) {
   levels[name] = (levels[name] ?? 0) + amount;
 }
 
-function isEquippedSlot(slot) {
-  return Boolean(slot?.main && slot.main !== NONE && slot.main !== "N/A" && (Number(slot.level) || 0) > 0);
+function slotLevel(slot) {
+  return Math.max(0, Number(slot?.level) || 0);
 }
 
 function getTraitLevels() {
   const rawLevels = {};
   for (const slot of state.build) {
-    if (!isEquippedSlot(slot)) continue;
-    const boostedLevel = (Number(slot.level) || 0) + (state.weapon.sigilBooster ? 1 : 0);
+    const level = slotLevel(slot);
+    if (level <= 0) continue;
+    const boostedLevel = level + (state.weapon.sigilBooster ? 1 : 0);
     addTraitLevel(rawLevels, slot.main, boostedLevel);
     if (!mainOnlyTraitNames.has(slot.sub)) {
       addTraitLevel(rawLevels, slot.sub, boostedLevel);
@@ -426,7 +427,7 @@ function hasMainSigil(name) {
 
 function hasBuildTrait(name) {
   return state.build.some((slot) =>
-    isEquippedSlot(slot) && (slot.main === name || slot.sub === name)
+    slotLevel(slot) > 0 && (slot.main === name || slot.sub === name)
   );
 }
 
@@ -494,6 +495,8 @@ function characterWarpathBonus(levels, row) {
   if (condition && condition.length > 2) {
     const text = `${row?.skill ?? ""} ${row?.modifier ?? ""}`;
     if (!text.includes(condition)) return 0;
+  } else if (condition && condition.length === 2) {
+    if (!String(row?.classification ?? "").includes(condition)) return 0;
   }
   return Number(character?.warpathBonus) || 0;
 }
@@ -1119,11 +1122,6 @@ els.sigilSlots.addEventListener("input", (event) => {
   slot.main = slotElement.querySelector(".sigil-main").value;
   slot.sub = slotElement.querySelector(".sigil-sub").value;
   slot.level = Math.max(0, Math.min(getTraitLevelCap(slot.main), numberInput(slotElement.querySelector(".sigil-level"), 0)));
-  if (slot.main === NONE || slot.main === "N/A") {
-    slot.main = NONE;
-    slot.sub = NONE;
-    slot.level = 0;
-  }
   renderSigilSlots();
   render();
 });
@@ -1137,11 +1135,8 @@ els.sigilSlots.addEventListener("change", (event) => {
   slot.main = slotElement.querySelector(".sigil-main").value;
   slot.sub = slotElement.querySelector(".sigil-sub").value;
   slot.level = Math.max(0, Math.min(getTraitLevelCap(slot.main), numberInput(slotElement.querySelector(".sigil-level"), 0)));
-  if (slot.main === NONE || slot.main === "N/A") {
-    slot.sub = NONE;
-    slot.level = 0;
-  } else if (event.target.matches(".sigil-main") && slot.level <= 0) {
-    slot.level = Math.min(15, getTraitLevelCap(slot.main));
+  if ((slot.main !== NONE || slot.sub !== NONE) && slot.level <= 0) {
+    slot.level = Math.min(15, getTraitLevelCap(slot.main !== NONE ? slot.main : slot.sub));
   }
   renderSigilSlots();
   render();

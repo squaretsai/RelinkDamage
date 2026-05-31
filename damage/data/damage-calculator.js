@@ -37,7 +37,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       },
       {
         "main": "手無寸鐵",
-        "level": 15,
+        "level": 10,
         "sub": "None"
       },
       {
@@ -48,15 +48,10 @@ const RELINK_DAMAGE_CALCULATOR = {
       {
         "main": "暴君",
         "level": 15,
-        "sub": "閃避性能"
-      },
-      {
-        "main": "狂戰士",
-        "level": 15,
         "sub": "None"
       },
       {
-        "main": "捨身",
+        "main": "狂戰士",
         "level": 15,
         "sub": "None"
       },
@@ -67,6 +62,11 @@ const RELINK_DAMAGE_CALCULATOR = {
       },
       {
         "main": "有利屬性轉換",
+        "level": 15,
+        "sub": "None"
+      },
+      {
+        "main": "盡涯",
         "level": 15,
         "sub": "None"
       },
@@ -9507,7 +9507,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "tweyen",
       "nameZh": "蘇恩",
       "imageUrl": "https://i.imgur.com/deLpS4S.png",
-      "warpathCondition": null,
+      "warpathCondition": "Ch",
       "warpathBonus": 0.2,
       "skillRows": [
         {
