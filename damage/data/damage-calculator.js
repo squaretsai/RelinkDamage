@@ -10,7 +10,9 @@ const RELINK_DAMAGE_CALCULATOR = {
     "notes": [
       "保留來源試算表的角色技能倍率、DMG Cap、因子清單、因子圖示與等級曲線。",
       "目前網站端會即時計算配裝因子等級與基礎估算；Google Sheet 的完整公式仍需逐段移植。"
-    ]
+    ],
+    "googleSheetExportedAt": "2026-05-31T13:43:33.931Z",
+    "syncedFromGoogleSheetExportAt": "2026-05-31T14:30:35.056Z"
   },
   "calculator": {
     "character": "瑟塔",
@@ -466,7 +468,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.006825396825,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.006825396825396824
         },
         {
           "skill": "攻擊",
@@ -476,7 +479,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.008873015873,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.008873015873015871
         },
         {
           "skill": "攻擊",
@@ -486,7 +490,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.004095238095,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.0040952380952380945
         },
         {
           "skill": "攻擊",
@@ -496,7 +501,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.007507936508,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.007507936507936508
         },
         {
           "skill": "攻擊",
@@ -506,7 +512,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.006142857143,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.006142857142857142
         },
         {
           "skill": "攻擊",
@@ -516,7 +523,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.009555555556,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.009555555555555553
         },
         {
           "skill": "衍生攻擊",
@@ -526,7 +534,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.013125,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.013124999999999998
         },
         {
           "skill": "衍生攻擊",
@@ -536,7 +545,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.016875,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.016874999999999998
         },
         {
           "skill": "衍生攻擊",
@@ -546,7 +556,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.02458823529,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.02458823529411765
         },
         {
           "skill": "衍生攻擊",
@@ -556,7 +567,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.01552941176,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.015529411764705882
         },
         {
           "skill": "衍生攻擊",
@@ -566,7 +578,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.003882352941,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.0038823529411764705
         },
         {
           "skill": "衍生攻擊",
@@ -576,7 +589,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.01413043478,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.014130434782608697
         },
         {
           "skill": "衍生攻擊",
@@ -586,7 +600,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.01086956522,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.010869565217391306
         },
         {
           "skill": "衍生攻擊",
@@ -596,7 +611,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.02305555556,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.023055555555555555
         },
         {
           "skill": "衍生攻擊",
@@ -606,7 +622,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.01844444444,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.018444444444444444
         },
         {
           "skill": "衍生攻擊",
@@ -616,7 +633,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0.0415,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.0415
         },
         {
           "skill": "暴躍之力",
@@ -626,7 +644,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "暴躍之力",
@@ -636,7 +655,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "暴躍之力",
@@ -646,7 +666,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "暴躍之力",
@@ -656,7 +677,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "暴躍之力",
@@ -666,7 +688,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "暴躍之力",
@@ -676,7 +699,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": 0.097,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.097
         },
         {
           "skill": "連結攻擊",
@@ -686,17 +710,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": 0.016,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.016
         },
         {
           "skill": "奧義",
           "modifier": "起手(奧義連結會跳過，也不會計入奧義總傷，可以無視)",
-          "multiplier": 0.9583333333,
+          "multiplier": 0.9583333333333333,
           "damageCap": 64999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": 0.002620727075,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.00262072707542051
         },
         {
           "skill": "奧義",
@@ -706,7 +732,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": 0.003937927292,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.003937927292457948
         },
         {
           "skill": "奧義",
@@ -716,7 +743,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": 0.00721953337,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.00721953336950624
         },
         {
           "skill": "奧義",
@@ -726,7 +754,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": 0.01115746066,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.01115746066196419
         },
         {
           "skill": "奧義",
@@ -736,27 +765,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": 0.0170643516,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.017064351600651114
         },
         {
           "skill": "天降箭雨",
           "modifier": "4 hit",
-          "multiplier": 0.8333333333,
+          "multiplier": 0.8333333333333334,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "強驅奮迅",
           "modifier": "Arts I",
-          "multiplier": 4.041666667,
+          "multiplier": 4.041666666666667,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "強驅奮迅",
@@ -766,7 +798,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "強驅奮迅",
@@ -776,7 +809,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "強驅奮迅",
@@ -786,37 +820,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0.288,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.288
         },
         {
           "skill": "破甲衝擊",
           "modifier": null,
-          "multiplier": 3.416666667,
+          "multiplier": 3.4166666666666665,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "破壞連斬",
           "modifier": "5hit, 6hii, 8hit, 11hit",
-          "multiplier": 1.416666667,
+          "multiplier": 1.4166666666666667,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0.025,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.025
         },
         {
           "skill": "衆神意志",
           "modifier": "1hit ~ 4hit",
-          "multiplier": 1.583333333,
+          "multiplier": 1.5833333333333333,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": 0.088,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.088
         },
         {
           "skill": "破魔之術",
@@ -826,7 +864,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "RaSk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         }
       ]
     },
@@ -845,7 +884,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -855,7 +895,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -865,7 +906,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -875,7 +917,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -885,7 +928,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (50% Gauge)",
@@ -895,7 +939,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (50% Gauge)",
@@ -905,7 +950,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (50% Gauge)",
@@ -915,7 +961,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (50% Gauge)",
@@ -925,7 +972,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (50% Gauge)",
@@ -935,7 +983,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (100% Gauge)",
@@ -945,7 +994,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (100% Gauge)",
@@ -955,7 +1005,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (100% Gauge)",
@@ -965,7 +1016,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (100% Gauge)",
@@ -975,7 +1027,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (100% Gauge)",
@@ -985,7 +1038,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -995,7 +1049,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊 (50% Gauge)",
@@ -1005,7 +1060,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊 (100% Gauge)",
@@ -1015,7 +1071,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -1025,7 +1082,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊 (50% Gauge)",
@@ -1035,7 +1093,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊 (100% Gauge)",
@@ -1045,7 +1104,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -1055,7 +1115,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -1065,7 +1126,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -1075,7 +1137,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (50% Gauge)",
@@ -1085,7 +1148,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (50% Gauge)",
@@ -1095,7 +1159,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (50% Gauge)",
@@ -1105,7 +1170,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (100% Gauge)",
@@ -1115,7 +1181,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (100% Gauge)",
@@ -1125,7 +1192,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (100% Gauge)",
@@ -1135,7 +1203,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -1145,7 +1214,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -1155,7 +1225,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -1165,7 +1236,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A (50% Gauge)",
@@ -1175,7 +1247,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B (50% Gauge)",
@@ -1185,7 +1258,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C (50% Gauge)",
@@ -1195,7 +1269,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A (100% Gauge)",
@@ -1205,7 +1280,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A (100% Gauge)",
@@ -1215,7 +1291,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B (100% Gauge)",
@@ -1225,7 +1302,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B (100% Gauge)",
@@ -1235,7 +1313,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C (100% Gauge)",
@@ -1245,7 +1324,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C (100% Gauge)",
@@ -1255,7 +1335,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -1265,7 +1346,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -1275,7 +1357,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -1285,7 +1368,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D (50% Gauge)",
@@ -1295,7 +1379,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D (50% Gauge)",
@@ -1305,7 +1390,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D (50% Gauge)",
@@ -1315,7 +1401,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D (100% Gauge)",
@@ -1325,7 +1412,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D (100% Gauge)",
@@ -1335,7 +1423,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D (100% Gauge)",
@@ -1345,7 +1434,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D (100% Gauge)",
@@ -1355,7 +1445,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D (100% Gauge)",
@@ -1365,7 +1456,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍",
@@ -1375,7 +1467,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍",
@@ -1385,7 +1478,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍",
@@ -1395,7 +1489,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍",
@@ -1405,7 +1500,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍 (50% Gauge)",
@@ -1415,7 +1511,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍 (50% Gauge)",
@@ -1425,7 +1522,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍 (50% Gauge)",
@@ -1435,7 +1533,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍 (50% Gauge)",
@@ -1445,7 +1544,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍 (100% Gauge)",
@@ -1455,7 +1555,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍 (100% Gauge)",
@@ -1465,7 +1566,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍 (100% Gauge)",
@@ -1475,7 +1577,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "誓約之劍 (100% Gauge)",
@@ -1485,7 +1588,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1495,7 +1599,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1505,7 +1610,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1515,7 +1621,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1525,7 +1632,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1535,7 +1643,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1545,7 +1654,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1555,7 +1665,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1565,7 +1676,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1575,7 +1687,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1585,7 +1698,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "艾瑞斯聯手攻擊",
@@ -1595,67 +1709,74 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "1st Hit",
-          "multiplier": 2.102916667,
+          "multiplier": 2.1029166666666668,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "2nd Hit",
-          "multiplier": 2.500166667,
+          "multiplier": 2.500166666666667,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "3rd Hit",
-          "multiplier": 5.599333333,
+          "multiplier": 5.599333333333333,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (50% Gauge)",
           "modifier": "1st Hit",
-          "multiplier": 2.598333333,
+          "multiplier": 2.598333333333333,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (50% Gauge)",
           "modifier": "2nd Hit",
-          "multiplier": 3.087333333,
+          "multiplier": 3.0873333333333335,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (50% Gauge)",
           "modifier": "3rd Hit",
-          "multiplier": 6.948416667,
+          "multiplier": 6.948416666666668,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (100% Gauge)",
@@ -1665,47 +1786,52 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (100% Gauge)",
-          "modifier": "2nd - 3rd Hit",
-          "multiplier": 0.7999166667,
+          "modifier": "2nd - 3rd Hit ",
+          "multiplier": 0.7999166666666667,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (100% Gauge)",
           "modifier": "4th Hit (Ares)",
-          "multiplier": 1.105333333,
+          "multiplier": 1.1053333333333335,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (100% Gauge)",
           "modifier": "5th Hit",
-          "multiplier": 3.960083333,
+          "multiplier": 3.960083333333334,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (100% Gauge)",
           "modifier": "6th Hit",
-          "multiplier": 7.909666667,
+          "multiplier": 7.909666666666667,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -1715,7 +1841,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (50% Gauge)",
@@ -1725,7 +1852,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (100% Gauge)",
@@ -1735,7 +1863,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (100% Gauge)",
@@ -1745,7 +1874,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (100% Gauge)",
@@ -1755,7 +1885,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (100% Gauge)",
@@ -1765,7 +1896,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (100% Gauge)",
@@ -1775,7 +1907,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (100% Gauge)",
@@ -1785,17 +1918,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "蒼天之劍",
           "modifier": "1st Hit (Melee)",
-          "multiplier": 0.66075,
+          "multiplier": 0.6607500000000001,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "蒼天之劍",
@@ -1805,67 +1940,74 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "蒼天之劍",
           "modifier": "3rd Hit (Ares)",
-          "multiplier": 1.500916667,
+          "multiplier": 1.5009166666666667,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威翔騎劍",
           "modifier": null,
-          "multiplier": 2.751333333,
+          "multiplier": 2.7513333333333336,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威翔騎劍 (50% Gauge)",
           "modifier": null,
-          "multiplier": 3.055666667,
+          "multiplier": 3.0556666666666668,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威翔騎劍 (100% Gauge)",
           "modifier": "1st - 4th Hit",
-          "multiplier": 0.87125,
+          "multiplier": 0.8712500000000001,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威翔騎劍 (100% Gauge)",
           "modifier": "5th Hit (Ares)",
-          "multiplier": 1.620416667,
+          "multiplier": 1.6204166666666666,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨",
-          "modifier": "1st - 3rd Hit",
-          "multiplier": 1.101583333,
+          "modifier": "1st - 3rd Hit ",
+          "multiplier": 1.1015833333333334,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨",
@@ -1875,57 +2017,63 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨",
           "modifier": "5th Hit",
-          "multiplier": 3.203583333,
+          "multiplier": 3.2035833333333334,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨",
           "modifier": "6th Hit (Spear)",
-          "multiplier": 1.887083333,
+          "multiplier": 1.8870833333333334,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (50% Gauge)",
-          "modifier": "1st - 3rd Hit",
-          "multiplier": 1.105333333,
+          "modifier": "1st - 3rd Hit ",
+          "multiplier": 1.1053333333333335,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (50% Gauge)",
           "modifier": "4th Hit",
-          "multiplier": 1.98225,
+          "multiplier": 1.9822499999999998,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (50% Gauge)",
           "modifier": "5th Hit",
-          "multiplier": 3.967666667,
+          "multiplier": 3.9676666666666667,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (50% Gauge)",
@@ -1935,47 +2083,52 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (100% Gauge)",
           "modifier": "1st - 3rd Hit",
-          "multiplier": 1.453666667,
+          "multiplier": 1.4536666666666667,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (100% Gauge)",
           "modifier": "4th Hit (Ares)",
-          "multiplier": 1.299666667,
+          "multiplier": 1.2996666666666667,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (100% Gauge)",
           "modifier": "5th Hit",
-          "multiplier": 2.11075,
+          "multiplier": 2.1107500000000003,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (100% Gauge)",
           "modifier": "6th Hit (Ares)",
-          "multiplier": 1.300083333,
+          "multiplier": 1.3000833333333335,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (100% Gauge)",
@@ -1985,67 +2138,74 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (100% Gauge)",
           "modifier": "8th Hit (Ares)",
-          "multiplier": 2.799416667,
+          "multiplier": 2.799416666666667,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冬之雨 (100% Gauge)",
           "modifier": "9th Hit (Spear)",
-          "multiplier": 2.63875,
+          "multiplier": 2.6387500000000004,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "疾刺迅劍",
           "modifier": null,
-          "multiplier": 3.62,
+          "multiplier": 3.6200000000000006,
           "damageCap": 59999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "疾刺迅劍 (50% Gauge)",
           "modifier": null,
-          "multiplier": 4.501333333,
+          "multiplier": 4.501333333333334,
           "damageCap": 59999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "疾刺迅劍 (100% Gauge)",
-          "modifier": "1st - 6th Hit",
-          "multiplier": 0.4533333333,
+          "modifier": "1st - 6th Hit ",
+          "multiplier": 0.45333333333333337,
           "damageCap": 59999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "疾刺迅劍 (100% Gauge)",
           "modifier": "7th Hit (Ares)",
-          "multiplier": 3.844666667,
+          "multiplier": 3.844666666666667,
           "damageCap": 59999,
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -2064,7 +2224,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊just",
@@ -2074,7 +2235,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊just",
@@ -2084,7 +2246,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊just",
@@ -2094,7 +2257,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "靶心狙擊",
@@ -2104,7 +2268,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "靶心狙擊",
@@ -2114,7 +2279,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "靶心狙擊V",
@@ -2124,7 +2290,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "靶心狙擊V",
@@ -2134,7 +2301,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "靶心狙擊V",
@@ -2144,7 +2312,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -2154,17 +2323,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": null,
-          "multiplier": 15.83333333,
+          "multiplier": 15.833333333333334,
           "damageCap": 375228,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -2174,7 +2345,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -2184,7 +2356,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -2194,7 +2367,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -2204,7 +2378,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -2214,7 +2389,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "砲火擊發",
@@ -2224,7 +2400,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 23,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "砲火擊發",
@@ -2234,7 +2411,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 23,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "造棺者",
@@ -2244,7 +2422,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 60,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "造棺者",
@@ -2254,7 +2433,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "造棺者",
@@ -2264,7 +2444,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "槍林彈雨",
@@ -2274,27 +2455,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 45,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "槍林彈雨",
           "modifier": "Total",
-          "multiplier": 14.81183333,
+          "multiplier": 14.811833333333334,
           "damageCap": 149985,
           "cooldown": null,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "散彈射擊",
           "modifier": "Per hit",
-          "multiplier": 0.6833333333,
+          "multiplier": 0.6833333333333333,
           "damageCap": 4999,
           "cooldown": 48,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "散彈射擊",
@@ -2304,7 +2488,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "間接傷害",
@@ -2314,7 +2499,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 123,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "間接傷害",
@@ -2324,7 +2510,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -2332,7 +2519,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "io",
       "nameZh": "伊歐",
       "imageUrl": "https://i.imgur.com/PudUfF0.png",
-      "warpathCondition": "重力場",
+      "warpathCondition": "",
       "warpathBonus": 0.15,
       "skillRows": [
         {
@@ -2343,7 +2530,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRa",
           "contribution": 0,
-          "notes": 0
+          "notes": 0,
+          "baseRatio": 0
         },
         {
           "skill": "蓄力攻擊",
@@ -2353,7 +2541,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": 0.03,
-          "notes": 0.049
+          "notes": 0.049,
+          "baseRatio": 0.03
         },
         {
           "skill": "連結攻擊",
@@ -2363,7 +2552,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "RaLi",
           "contribution": 0.01,
-          "notes": 0.013
+          "notes": 0.013,
+          "baseRatio": 0.01
         },
         {
           "skill": "連結攻擊",
@@ -2373,7 +2563,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "RaLi",
           "contribution": 0.01,
-          "notes": 0.013
+          "notes": 0.013,
+          "baseRatio": 0.01
         },
         {
           "skill": "奧義",
@@ -2383,7 +2574,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "SbRa",
           "contribution": 0.005263229919,
-          "notes": 0.008684329366
+          "notes": 0.008684329365695503,
+          "baseRatio": 0.005263229918603335
         },
         {
           "skill": "奧義",
@@ -2393,7 +2585,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": 0.00184209626,
-          "notes": 0.003039458829
+          "notes": 0.0030394588292880624,
+          "baseRatio": 0.0018420962601745831
         },
         {
           "skill": "奧義",
@@ -2403,7 +2596,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": 0.00184209626,
-          "notes": 0.003039458829
+          "notes": 0.0030394588292880624,
+          "baseRatio": 0.0018420962601745831
         },
         {
           "skill": "奧義",
@@ -2413,7 +2607,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": 0.00184209626,
-          "notes": 0.003039458829
+          "notes": 0.0030394588292880624,
+          "baseRatio": 0.0018420962601745831
         },
         {
           "skill": "奧義",
@@ -2423,7 +2618,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": 0.00184209626,
-          "notes": 0.003039458829
+          "notes": 0.0030394588292880624,
+          "baseRatio": 0.0018420962601745831
         },
         {
           "skill": "奧義",
@@ -2433,7 +2629,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": 0.00184209626,
-          "notes": 0.003039458829
+          "notes": 0.0030394588292880624,
+          "baseRatio": 0.0018420962601745831
         },
         {
           "skill": "奧義",
@@ -2443,7 +2640,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": 0.00184209626,
-          "notes": 0.003039458829
+          "notes": 0.0030394588292880624,
+          "baseRatio": 0.0018420962601745831
         },
         {
           "skill": "奧義",
@@ -2453,7 +2651,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": 0.00184209626,
-          "notes": 0.003039458829
+          "notes": 0.0030394588292880624,
+          "baseRatio": 0.0018420962601745831
         },
         {
           "skill": "奧義",
@@ -2463,7 +2662,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": 0.00184209626,
-          "notes": 0.003039458829
+          "notes": 0.0030394588292880624,
+          "baseRatio": 0.0018420962601745831
         },
         {
           "skill": "星夢之術",
@@ -2473,7 +2673,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": 0.03,
-          "notes": 0.069
+          "notes": 0.069,
+          "baseRatio": 0.03
         },
         {
           "skill": "星夢之術",
@@ -2483,7 +2684,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": 0.01,
-          "notes": 0.139
+          "notes": 0.139,
+          "baseRatio": 0.01
         },
         {
           "skill": "星夢之術",
@@ -2493,7 +2695,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": 0,
-          "notes": 0
+          "notes": 0,
+          "baseRatio": 0
         },
         {
           "skill": "星夢之術",
@@ -2503,7 +2706,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": 0,
-          "notes": 0
+          "notes": 0,
+          "baseRatio": 0
         },
         {
           "skill": "星夢之術",
@@ -2513,17 +2717,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": 0.6,
-          "notes": 0.3
+          "notes": 0.3,
+          "baseRatio": 0.6
         },
         {
           "skill": "冰魔法",
           "modifier": "Total",
-          "multiplier": 7.7,
+          "multiplier": 7.700000000000001,
           "damageCap": 49995,
           "cooldown": 20,
           "classification": "RaSk",
           "contribution": 0,
-          "notes": 0.025
+          "notes": 0.025,
+          "baseRatio": 0
         },
         {
           "skill": "火魔法",
@@ -2533,47 +2739,52 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 20,
           "classification": "Sk",
           "contribution": 0.004705882353,
-          "notes": 0.008117647059
+          "notes": 0.00811764705882353,
+          "baseRatio": 0.004705882352941177
         },
         {
           "skill": "火魔法",
           "modifier": "Pass-Through",
-          "multiplier": 3.3,
+          "multiplier": 3.3000000000000003,
           "damageCap": 54999,
           "cooldown": 20,
           "classification": "RaSk",
           "contribution": 0.01176470588,
-          "notes": 0.02029411765
+          "notes": 0.020294117647058827,
+          "baseRatio": 0.011764705882352941
         },
         {
           "skill": "火魔法",
           "modifier": "Explosion",
-          "multiplier": 6.6,
+          "multiplier": 6.6000000000000005,
           "damageCap": 54999,
           "cooldown": 20,
           "classification": "RaSk",
           "contribution": 0.02352941176,
-          "notes": 0.04058823529
+          "notes": 0.040588235294117654,
+          "baseRatio": 0.023529411764705882
         },
         {
           "skill": "繁花七綻",
           "modifier": "Uncharged",
-          "multiplier": 27.72,
+          "multiplier": 27.720000000000002,
           "damageCap": 489993,
           "cooldown": 180,
           "classification": "RaSkCh",
           "contribution": 0,
-          "notes": 0.126
+          "notes": 0.126,
+          "baseRatio": 0
         },
         {
           "skill": "繁花七綻",
           "modifier": "蓄力",
-          "multiplier": 46.97,
+          "multiplier": 46.970000000000006,
           "damageCap": 979993,
           "cooldown": 180,
           "classification": "RaSkChOc",
           "contribution": 0.12,
-          "notes": 0
+          "notes": 0,
+          "baseRatio": 0.12
         },
         {
           "skill": "雷魔法",
@@ -2583,17 +2794,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 150,
           "classification": "RaSk",
           "contribution": 0,
-          "notes": 0
+          "notes": 0,
+          "baseRatio": 0
         },
         {
           "skill": "重力場",
           "modifier": "Total",
-          "multiplier": 26.4,
+          "multiplier": 26.400000000000002,
           "damageCap": 319984,
           "cooldown": 80,
           "classification": "RaSk",
           "contribution": 0,
-          "notes": 0.035
+          "notes": 0.034999999999999996,
+          "baseRatio": 0
         }
       ]
     },
@@ -2601,218 +2814,239 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "eugen",
       "nameZh": "尤金",
       "imageUrl": "https://i.imgur.com/alK5icy.png",
-      "warpathCondition": null,
+      "warpathCondition": "Grenade",
       "warpathBonus": 0.25,
       "skillRows": [
         {
           "skill": "近身攻擊",
           "modifier": "First",
-          "multiplier": 1.498429029,
-          "damageCap": 14998.96907,
+          "multiplier": 1.4984290290783637,
+          "damageCap": 14998.96907216495,
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": 1.498429029
+          "notes": 1.4984290290783637,
+          "baseRatio": null
         },
         {
           "skill": "近身攻擊",
           "modifier": "Second",
-          "multiplier": 1.70964761,
-          "damageCap": 14998.96907,
+          "multiplier": 1.709647609659931,
+          "damageCap": 14998.96907216495,
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": 1.70964761
+          "notes": 1.709647609659931,
+          "baseRatio": null
         },
         {
           "skill": "近身攻擊",
           "modifier": "Third",
-          "multiplier": 2.201577132,
-          "damageCap": 14998.96907,
+          "multiplier": 2.2015771315919173,
+          "damageCap": 14998.96907216495,
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": 2.201577132
+          "notes": 2.2015771315919173,
+          "baseRatio": null
         },
         {
           "skill": "近身攻擊",
           "modifier": "擊飛攻擊",
-          "multiplier": 1.002402661,
-          "damageCap": 14998.96907,
+          "multiplier": 1.0024026614095614,
+          "damageCap": 14998.96907216495,
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": 1.002402661
+          "notes": 1.0024026614095614,
+          "baseRatio": null
         },
         {
           "skill": "射擊",
           "modifier": "站立",
-          "multiplier": 1.599279202,
-          "damageCap": 14998.96907,
+          "multiplier": 1.5992792015771315,
+          "damageCap": 14998.96907216495,
           "cooldown": 0,
           "classification": "NoRa",
           "contribution": null,
-          "notes": 1.599279202
+          "notes": 1.5992792015771315,
+          "baseRatio": null
         },
         {
           "skill": "射擊",
           "modifier": "空中",
-          "multiplier": 1.611230902,
+          "multiplier": 1.6112309019221291,
           "damageCap": 14999,
           "cooldown": 0,
           "classification": "NoRa",
           "contribution": null,
-          "notes": 1.611230902
+          "notes": 1.6112309019221291,
+          "baseRatio": null
         },
         {
           "skill": "射擊",
           "modifier": "瞄準模式",
-          "multiplier": 2.619054953,
-          "damageCap": 24998.96907,
+          "multiplier": 2.619054953178906,
+          "damageCap": 24998.96907216495,
           "cooldown": 0,
           "classification": "NoRa",
           "contribution": null,
-          "notes": 2.619054953
+          "notes": 2.619054953178906,
+          "baseRatio": null
         },
         {
           "skill": "射擊",
           "modifier": "蓄力",
-          "multiplier": 2.990635781,
-          "damageCap": 24998.96907,
+          "multiplier": 2.990635781172992,
+          "damageCap": 24998.96907216495,
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": 2.990635781
+          "notes": 2.990635781172992,
+          "baseRatio": null
         },
         {
           "skill": "榴彈",
           "modifier": "一般",
-          "multiplier": 2.597307787,
-          "damageCap": 74998.96907,
+          "multiplier": 2.597307787087235,
+          "damageCap": 74998.96907216495,
           "cooldown": 0,
           "classification": "NoTh",
           "contribution": null,
-          "notes": 2.597307787
+          "notes": 2.597307787087235,
+          "baseRatio": null
         },
         {
           "skill": "榴彈",
           "modifier": "跳躍",
-          "multiplier": 2.592533268,
-          "damageCap": 24998.96907,
+          "multiplier": 2.592533267619517,
+          "damageCap": 24998.96907216495,
           "cooldown": 0,
           "classification": "NoTh",
           "contribution": null,
-          "notes": 2.592533268
+          "notes": 2.592533267619517,
+          "baseRatio": null
         },
         {
           "skill": "榴彈+",
           "modifier": "長按",
-          "multiplier": 4.433033514,
-          "damageCap": 74998.96907,
+          "multiplier": 4.433033514046328,
+          "damageCap": 74998.96907216495,
           "cooldown": 0,
           "classification": "NoTh",
           "contribution": null,
-          "notes": 4.433033514
+          "notes": 4.433033514046328,
+          "baseRatio": null
         },
         {
           "skill": "榴彈+",
           "modifier": "瞄準模式",
-          "multiplier": 6.995995564,
-          "damageCap": 74998.96907,
+          "multiplier": 6.995995564317398,
+          "damageCap": 74998.96907216495,
           "cooldown": 0,
           "classification": "NoTh",
           "contribution": null,
-          "notes": 6.995995564
+          "notes": 6.995995564317398,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
           "modifier": null,
-          "multiplier": 5.98823312,
-          "damageCap": 99998.96907,
+          "multiplier": 5.98823311976343,
+          "damageCap": 99998.96907216495,
           "cooldown": 0,
           "classification": "NoRaLi",
           "contribution": null,
-          "notes": 5.98823312
+          "notes": 5.98823311976343,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "起手(奧義連結會跳過，也不會計入奧義總傷，可以無視)",
-          "multiplier": 0.9779130636,
-          "damageCap": 99998.85057,
+          "multiplier": 0.9779130636079871,
+          "damageCap": 99998.85057471265,
           "cooldown": 0,
           "classification": "SbRa",
           "contribution": null,
-          "notes": 1.173495676
+          "notes": 1.1734956763295845,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "First",
-          "multiplier": 3.642986357,
-          "damageCap": 129998.8506,
+          "multiplier": 3.6429863569156327,
+          "damageCap": 129998.85057471265,
           "cooldown": 0,
           "classification": "Sb",
           "contribution": null,
-          "notes": 4.371583628
+          "notes": 4.371583628298759,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Second",
-          "multiplier": 5.447175986,
-          "damageCap": 129998.8506,
+          "multiplier": 5.447175986080619,
+          "damageCap": 129998.85057471265,
           "cooldown": 0,
           "classification": "Sb",
           "contribution": null,
-          "notes": 6.536611183
+          "notes": 6.536611183296742,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Total",
           "multiplier": 0,
-          "damageCap": 259997.7011,
+          "damageCap": 259997.7011494253,
           "cooldown": 0,
           "classification": null,
           "contribution": null,
-          "notes": 0
+          "notes": 0,
+          "baseRatio": null
         },
         {
           "skill": "暮光",
           "modifier": "Single",
           "multiplier": 2.4,
-          "damageCap": 14998.85057,
+          "damageCap": 14998.850574712644,
           "cooldown": 30,
           "classification": "SkRa",
           "contribution": null,
-          "notes": 2.338410752
+          "notes": 2.338410752423197,
+          "baseRatio": null
         },
         {
           "skill": "雷管引爆",
           "modifier": "0%",
           "multiplier": 4,
-          "damageCap": 149998.8506,
+          "damageCap": 149998.85057471265,
           "cooldown": 45,
           "classification": "SkRa",
           "contribution": null,
-          "notes": 3.946910424
+          "notes": 3.9469104238541153,
+          "baseRatio": null
         },
         {
           "skill": "雷管引爆",
           "modifier": "50%",
-          "multiplier": 9.359405803,
+          "multiplier": 9.359405803351406,
           "damageCap": 199999,
           "cooldown": 45,
           "classification": "SkRaCh",
           "contribution": null,
-          "notes": 11.23128696
+          "notes": 11.231286964021686,
+          "baseRatio": null
         },
         {
           "skill": "雷管引爆",
           "modifier": "100% First",
-          "multiplier": 21.62412382,
+          "multiplier": 21.624123815782273,
           "damageCap": 224999,
           "cooldown": 45,
           "classification": "SkRaCh",
           "contribution": null,
-          "notes": 25.94894858
+          "notes": 25.948948578938726,
+          "baseRatio": null
         },
         {
           "skill": "雷管引爆",
@@ -2822,67 +3056,63 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 45,
           "classification": "SkRaCh",
           "contribution": null,
-          "notes": 10.20610009
+          "notes": 10.206100090356498,
+          "baseRatio": null
         },
         {
           "skill": "截擊",
           "modifier": null,
-          "multiplier": 3.645020467,
-          "damageCap": 69998.85057,
+          "multiplier": 3.6450204671157116,
+          "damageCap": 69998.85057471265,
           "cooldown": 12,
           "classification": "SkRa",
           "contribution": null,
-          "notes": 4.374024561
+          "notes": 4.374024560538854,
+          "baseRatio": null
         },
         {
           "skill": "穿甲彈",
           "modifier": null,
           "multiplier": 4.95,
-          "damageCap": 44998.85057,
+          "damageCap": 44998.85057471265,
           "cooldown": 60,
           "classification": "SkRa",
           "contribution": null,
-          "notes": 4.969427674
+          "notes": 4.969427673730902,
+          "baseRatio": null
         },
         {
           "skill": "毒榴彈",
           "modifier": null,
           "multiplier": 1,
-          "damageCap": 19998.85057,
+          "damageCap": 19998.850574712644,
           "cooldown": 80,
           "classification": "SkRa",
           "contribution": null,
-          "notes": 1.123526573
+          "notes": 1.1235265730244786,
+          "baseRatio": null
         },
         {
           "skill": "麻痺彈",
           "modifier": null,
           "multiplier": 2.4,
-          "damageCap": 19998.85057,
+          "damageCap": 19998.850574712644,
           "cooldown": 120,
           "classification": "SkRa",
           "contribution": null,
-          "notes": 2.57931863
-        },
-        {
-          "skill": "治癒彈",
-          "modifier": null,
-          "multiplier": "0.6xMax HP",
-          "damageCap": 20000,
-          "cooldown": 45,
-          "classification": null,
-          "contribution": null,
-          "notes": "0.6xMax HP"
+          "notes": 2.5793186298669295,
+          "baseRatio": null
         },
         {
           "skill": "干擾者",
           "modifier": null,
           "multiplier": 1,
-          "damageCap": 9998.850575,
+          "damageCap": 9998.850574712644,
           "cooldown": 55,
           "classification": "SkRa",
           "contribution": null,
-          "notes": 1.088487761
+          "notes": 1.0884877608017087,
+          "baseRatio": null
         }
       ]
     },
@@ -2890,7 +3120,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "rosetta",
       "nameZh": "蘿賽塔",
       "imageUrl": "https://i.imgur.com/Z62jCzG.png",
-      "warpathCondition": null,
+      "warpathCondition": "Rose Attacks",
       "warpathBonus": 0.1,
       "skillRows": [
         {
@@ -2901,7 +3131,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -2911,7 +3142,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -2921,7 +3153,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -2931,7 +3164,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -2941,7 +3175,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -2951,7 +3186,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -2961,7 +3197,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -2971,7 +3208,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -2981,7 +3219,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -2991,7 +3230,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -3001,7 +3241,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -3011,7 +3252,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -3021,7 +3263,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -3031,7 +3274,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "玫瑰宮殿",
@@ -3041,7 +3285,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -3051,7 +3296,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3061,7 +3307,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3071,7 +3318,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3081,7 +3329,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -3091,7 +3340,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -3101,7 +3351,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -3111,7 +3362,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -3121,7 +3373,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -3131,7 +3384,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -3141,7 +3395,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -3151,7 +3406,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -3161,7 +3417,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -3171,27 +3428,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Sixth Attack",
-          "multiplier": 1.8,
+          "multiplier": 1.8000000000000003,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Seventh Attack",
-          "multiplier": 3.5,
+          "multiplier": 3.5000000000000004,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -3201,7 +3461,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "女皇召集",
@@ -3211,7 +3472,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": "35s",
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "女皇召集",
@@ -3221,7 +3483,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "女皇召集",
@@ -3231,7 +3494,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "女皇召集",
@@ -3241,7 +3505,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "花散",
@@ -3251,7 +3516,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": "105s",
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "花散",
@@ -3261,7 +3527,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "花散",
@@ -3271,17 +3538,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "花散",
           "modifier": "Level 4",
-          "multiplier": 13.2,
+          "multiplier": 13.200000000000001,
           "damageCap": 219999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "螺旋玫瑰",
@@ -3291,7 +3560,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": "40s",
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "螺旋玫瑰",
@@ -3301,17 +3571,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "螺旋玫瑰",
           "modifier": "Level 1 Rose Hit",
-          "multiplier": 0.45,
+          "multiplier": 0.45000000000000007,
           "damageCap": 4999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "螺旋玫瑰",
@@ -3321,7 +3593,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "螺旋玫瑰",
@@ -3331,17 +3604,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "螺旋玫瑰",
           "modifier": "Level 4 Rose Hit",
-          "multiplier": 0.9,
+          "multiplier": 0.9000000000000001,
           "damageCap": 4999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -3349,7 +3624,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "charlotta",
       "nameZh": "夏綠蒂",
       "imageUrl": "https://i.imgur.com/QmCqJSI.jpeg",
-      "warpathCondition": null,
+      "warpathCondition": "Sp",
       "warpathBonus": 0.1,
       "skillRows": [
         {
@@ -3360,7 +3635,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.005,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.005
         },
         {
           "skill": "攻擊",
@@ -3370,7 +3646,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.006,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.006
         },
         {
           "skill": "攻擊",
@@ -3380,7 +3657,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.01,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.01
         },
         {
           "skill": "攻擊",
@@ -3390,7 +3668,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0.006,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.006
         },
         {
           "skill": "攻擊",
@@ -3400,7 +3679,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": 0.052,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.052
         },
         {
           "skill": "高貴戰略",
@@ -3410,7 +3690,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略",
@@ -3420,7 +3701,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略",
@@ -3430,7 +3712,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略",
@@ -3440,7 +3723,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略",
@@ -3450,7 +3734,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略",
@@ -3460,7 +3745,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略 (迴旋)",
@@ -3470,7 +3756,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略 (迴旋)",
@@ -3480,7 +3767,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略 (迴旋)",
@@ -3490,7 +3778,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": 0.4366666667,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.4366666666666667
         },
         {
           "skill": "高貴戰略 (迴旋)",
@@ -3500,7 +3789,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": 0.08733333333,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.08733333333333335
         },
         {
           "skill": "高貴戰略 (落下)",
@@ -3510,7 +3800,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "高貴戰略 (落下)",
@@ -3520,7 +3811,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "擊飛攻擊",
@@ -3530,7 +3822,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "空中連技",
@@ -3540,7 +3833,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "空中連技",
@@ -3550,7 +3844,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "空中連技",
@@ -3560,7 +3855,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "空中連技",
@@ -3570,7 +3866,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "落下攻擊",
@@ -3580,7 +3877,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "連結攻擊",
@@ -3590,67 +3888,74 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": 0.016,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.016
         },
         {
           "skill": "奧義",
           "modifier": "起手(奧義連結會跳過，也不會計入奧義總傷，可以無視)",
-          "multiplier": 1.008333333,
+          "multiplier": 1.0083333333333333,
           "damageCap": 99999,
           "cooldown": null,
           "classification": "RaSb",
           "contribution": 0.00805554213,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.008055542129517746
         },
         {
           "skill": "奧義",
           "modifier": "Slash Attack",
-          "multiplier": 4.983333333,
+          "multiplier": 4.983333333333334,
           "damageCap": 129999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": 0.01047222894,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.010472228935241128
         },
         {
           "skill": "奧義",
           "modifier": "Explosion Attack",
-          "multiplier": 6.558333333,
+          "multiplier": 6.558333333333334,
           "damageCap": 129999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": 0.01047222894,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.010472228935241128
         },
         {
           "skill": "聖光階梯",
           "modifier": "1st Attack",
-          "multiplier": 1.983333333,
+          "multiplier": 1.9833333333333334,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "聖光階梯",
           "modifier": "2nd Attack",
-          "multiplier": 1.983333333,
+          "multiplier": 1.9833333333333334,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "聖光階梯",
           "modifier": "3rd Attack",
-          "multiplier": 1.983333333,
+          "multiplier": 1.9833333333333334,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "昇劍反斬",
@@ -3660,17 +3965,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "昇劍反斬",
           "modifier": "2nd Attack",
-          "multiplier": 1.441666667,
+          "multiplier": 1.4416666666666667,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "昇劍反斬",
@@ -3680,37 +3987,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "昇劍反斬",
           "modifier": "1st Attack (空放)",
-          "multiplier": 4.216666667,
+          "multiplier": 4.216666666666667,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0
         },
         {
           "skill": "曜劍猛襲",
           "modifier": "1st-4th Attacks",
-          "multiplier": 2.008333333,
+          "multiplier": 2.0083333333333337,
           "damageCap": 79996,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0.0472,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.0472
         },
         {
           "skill": "曜劍猛襲",
           "modifier": "5th Attack (Finisher)",
-          "multiplier": 4.008333333,
+          "multiplier": 4.008333333333333,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0.0118,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.0118
         },
         {
           "skill": "盧米埃之劍",
@@ -3720,27 +4031,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0.119,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.119
         },
         {
           "skill": "盧米埃之劍",
           "modifier": "Uppercut Attack",
-          "multiplier": 3.241666667,
+          "multiplier": 3.2416666666666667,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0.008,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.008
         },
         {
           "skill": "盧米埃之劍",
           "modifier": "Finisher Attack",
-          "multiplier": 3.333333333,
+          "multiplier": 3.3333333333333335,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": 0.008,
-          "notes": null
+          "notes": null,
+          "baseRatio": 0.008
         }
       ]
     },
@@ -3748,7 +4062,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "ghandagoza",
       "nameZh": "剛特克澤",
       "imageUrl": "https://i.imgur.com/pn7UzVA.png",
-      "warpathCondition": null,
+      "warpathCondition": "Raging Fist",
       "warpathBonus": 1,
       "skillRows": [
         {
@@ -3759,7 +4073,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "Auto Attack",
@@ -3769,7 +4084,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "Auto Attack",
@@ -3779,7 +4095,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "Auto Attack",
@@ -3789,7 +4106,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "Auto Attack",
@@ -3799,7 +4117,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "Auto Attack",
@@ -3809,7 +4128,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "Auto Attack",
@@ -3819,7 +4139,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "Auto Attack",
@@ -3829,7 +4150,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "Auto Attack",
@@ -3839,7 +4161,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3849,7 +4172,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3859,7 +4183,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3869,7 +4194,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3879,7 +4205,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3889,7 +4216,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3899,7 +4227,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -3909,7 +4238,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊",
@@ -3919,87 +4249,96 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊II",
           "modifier": "3 Rage (Uncharged)",
-          "multiplier": 1.873303167,
+          "multiplier": 1.8733031674208143,
           "damageCap": 59999,
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊II",
           "modifier": "3 Rage",
-          "multiplier": 9.683257919,
+          "multiplier": 9.683257918552036,
           "damageCap": 59999,
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊III",
           "modifier": "5 Rage (Uncharged)",
-          "multiplier": 2.425531915,
+          "multiplier": 2.425531914893617,
           "damageCap": 104999,
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊III",
           "modifier": "5 Rage",
-          "multiplier": 15.74468085,
+          "multiplier": 15.74468085106383,
           "damageCap": 104999,
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊IV",
           "modifier": "7 Rage (Uncharged)",
-          "multiplier": 3.036144578,
+          "multiplier": 3.0361445783132526,
           "damageCap": 179999,
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊IV",
           "modifier": "7 Rage",
-          "multiplier": 21.44578313,
+          "multiplier": 21.445783132530117,
           "damageCap": 179999,
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊V",
           "modifier": "10 Rage (Uncharged)",
-          "multiplier": 3.955555556,
+          "multiplier": 3.9555555555555553,
           "damageCap": 299999,
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "正拳擊V",
-          "modifier": "10 Rage",
-          "multiplier": 29.92592593,
+          "modifier": "10 Rage ",
+          "multiplier": 29.925925925925924,
           "damageCap": 299999,
           "cooldown": 0,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
@@ -4009,7 +4348,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 15,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
@@ -4019,17 +4359,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 25,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
           "modifier": "羅漢天降擊",
-          "multiplier": 8.333333333,
+          "multiplier": 8.333333333333334,
           "damageCap": 64999,
           "cooldown": 25,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
@@ -4039,7 +4381,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 120,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
@@ -4049,7 +4392,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 45,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
@@ -4059,57 +4403,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 45,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
           "modifier": "印可掌",
-          "multiplier": 4.833333333,
+          "multiplier": 4.833333333333333,
           "damageCap": 24999,
           "cooldown": 45,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "技能",
-          "modifier": "雄武見得",
-          "multiplier": null,
-          "damageCap": null,
-          "cooldown": 90,
-          "classification": null,
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "技能",
-          "modifier": "無明白天",
-          "multiplier": null,
-          "damageCap": null,
-          "cooldown": 60,
-          "classification": null,
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "技能",
-          "modifier": "禪定",
-          "multiplier": null,
-          "damageCap": null,
-          "cooldown": 80,
-          "classification": null,
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "技能",
-          "modifier": "古今無雙",
-          "multiplier": null,
-          "damageCap": null,
-          "cooldown": 150,
-          "classification": null,
-          "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -4119,7 +4425,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -4129,7 +4436,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -4139,7 +4447,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -4149,7 +4458,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -4159,7 +4469,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -4178,7 +4489,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -4188,7 +4500,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -4198,7 +4511,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -4208,7 +4522,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -4218,7 +4533,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -4228,7 +4544,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -4238,7 +4555,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -4248,7 +4566,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "蓄力(連擊)",
@@ -4258,27 +4577,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
-          "modifier": "1st Hit",
+          "modifier": "1st Hit ",
           "multiplier": 0.7,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
-          "modifier": "2nd Hit",
+          "modifier": "2nd Hit ",
           "multiplier": 1,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -4288,7 +4610,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -4298,7 +4621,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -4308,7 +4632,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -4318,17 +4643,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
-          "modifier": "1st Hit (Charged Tipper)",
+          "modifier": "1st Hit (Charged Tipper) ",
           "multiplier": 1,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -4338,37 +4665,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
-          "modifier": "1st Hit",
+          "modifier": "1st Hit ",
           "multiplier": 0.3,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
-          "modifier": "2nd Hit",
+          "modifier": "2nd Hit ",
           "multiplier": 0.6,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
-          "modifier": "3rd Hit",
+          "modifier": "3rd Hit ",
           "multiplier": 1.3,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -4378,7 +4709,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -4388,7 +4720,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -4398,7 +4731,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -4408,7 +4742,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -4418,47 +4753,52 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
-          "modifier": "1st Hit",
+          "modifier": "1st Hit ",
           "multiplier": 0.4,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
-          "modifier": "2nd Hit",
+          "modifier": "2nd Hit ",
           "multiplier": 0.7,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
-          "modifier": "3rd Hit",
+          "modifier": "3rd Hit ",
           "multiplier": 0.7,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
-          "modifier": "4th Hit",
+          "modifier": "4th Hit ",
           "multiplier": 1.7,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -4468,7 +4808,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -4478,7 +4819,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -4488,7 +4830,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -4498,7 +4841,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -4508,7 +4852,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -4518,7 +4863,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "猛襲",
@@ -4528,7 +4874,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "猛襲(釋放)",
@@ -4538,7 +4885,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "猛襲(釋放)",
@@ -4548,7 +4896,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -4558,7 +4907,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -4568,7 +4918,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -4578,7 +4929,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -4588,7 +4940,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -4598,7 +4951,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -4608,7 +4962,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -4618,7 +4973,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -4628,7 +4984,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -4638,7 +4995,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -4648,7 +5006,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -4658,7 +5017,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -4668,7 +5028,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寵物",
@@ -4678,7 +5039,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoPeRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寵物",
@@ -4688,7 +5050,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoPeRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寵物",
@@ -4698,7 +5061,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoPeRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寵物",
@@ -4708,17 +5072,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoPeRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "光譜淨化",
           "modifier": "Non Tipper",
-          "multiplier": 5.833333333,
+          "multiplier": 5.833333333333334,
           "damageCap": 49999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "光譜淨化",
@@ -4728,7 +5094,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "幻藍幽魂之鞭",
@@ -4738,27 +5105,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkPeRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "翔靈擺索",
           "modifier": "Each Hit",
-          "multiplier": 0.4166666667,
+          "multiplier": 0.4166666666666667,
           "damageCap": 5999,
           "cooldown": null,
           "classification": "SkPe",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "懲戒",
           "modifier": "Weakest Hit",
-          "multiplier": 0.5833333333,
+          "multiplier": 0.5833333333333334,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "SkPeRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "懲戒",
@@ -4768,17 +5138,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkPeRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "幽靈環繞",
           "modifier": "Each Hit",
-          "multiplier": 2.25,
+          "multiplier": 2.2500000000000004,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "SkPe",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -4788,17 +5160,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Weakest Hit",
-          "multiplier": 0.6666666667,
+          "multiplier": 0.6666666666666667,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -4808,7 +5182,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -4818,7 +5193,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiPe",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -4837,7 +5213,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏之架式",
@@ -4847,7 +5224,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏之架式",
@@ -4857,7 +5235,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏之架式",
@@ -4867,7 +5246,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏之架式",
@@ -4877,7 +5257,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏蓄力",
@@ -4887,7 +5268,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏蓄力",
@@ -4897,7 +5279,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏蓄力",
@@ -4907,7 +5290,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏蓄力",
@@ -4917,7 +5301,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "源氏蓄力",
@@ -4927,7 +5312,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -4937,7 +5323,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -4947,7 +5334,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -4957,7 +5345,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -4967,7 +5356,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -4977,7 +5367,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -4987,7 +5378,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -4997,7 +5389,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -5007,7 +5400,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -5017,7 +5411,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -5027,7 +5422,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -5037,7 +5433,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神樂之架式",
@@ -5047,7 +5444,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "架式切換",
@@ -5057,7 +5455,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "架式切換",
@@ -5067,7 +5466,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "架式切換連技",
@@ -5077,7 +5477,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "架式切換連技",
@@ -5087,7 +5488,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "架式切換連技",
@@ -5097,7 +5499,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "架式切換連技",
@@ -5107,7 +5510,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "架式切換連技",
@@ -5117,7 +5521,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "剎那",
@@ -5127,7 +5532,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkChSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "剎那",
@@ -5137,7 +5543,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkChSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "剎那",
@@ -5147,7 +5554,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkChSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "剎那",
@@ -5157,7 +5565,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkChSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "剎那",
@@ -5167,7 +5576,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkChSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "剎那",
@@ -5177,7 +5587,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkChSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5187,7 +5598,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5197,7 +5609,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5207,7 +5620,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5217,7 +5631,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5227,7 +5642,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5237,7 +5653,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5247,7 +5664,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5257,7 +5675,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5267,7 +5686,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5277,7 +5697,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5287,7 +5708,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5297,7 +5719,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鏡花水月",
@@ -5307,7 +5730,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻(神樂)",
@@ -5317,7 +5741,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻(神樂)",
@@ -5327,7 +5752,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻(神樂)",
@@ -5337,7 +5763,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻(神樂)",
@@ -5347,7 +5774,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻(神樂)",
@@ -5357,7 +5785,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5367,7 +5796,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5377,7 +5807,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5387,7 +5818,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5397,7 +5829,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5407,7 +5840,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5417,7 +5851,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5427,7 +5862,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5437,7 +5873,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5447,7 +5884,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5457,7 +5895,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5467,7 +5906,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5477,7 +5917,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5487,7 +5928,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "泡沫夢幻 (源氏)",
@@ -5497,7 +5939,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -5507,7 +5950,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "LiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -5517,7 +5961,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -5527,7 +5972,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -5537,7 +5983,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -5547,7 +5994,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -5557,7 +6005,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SbSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "織月",
@@ -5567,7 +6016,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "織月",
@@ -5577,7 +6027,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "織月",
@@ -5587,7 +6038,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "織月",
@@ -5597,7 +6049,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "織月",
@@ -5607,7 +6060,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "織月",
@@ -5617,7 +6071,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "織月",
@@ -5627,7 +6082,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5637,7 +6093,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5647,7 +6104,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5657,7 +6115,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5667,7 +6126,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5677,7 +6137,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5687,7 +6148,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5697,7 +6159,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5707,7 +6170,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5717,7 +6181,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5727,7 +6192,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5737,7 +6203,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5747,7 +6214,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5757,7 +6225,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5767,7 +6236,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5777,7 +6247,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5787,7 +6258,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5797,7 +6269,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5807,7 +6280,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5817,7 +6291,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5827,7 +6302,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "至人無己",
@@ -5837,7 +6313,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -5856,7 +6333,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -5866,7 +6344,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -5876,7 +6355,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -5886,7 +6366,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -5896,7 +6377,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -5906,7 +6388,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -5916,7 +6399,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -5926,7 +6410,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -5936,7 +6421,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "雙劍亂舞",
@@ -5946,7 +6432,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "雙劍亂舞",
@@ -5956,7 +6443,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "雙劍亂舞",
@@ -5966,7 +6454,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "雙劍亂舞",
@@ -5976,7 +6465,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
@@ -5986,7 +6476,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
@@ -5996,7 +6487,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
@@ -6006,7 +6498,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
@@ -6016,7 +6509,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -6026,7 +6520,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -6036,7 +6531,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -6046,7 +6542,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -6056,7 +6553,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -6066,7 +6564,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -6076,47 +6575,52 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "3rd Hit",
-          "multiplier": 0.7916666667,
+          "multiplier": 0.7916666666666666,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "4th Hit",
-          "multiplier": 1.041666667,
+          "multiplier": 1.0416666666666667,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "5th Hit",
-          "multiplier": 1.125,
+          "multiplier": 1.1250000000000002,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "6th Hit",
-          "multiplier": 2.708333333,
+          "multiplier": 2.7083333333333335,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -6126,27 +6630,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "亂氣奔流",
           "modifier": null,
-          "multiplier": 9.586666667,
+          "multiplier": 9.586666666666666,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "迅刃衝擊",
           "modifier": "1st Hit",
-          "multiplier": 1.65,
+          "multiplier": 1.6500000000000001,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "迅刃衝擊",
@@ -6156,7 +6663,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "寒冰牢籠",
@@ -6166,17 +6674,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "雪襲飛刃",
           "modifier": null,
-          "multiplier": 1.759166667,
+          "multiplier": 1.759166666666667,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "南十字斬",
@@ -6186,17 +6696,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "南十字斬",
           "modifier": "6th Hit",
-          "multiplier": 5.540833333,
+          "multiplier": 5.5408333333333335,
           "damageCap": 49999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -6204,7 +6716,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "vane",
       "nameZh": "范恩",
       "imageUrl": "https://i.imgur.com/5N5Hbw0.png",
-      "warpathCondition": null,
+      "warpathCondition": "Sp",
       "warpathBonus": 0.3,
       "skillRows": [
         {
@@ -6215,7 +6727,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6225,7 +6738,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6235,7 +6749,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -6245,7 +6760,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -6255,7 +6771,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -6265,7 +6782,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -6275,7 +6793,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -6285,7 +6804,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -6295,7 +6815,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -6305,7 +6826,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -6315,7 +6837,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -6325,7 +6848,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -6335,7 +6859,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -6345,7 +6870,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -6355,7 +6881,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -6365,7 +6892,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6375,7 +6903,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6385,7 +6914,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6395,7 +6925,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6405,7 +6936,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6415,7 +6947,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6425,7 +6958,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6435,7 +6969,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6445,7 +6980,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6455,7 +6991,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6465,7 +7002,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衝擊連技",
@@ -6475,7 +7013,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -6485,7 +7024,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -6495,7 +7035,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -6505,7 +7046,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "武裝擊潰",
@@ -6515,7 +7057,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 30,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "英豪衝擊",
@@ -6525,47 +7068,52 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 30,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "集能崩擊",
-          "modifier": "0%SBA",
+          "modifier": "    0%SBA",
           "multiplier": 17.5,
           "damageCap": 299999,
           "cooldown": 60,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "集能崩擊",
           "modifier": "100% SBA",
-          "multiplier": 38.33333333,
+          "multiplier": 38.333333333333336,
           "damageCap": 349999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "昇揚裂斬",
           "modifier": "First Hit",
-          "multiplier": 1.583333333,
+          "multiplier": 1.5833333333333333,
           "damageCap": 19999,
           "cooldown": 50,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "昇揚裂斬",
           "modifier": "Final Hit",
-          "multiplier": 6.666666667,
+          "multiplier": 6.666666666666667,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -6573,328 +7121,360 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "percival",
       "nameZh": "帕西瓦爾",
       "imageUrl": "https://i.imgur.com/rwPVg0q.png",
-      "warpathCondition": null,
+      "warpathCondition": "Schlacht",
       "warpathBonus": 0.3,
       "skillRows": [
         {
           "skill": "攻擊",
           "modifier": "1st Attack",
-          "multiplier": 1.309978627,
+          "multiplier": 1.3099786267699707,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "2nd Attack",
-          "multiplier": 2.201709858,
+          "multiplier": 2.201709858402351,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "3rd Attack",
-          "multiplier": 1.738244723,
+          "multiplier": 1.7382447234838365,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "4th Attack",
-          "multiplier": 2.997929468,
+          "multiplier": 2.997929468340903,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "Combo Finisher",
-          "multiplier": 5.192559444,
+          "multiplier": 5.19255944429602,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
           "modifier": null,
-          "multiplier": 0.9950574406,
+          "multiplier": 0.995057440555704,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
           "modifier": "1st Attack",
-          "multiplier": 1.094175795,
+          "multiplier": 1.0941757948169917,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
           "modifier": "2nd Attack",
-          "multiplier": 1.445631846,
+          "multiplier": 1.4456318461127438,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
           "modifier": "3rd Attack",
-          "multiplier": 0.8374298691,
+          "multiplier": 0.8374298690889661,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
           "modifier": "4th Attack",
-          "multiplier": 1.445631846,
+          "multiplier": 1.4456318461127438,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "征戰",
           "modifier": null,
-          "multiplier": 4.998397008,
+          "multiplier": 4.998397007747796,
           "damageCap": 44999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "征戰+",
           "modifier": "1st Swing",
-          "multiplier": 2.502805236,
+          "multiplier": 2.502805236441357,
           "damageCap": 44999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "征戰+",
           "modifier": "2nd Swing",
-          "multiplier": 5.613946033,
+          "multiplier": 5.613946032594176,
           "damageCap": 44999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "征戰++",
           "modifier": "Upward Swing",
-          "multiplier": 4.998397008,
+          "multiplier": 4.998397007747796,
           "damageCap": 79999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "征戰++",
           "modifier": "Downward Swing",
-          "multiplier": 8.404488378,
+          "multiplier": 8.404488378306171,
           "damageCap": 79999,
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊 (征戰)",
           "modifier": null,
-          "multiplier": 1.598049693,
+          "multiplier": 1.5980496927598182,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
           "modifier": null,
-          "multiplier": 6.008883249,
+          "multiplier": 6.008883248730965,
           "damageCap": 99999,
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "起手(奧義連結會跳過，也不會計入奧義總傷，可以無視)",
-          "multiplier": 1.002983347,
+          "multiplier": 1.0029833466916016,
           "damageCap": 99999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "1st Hit",
-          "multiplier": 1.483213109,
+          "multiplier": 1.483213108914418,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "2nd-10th Hit",
-          "multiplier": 0.3971301986,
+          "multiplier": 0.39713019859292903,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "11th Hit",
-          "multiplier": 6.004597471,
+          "multiplier": 6.0045974708344465,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "紅旋",
           "modifier": "1st Hit",
-          "multiplier": 6.035711105,
+          "multiplier": 6.0357111051741,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "紅旋",
           "modifier": "2nd-17th Hit",
-          "multiplier": 1.97785924,
+          "multiplier": 1.9778592404859605,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "熾炎強攻",
           "modifier": "1st Hit",
-          "multiplier": 2.98342083,
+          "multiplier": 2.9834208303161964,
           "damageCap": 84999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "熾炎強攻",
           "modifier": "2nd Hit",
-          "multiplier": 4.647950358,
+          "multiplier": 4.647950358033631,
           "damageCap": 84999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "熾炎強攻",
           "modifier": "3rd Hit",
-          "multiplier": 6.660330678,
+          "multiplier": 6.660330678252475,
           "damageCap": 84999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "熾炎強攻",
           "modifier": "4th Hit",
-          "multiplier": 8.82914957,
+          "multiplier": 8.829149569555073,
           "damageCap": 84999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威滅斬擊",
           "modifier": "1st-4th Hit",
-          "multiplier": 0.8005499154,
+          "multiplier": 0.8005499153976312,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威滅斬擊",
           "modifier": "5th Hit",
-          "multiplier": 5.798434856,
+          "multiplier": 5.798434856175973,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "王之威光",
           "modifier": "1st Hit",
-          "multiplier": 4.310760117,
+          "multiplier": 4.310760117467214,
           "damageCap": 54999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "王之威光",
           "modifier": "2nd Hit",
-          "multiplier": 8.560775203,
+          "multiplier": 8.560775203153915,
           "damageCap": 54999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "破滅烈炎",
           "modifier": null,
-          "multiplier": 3.897060303,
+          "multiplier": 3.8970603025183044,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -6902,7 +7482,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "siegfried",
       "nameZh": "齊格菲",
       "imageUrl": "https://i.imgur.com/czIrhY4.png",
-      "warpathCondition": null,
+      "warpathCondition": "Sp",
       "warpathBonus": 0.4,
       "skillRows": [
         {
@@ -6913,7 +7493,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6923,7 +7504,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6933,7 +7515,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6943,7 +7526,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6953,7 +7537,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6963,7 +7548,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6973,7 +7559,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6983,7 +7570,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -6993,7 +7581,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7003,7 +7592,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7013,7 +7603,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7023,7 +7614,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7033,7 +7625,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7043,7 +7636,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7053,7 +7647,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7063,7 +7658,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7073,7 +7669,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "精準複合技",
@@ -7083,7 +7680,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "精準複合技",
@@ -7093,7 +7691,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "精準複合技",
@@ -7103,7 +7702,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "精準複合技",
@@ -7113,17 +7713,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
           "modifier": "統馭之刃 (1 of 2)",
-          "multiplier": 2.458333333,
+          "multiplier": 2.4583333333333335,
           "damageCap": 54999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
@@ -7133,7 +7735,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
@@ -7143,37 +7746,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
           "modifier": "豪勢驅逐",
-          "multiplier": 9.166666667,
+          "multiplier": 9.166666666666668,
           "damageCap": 109999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
           "modifier": "昨日之影 (空放)",
-          "multiplier": 3.833333333,
+          "multiplier": 3.833333333333333,
           "damageCap": 64999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
           "modifier": "昨日之影 (1 of 2)",
-          "multiplier": 2.858333333,
+          "multiplier": 2.8583333333333334,
           "damageCap": 64999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "技能",
@@ -7183,7 +7790,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中",
@@ -7193,7 +7801,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中",
@@ -7203,7 +7812,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中",
@@ -7213,7 +7823,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中",
@@ -7223,7 +7834,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中",
@@ -7233,7 +7845,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中",
@@ -7243,7 +7856,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中",
@@ -7253,7 +7867,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -7263,37 +7878,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoLi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "起手(奧義連結會跳過，也不會計入奧義總傷，可以無視)",
-          "multiplier": 0.8333333333,
+          "multiplier": 0.8333333333333334,
           "damageCap": 99999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Schwarze Faenge (1 of 3)",
-          "multiplier": 1.666666667,
+          "multiplier": 1.6666666666666667,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Schwarze Faenge (2 of 3)",
-          "multiplier": 2.083333333,
+          "multiplier": 2.0833333333333335,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -7303,7 +7922,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -7322,7 +7942,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7332,7 +7953,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7342,7 +7964,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7352,7 +7975,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -7362,7 +7986,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大崩壞",
@@ -7372,7 +7997,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大崩壞",
@@ -7382,7 +8008,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大崩壞",
@@ -7392,7 +8019,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大崩壞",
@@ -7402,7 +8030,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大崩壞",
@@ -7412,7 +8041,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍1",
@@ -7422,7 +8052,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍1",
@@ -7432,7 +8063,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍1",
@@ -7442,7 +8074,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍1",
@@ -7452,7 +8085,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍1",
@@ -7462,7 +8096,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍1",
@@ -7472,7 +8107,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍2",
@@ -7482,7 +8118,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍2",
@@ -7492,7 +8129,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍2",
@@ -7502,7 +8140,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍2",
@@ -7512,7 +8151,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍2",
@@ -7522,7 +8162,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "長槍2",
@@ -7532,7 +8173,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "剪刀1",
@@ -7542,7 +8184,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "剪刀2",
@@ -7552,7 +8195,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鋸片1",
@@ -7562,7 +8206,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "鋸片2",
@@ -7572,7 +8217,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大錘1",
@@ -7582,7 +8228,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大錘2",
@@ -7592,7 +8239,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -7602,7 +8250,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoLiRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -7612,7 +8261,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoLiRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -7622,7 +8272,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "SbNc",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -7632,7 +8283,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -7642,17 +8294,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擬態人偶",
           "modifier": null,
           "multiplier": 10.1,
           "damageCap": 99999,
-          "cooldown": 29.54545455,
+          "cooldown": 29.545454545454543,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "亞歷山卓",
@@ -7662,7 +8316,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 30,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "亞歷山卓",
@@ -7672,7 +8327,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 30,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "高速列車",
@@ -7682,7 +8338,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 15,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "高速列車",
@@ -7692,17 +8349,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 15,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "盤蛇",
           "modifier": null,
-          "multiplier": 3.3,
+          "multiplier": 3.3000000000000003,
           "damageCap": 39999,
           "cooldown": 10,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "盤蛇",
@@ -7712,7 +8371,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 10,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "崩毀",
@@ -7722,7 +8382,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 60,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -7732,7 +8393,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -7742,7 +8404,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -7752,7 +8415,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -7762,7 +8426,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -7772,7 +8437,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -7782,7 +8448,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -7792,7 +8459,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -7802,7 +8470,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 0,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -7816,102 +8485,112 @@ const RELINK_DAMAGE_CALCULATOR = {
         {
           "skill": "攻擊",
           "modifier": "1st Attack",
-          "multiplier": 0.500203821,
+          "multiplier": 0.5002038210304013,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "2nd Attack",
-          "multiplier": 0.799743382,
+          "multiplier": 0.7997433819556996,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "3rd Attack",
-          "multiplier": 1.100307942,
+          "multiplier": 1.1003079416531605,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "4th Attack (1/2)",
-          "multiplier": 0.450893571,
+          "multiplier": 0.45089357104268,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "4th Attack (2/2)",
-          "multiplier": 1.003466595,
+          "multiplier": 1.0034665946335315,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "5th Attack (Spin)",
-          "multiplier": 0.500203821,
+          "multiplier": 0.5002038210304013,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "5th Attack (Slam)",
-          "multiplier": 2.200010805,
+          "multiplier": 2.200010804970286,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
           "modifier": "1st Hit",
-          "multiplier": 1.005375473,
+          "multiplier": 1.00537547271745,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
           "modifier": "2nd Hit",
-          "multiplier": 0.9032020114,
+          "multiplier": 0.9032020113867764,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中攻擊",
           "modifier": "1st Attack",
-          "multiplier": 1.099851432,
+          "multiplier": 1.099851431658563,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中攻擊",
@@ -7921,37 +8600,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中攻擊",
           "modifier": "3rd Attack (Spin)",
-          "multiplier": 0.500203821,
+          "multiplier": 0.5002038210304013,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中攻擊",
           "modifier": "3rd Attack (Slam)",
-          "multiplier": 1.401404646,
+          "multiplier": 1.4014046461372232,
           "damageCap": 3999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "突進攻擊",
           "modifier": "無反擊",
-          "multiplier": 1.705540549,
+          "multiplier": 1.7055405486523803,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "突進攻擊",
@@ -7961,77 +8644,85 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "1st Attack",
-          "multiplier": 0.799743382,
+          "multiplier": 0.7997433819556996,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "2nd Attack",
-          "multiplier": 0.899017288,
+          "multiplier": 0.899017287952458,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "3rd Attack",
-          "multiplier": 0.9992436521,
+          "multiplier": 0.9992436520799567,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "4th Attack",
-          "multiplier": 1.203317126,
+          "multiplier": 1.2033171258779,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "5th Attack",
-          "multiplier": 1.298612102,
+          "multiplier": 1.29861210156672,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "6th Attack",
-          "multiplier": 1.401404646,
+          "multiplier": 1.4014046461372232,
           "damageCap": 9999,
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "7th Attack",
-          "multiplier": 4.649858995,
+          "multiplier": 4.64985899513776,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -8041,7 +8732,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -8051,7 +8743,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -8061,477 +8754,525 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "1st-15th Hit",
-          "multiplier": 0.40228255,
+          "multiplier": 0.4022825499729876,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "16th Hit",
-          "multiplier": 0.9956705084,
+          "multiplier": 0.9956705084338796,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "17th Hit",
-          "multiplier": 2.997103668,
+          "multiplier": 2.9971036676871363,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空空漠漠",
           "modifier": "Flurry",
-          "multiplier": 0.608025304,
+          "multiplier": 0.6080253039774918,
           "damageCap": 7999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空空漠漠",
           "modifier": "Final Hit I",
-          "multiplier": 2.504276967,
+          "multiplier": 2.5042769674050063,
           "damageCap": 7999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空空漠漠",
           "modifier": "Final Hit II",
-          "multiplier": 1.544867639,
+          "multiplier": 1.5448676391139917,
           "damageCap": 7999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空空漠漠",
           "modifier": "Final Hit III",
-          "multiplier": 3.660023861,
+          "multiplier": 3.6600238609760503,
           "damageCap": 7999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "動天驚地",
           "modifier": "1st Hit",
-          "multiplier": 3.793557536,
+          "multiplier": 3.793557536466775,
           "damageCap": 69999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "動天驚地",
           "modifier": "2nd Hit(0 Shroud)",
-          "multiplier": 5.568128251,
+          "multiplier": 5.568128250760056,
           "damageCap": 69999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "動天驚地",
           "modifier": "2nd Hit(1 Shroud)",
-          "multiplier": 8.51658638,
+          "multiplier": 8.51658637973468,
           "damageCap": 74999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "動天驚地",
           "modifier": "2nd Hit(2 Shroud)",
-          "multiplier": 11.24214013,
+          "multiplier": 11.242140134461854,
           "damageCap": 79999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "動天驚地",
           "modifier": "2nd Hit(3 Shroud)",
-          "multiplier": 14.15942058,
+          "multiplier": 14.159420583468417,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "十起",
           "modifier": "1st Attack",
-          "multiplier": 1.0786962,
+          "multiplier": 1.0786962002521159,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "十起",
           "modifier": "2nd Attack",
-          "multiplier": 1.335830107,
+          "multiplier": 1.3358301068491507,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "十起",
           "modifier": "3rd Attack",
-          "multiplier": 1.63008734,
+          "multiplier": 1.6300873401764813,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "十起",
           "modifier": "4th Attack",
-          "multiplier": 2.738919278,
+          "multiplier": 2.738919277867819,
           "damageCap": 14999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "1st Attack(0 Shroud)",
-          "multiplier": 2.645895237,
+          "multiplier": 2.6458952368089323,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "2nd Hit(0 Shroud)",
-          "multiplier": 1.31758734,
+          "multiplier": 1.3175873401764813,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "3rd Attack(0 Shroud)",
-          "multiplier": 0.9876105509,
+          "multiplier": 0.9876105508533924,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "4th Attack(0 Shroud)",
-          "multiplier": 1.532683159,
+          "multiplier": 1.5326831592532566,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "5th Attack(0 Shroud)",
-          "multiplier": 2.738365898,
+          "multiplier": 2.7383658983132237,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "Final Attack(0 Shroud)",
-          "multiplier": 5.233169758,
+          "multiplier": 5.233169758088721,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "1st Attack(1 Shroud)",
-          "multiplier": 3.747604255,
+          "multiplier": 3.747604255100203,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "2nd Attack(1 Shroud)",
-          "multiplier": 1.870546166,
+          "multiplier": 1.8705461655218545,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "3rd Attack(1 Shroud)",
-          "multiplier": 1.313302333,
+          "multiplier": 1.3133023333590594,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "4th Attack(1 Shroud)",
-          "multiplier": 1.964028453,
+          "multiplier": 1.964028453088421,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "5th Attack(1 Shroud)",
-          "multiplier": 3.520474776,
+          "multiplier": 3.5204747755396055,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "Final Attack(1 Shroud)",
-          "multiplier": 7.07448998,
+          "multiplier": 7.074489979676366,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "1st Attack(2 Shroud)",
-          "multiplier": 4.646523115,
+          "multiplier": 4.646523114918577,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "2nd Attack(2 Shroud)",
-          "multiplier": 2.307697255,
+          "multiplier": 2.307697255023025,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "3rd Attack(2 Shroud)",
-          "multiplier": 1.651263152,
+          "multiplier": 1.6512631524787116,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "4th Attack(2 Shroud)",
-          "multiplier": 2.756441177,
+          "multiplier": 2.756441177227239,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "5th Attack(2 Shroud)",
-          "multiplier": 4.697798487,
+          "multiplier": 4.69779848730416,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "Final Attack(2 Shroud)",
-          "multiplier": 8.925034087,
+          "multiplier": 8.925034087108642,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "1st Attack(3 Shroud)",
-          "multiplier": 6.344784672,
+          "multiplier": 6.344784672377865,
           "damageCap": 49999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "2nd Attack(3 Shroud)",
-          "multiplier": 3.171403488,
+          "multiplier": 3.171403488461835,
           "damageCap": 49999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "3rd Attack(3 Shroud)",
-          "multiplier": 2.353280723,
+          "multiplier": 2.3532807234184867,
           "damageCap": 49999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "4th Attack(3 Shroud)",
-          "multiplier": 3.541940007,
+          "multiplier": 3.5419400066887916,
           "damageCap": 49999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "5th Attack(3 Shroud)",
-          "multiplier": 6.24041702,
+          "multiplier": 6.240417020400813,
           "damageCap": 49999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃空",
           "modifier": "Final Attack(3 Shroud)",
-          "multiplier": 12.36168995,
+          "multiplier": 12.361689948805022,
           "damageCap": 49999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "竹篦返",
           "modifier": "1st Attack",
-          "multiplier": 1.582461432,
+          "multiplier": 1.5824614322588417,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "竹篦返",
           "modifier": "2nd Attack",
-          "multiplier": 1.415113677,
+          "multiplier": 1.4151136772915582,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "竹篦返",
           "modifier": "3rd Attack",
-          "multiplier": 1.677584564,
+          "multiplier": 1.6775845638993918,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "竹篦返",
           "modifier": "4th Attack",
-          "multiplier": 1.999857434,
+          "multiplier": 1.9998574344198332,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "竹篦返",
           "modifier": "5th Attack",
-          "multiplier": 3.963060883,
+          "multiplier": 3.9630608830061838,
           "damageCap": 29999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "竹篦返",
           "modifier": "1st Attack(空放)",
-          "multiplier": 0.8009409328,
+          "multiplier": 0.8009409328291014,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "竹篦返",
           "modifier": "2nd Attack(空放)",
-          "multiplier": 1.987664326,
+          "multiplier": 1.9876643255897712,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -8550,7 +9291,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -8560,7 +9302,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -8570,7 +9313,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -8580,7 +9324,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8590,7 +9335,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8600,7 +9346,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8610,7 +9357,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8620,7 +9368,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8630,7 +9379,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8640,7 +9390,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8650,7 +9401,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8660,7 +9412,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空連技",
@@ -8670,17 +9423,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空終擊",
           "modifier": "0 loops big",
           "multiplier": 7.82,
-          "damageCap": 59998.93617,
+          "damageCap": 59998.936170212764,
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空終擊",
@@ -8690,7 +9445,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空終擊",
@@ -8700,7 +9456,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空終擊",
@@ -8710,7 +9467,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空終擊",
@@ -8720,7 +9478,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "浮空終擊",
@@ -8730,7 +9489,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "亞爾貝斯揮擊",
@@ -8740,7 +9500,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "亞爾貝斯揮擊",
@@ -8750,7 +9511,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "亞爾貝斯揮擊",
@@ -8760,7 +9522,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "亞爾貝斯揮擊",
@@ -8770,17 +9533,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSp",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "狂詩曲",
           "modifier": "Rhapsody",
           "multiplier": 2.2,
-          "damageCap": 22998.82353,
+          "damageCap": 22998.823529411766,
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -8790,7 +9555,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -8800,7 +9566,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -8810,7 +9577,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -8820,7 +9588,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -8830,7 +9599,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -8840,137 +9610,151 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
           "modifier": null,
           "multiplier": 6.1,
-          "damageCap": 99998.82353,
+          "damageCap": 99998.82352941176,
           "cooldown": null,
           "classification": "NoLi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "起手(奧義連結會跳過，也不會計入奧義總傷，可以無視)",
           "multiplier": 0.5,
-          "damageCap": 99998.7013,
+          "damageCap": 99998.7012987013,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "1st hit",
-          "multiplier": 3.041666667,
-          "damageCap": 39998.7013,
+          "multiplier": 3.0416666666666665,
+          "damageCap": 39998.7012987013,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "2nd hit",
-          "multiplier": 10.08333333,
+          "multiplier": 10.083333333333334,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "3rd-10th hits",
-          "multiplier": 0.2083333333,
+          "multiplier": 0.20833333333333334,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "total",
-          "multiplier": 14.79166667,
-          "damageCap": 479984.4156,
+          "multiplier": 14.791666666666668,
+          "damageCap": 479984.4155844156,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "亞爾貝斯之槍",
           "modifier": null,
-          "multiplier": 4.944243056,
-          "damageCap": 44998.7013,
+          "multiplier": 4.944243055555556,
+          "damageCap": 44998.7012987013,
           "cooldown": 15,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "無限奇擊",
           "modifier": "per hit",
-          "multiplier": 0.8333333333,
-          "damageCap": 6998.701299,
+          "multiplier": 0.8333333333333334,
+          "damageCap": 6998.701298701299,
           "cooldown": 18,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "無限奇擊",
           "modifier": "total",
-          "multiplier": 4.166666667,
-          "damageCap": 34993.50649,
+          "multiplier": 4.166666666666667,
+          "damageCap": 34993.506493506495,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "狂努之雨",
           "modifier": "per hit",
           "multiplier": 1.5,
-          "damageCap": 14998.7013,
+          "damageCap": 14998.701298701297,
           "cooldown": 48,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "狂努之雨",
           "modifier": "total",
-          "multiplier": 9,
-          "damageCap": 89992.20779,
+          "multiplier": 9.000000000000002,
+          "damageCap": 89992.20779220777,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "斷翼輪斬",
           "modifier": "1st hit",
-          "multiplier": 4.041666667,
+          "multiplier": 4.041666666666667,
           "damageCap": 69999,
           "cooldown": 133,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "斷翼輪斬",
           "modifier": "2nd",
-          "multiplier": 7.958333333,
+          "multiplier": 7.958333333333334,
           "damageCap": 69999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "斷翼輪斬",
@@ -8980,37 +9764,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "千炎",
           "modifier": null,
-          "multiplier": 3.542409722,
-          "damageCap": 29998.7013,
+          "multiplier": 3.5424097222222217,
+          "damageCap": 29998.701298701297,
           "cooldown": 70,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "千炎",
-          "modifier": "burn",
-          "multiplier": 2,
-          "damageCap": "1.5% of enemy's max HP",
-          "cooldown": null,
-          "classification": null,
-          "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威光領域",
           "modifier": "1st",
-          "multiplier": 1.666666667,
-          "damageCap": 54998.7013,
+          "multiplier": 1.6666666666666667,
+          "damageCap": 54998.7012987013,
           "cooldown": 30,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威光領域",
@@ -9020,27 +9797,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威光領域",
           "modifier": "3rd (jump)",
           "multiplier": 2,
-          "damageCap": 14998.7013,
+          "damageCap": 14998.701298701297,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "威光領域",
           "modifier": "空放",
-          "multiplier": 3.5,
-          "damageCap": 14998.7013,
+          "multiplier": 3.5000000000000004,
+          "damageCap": 14998.701298701297,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -9059,7 +9839,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -9069,7 +9850,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -9079,7 +9861,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -9089,7 +9872,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -9099,7 +9883,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -9109,7 +9894,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -9119,7 +9905,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -9129,7 +9916,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -9139,7 +9927,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -9149,7 +9938,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -9159,7 +9949,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -9169,7 +9960,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -9179,7 +9971,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -9189,7 +9982,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -9199,7 +9993,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -9209,7 +10004,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -9219,7 +10015,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -9229,7 +10026,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -9239,7 +10037,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "漆黑奔騰",
@@ -9249,7 +10048,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -9259,7 +10059,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -9269,7 +10070,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -9279,7 +10081,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -9289,7 +10092,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -9299,7 +10103,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -9309,7 +10114,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Li",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -9319,7 +10125,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -9329,57 +10136,63 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "起手(奧義連結會跳過，也不會計入奧義總傷，可以無視)",
-          "multiplier": 0.9428606388,
+          "multiplier": 0.9428606387930563,
           "damageCap": 99999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Second Hit",
-          "multiplier": 1.885056573,
+          "multiplier": 1.8850565732326874,
           "damageCap": 11999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Multi Hits",
-          "multiplier": 0.1890983517,
+          "multiplier": 0.1890983516784404,
           "damageCap": 11999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Final Hit",
-          "multiplier": 1.885056573,
+          "multiplier": 1.8850565732326874,
           "damageCap": 11999,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "恐懼營集",
           "modifier": "Regular",
-          "multiplier": 5.416666667,
+          "multiplier": 5.416666666666667,
           "damageCap": 64998.91304347826,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "恐懼營集",
@@ -9389,7 +10202,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "恐懼營集",
@@ -9399,7 +10213,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大鐮格羅諾斯",
@@ -9409,7 +10224,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大鐮格羅諾斯",
@@ -9419,7 +10235,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "大鐮格羅諾斯",
@@ -9429,17 +10246,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "覆滅之途",
           "modifier": "Regular",
-          "multiplier": 12.04166667,
+          "multiplier": 12.041666666666666,
           "damageCap": 99998.91304347826,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "月食",
@@ -9449,7 +10268,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殘暴暗影",
@@ -9459,7 +10279,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殘暴暗影",
@@ -9469,27 +10290,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殘暴暗影",
           "modifier": "Final Hit",
-          "multiplier": 6.958333333,
+          "multiplier": 6.958333333333333,
           "damageCap": 49998.91304347826,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "獄怒",
           "modifier": "Regular (Uncharged)",
-          "multiplier": 4.166666667,
+          "multiplier": 4.166666666666667,
           "damageCap": 299998.9130434783,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "獄怒",
@@ -9499,7 +10323,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -9513,402 +10338,431 @@ const RELINK_DAMAGE_CALCULATOR = {
         {
           "skill": "攻擊",
           "modifier": "First Hit",
-          "multiplier": 0.3459010723,
-          "damageCap": 3498.850575,
+          "multiplier": 0.3459010722933241,
+          "damageCap": 3498.8505747126437,
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "Second Hit",
-          "multiplier": 0.3459010723,
-          "damageCap": 3498.850575,
+          "multiplier": 0.3459010722933241,
+          "damageCap": 3498.8505747126437,
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
           "modifier": "Third Hit",
-          "multiplier": 0.3459010723,
-          "damageCap": 3498.850575,
+          "multiplier": 0.3459010722933241,
+          "damageCap": 3498.8505747126437,
           "cooldown": null,
           "classification": "NoRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "蓄力攻擊",
           "modifier": "First Hit",
-          "multiplier": 1.0160844,
-          "damageCap": 9998.850575,
+          "multiplier": 1.0160843998616396,
+          "damageCap": 9998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "蓄力攻擊",
           "modifier": "Second Hit",
-          "multiplier": 1.0160844,
-          "damageCap": 9998.850575,
+          "multiplier": 1.0160843998616396,
+          "damageCap": 9998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "蓄力攻擊",
           "modifier": "Third Hit",
-          "multiplier": 1.0160844,
-          "damageCap": 9998.850575,
+          "multiplier": 1.0160843998616396,
+          "damageCap": 9998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "XY",
-          "multiplier": 0.899342788,
-          "damageCap": 12998.85057,
+          "multiplier": 0.8993427879626427,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "XXY",
-          "multiplier": 0.1988931166,
-          "damageCap": 3498.850575,
+          "multiplier": 0.19889311656866138,
+          "damageCap": 3498.8505747126437,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "XXXY",
-          "multiplier": 1.193358699,
-          "damageCap": 15998.85057,
+          "multiplier": 1.1933586994119683,
+          "damageCap": 15998.850574712644,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "XY Charged",
-          "multiplier": 1.32595411,
-          "damageCap": 19998.85057,
+          "multiplier": 1.3259541104577426,
+          "damageCap": 19998.850574712644,
           "cooldown": null,
           "classification": "NoRaFiCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "XXY Charged",
-          "multiplier": 0.4900265191,
-          "damageCap": 3498.850575,
+          "multiplier": 0.4900265190822092,
+          "damageCap": 3498.8505747126437,
           "cooldown": null,
           "classification": "NoRaFiCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終擊",
           "modifier": "XXXY Charged",
-          "multiplier": 2.7095584,
-          "damageCap": 34998.85057,
+          "multiplier": 2.709558399631039,
+          "damageCap": 34998.85057471265,
           "cooldown": null,
           "classification": "NoRaFiCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衍生終擊",
           "modifier": "XYY",
-          "multiplier": 1.591144933,
-          "damageCap": 12998.85057,
+          "multiplier": 1.591144932549291,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衍生終擊",
           "modifier": "XXYY",
-          "multiplier": 0.1902455898,
-          "damageCap": 3498.850575,
+          "multiplier": 0.19024558976132827,
+          "damageCap": 3498.8505747126437,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衍生終擊",
           "modifier": "XXXYY",
-          "multiplier": 3.25147008,
-          "damageCap": 15998.85057,
+          "multiplier": 3.2514700795572464,
+          "damageCap": 15998.850574712644,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衍生終擊",
           "modifier": "XYCharged Y",
-          "multiplier": 2.040816327,
-          "damageCap": 19998.85057,
+          "multiplier": 2.0408163265306123,
+          "damageCap": 19998.850574712644,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衍生終擊",
           "modifier": "XXYCharged Y",
-          "multiplier": 0.3459010723,
-          "damageCap": 3498.850575,
+          "multiplier": 0.3459010722933241,
+          "damageCap": 3498.8505747126437,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衍生終擊",
           "modifier": "XXXYCharged Y",
-          "multiplier": 3.804911795,
-          "damageCap": 34998.85057,
+          "multiplier": 3.804911795226565,
+          "damageCap": 34998.85057471265,
           "cooldown": null,
           "classification": "NoRaFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "I",
-          "multiplier": 0.9079903148,
-          "damageCap": 12998.85057,
+          "multiplier": 0.9079903147699758,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "II",
-          "multiplier": 0.9079903148,
-          "damageCap": 12998.85057,
+          "multiplier": 0.9079903147699758,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "III",
-          "multiplier": 0.9079903148,
-          "damageCap": 12998.85057,
+          "multiplier": 0.9079903147699758,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "IV",
-          "multiplier": 1.080940851,
-          "damageCap": 12998.85057,
+          "multiplier": 1.0809408509166378,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "V",
-          "multiplier": 1.080940851,
-          "damageCap": 12998.85057,
+          "multiplier": 1.0809408509166378,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "VI",
-          "multiplier": 1.080940851,
-          "damageCap": 12998.85057,
+          "multiplier": 1.0809408509166378,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "VII",
-          "multiplier": 1.3547792,
-          "damageCap": 12998.85057,
+          "multiplier": 1.3547791998155194,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "VIII",
-          "multiplier": 1.3547792,
-          "damageCap": 12998.85057,
+          "multiplier": 1.3547791998155194,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "IX",
-          "multiplier": 1.3547792,
-          "damageCap": 12998.85057,
+          "multiplier": 1.3547791998155194,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多重鎖定",
           "modifier": "X",
-          "multiplier": 1.3547792,
-          "damageCap": 12998.85057,
+          "multiplier": 1.3547791998155194,
+          "damageCap": 12998.850574712644,
           "cooldown": null,
           "classification": "NoRaCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "腐化",
           "modifier": "Per hit",
-          "multiplier": 0.5321554958,
-          "damageCap": 3998.850575,
+          "multiplier": 0.5321554958358832,
+          "damageCap": 3998.8505747126437,
           "cooldown": 180,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "致命一擊",
           "modifier": "0 Debuffs",
-          "multiplier": 18.1598063,
-          "damageCap": 199998.8506,
+          "multiplier": 18.159806295399516,
+          "damageCap": 199998.85057471265,
           "cooldown": 45,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "致命一擊",
           "modifier": "1 Debuffs",
-          "multiplier": 20.75406434,
-          "damageCap": 199998.8506,
+          "multiplier": 20.754064337599445,
+          "damageCap": 199998.85057471265,
           "cooldown": 45,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "致命一擊",
           "modifier": "2 Debuffs",
-          "multiplier": 25.0113083,
-          "damageCap": 199998.8506,
+          "multiplier": 25.011308304286516,
+          "damageCap": 199998.85057471265,
           "cooldown": 45,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "致命一擊",
           "modifier": "3 Debuffs",
-          "multiplier": 25.94258042,
-          "damageCap": 199998.8506,
+          "multiplier": 25.94258042199931,
+          "damageCap": 199998.85057471265,
           "cooldown": 45,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "致命一擊",
           "modifier": "4 Debuffs",
-          "multiplier": 26.87385254,
-          "damageCap": 199998.8506,
+          "multiplier": 26.873852539712104,
+          "damageCap": 199998.85057471265,
           "cooldown": 45,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殺戮之雨",
           "modifier": "Per hit",
-          "multiplier": 2.594258042,
-          "damageCap": 19998.85057,
+          "multiplier": 2.5942580421999306,
+          "damageCap": 19998.850574712644,
           "cooldown": 40,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "散環",
           "modifier": "Per hit",
-          "multiplier": 1.037703217,
-          "damageCap": 7998.850575,
+          "multiplier": 1.0377032168799722,
+          "damageCap": 7998.850574712644,
           "cooldown": 35,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "多導狙射",
           "modifier": "Initial Hit",
-          "multiplier": 2.334832238,
-          "damageCap": 19998.85057,
+          "multiplier": 2.3348322379799376,
+          "damageCap": 19998.850574712644,
           "cooldown": 15,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "二王的鬥諍",
           "modifier": "Initial Hit",
-          "multiplier": 53.44171567,
-          "damageCap": 599998.8506,
+          "multiplier": 53.441715669318576,
+          "damageCap": 599998.8505747126,
           "cooldown": 180,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "二王的鬥諍",
           "modifier": "Follow-up",
-          "multiplier": 4.73884469,
-          "damageCap": 49998.85057,
+          "multiplier": 4.73884469041854,
+          "damageCap": 49998.85057471265,
           "cooldown": 180,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "殲雷鳴箭",
-          "modifier": "(額外追加傷害)",
-          "multiplier": 0,
-          "damageCap": null,
-          "cooldown": null,
-          "classification": null,
-          "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殲雷鳴箭",
@@ -9918,7 +10772,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Fl",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殲雷鳴箭",
@@ -9928,7 +10783,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Fl",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殲雷鳴箭",
@@ -9938,7 +10794,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Fl",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殲雷鳴箭",
@@ -9948,7 +10805,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Fl",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殲雷鳴箭",
@@ -9958,7 +10816,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Fl",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "殲雷鳴箭",
@@ -9968,17 +10827,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Fl",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
           "modifier": null,
-          "multiplier": 6.281134936,
-          "damageCap": 99998.91304,
+          "multiplier": 6.281134936105697,
+          "damageCap": 99998.91304347826,
           "cooldown": null,
           "classification": "RaNoLi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -9988,117 +10849,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Initial hits",
-          "multiplier": 0.7147498376,
-          "damageCap": 24998.94737,
+          "multiplier": 0.7147498375568551,
+          "damageCap": 24998.947368421053,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Opener",
-          "multiplier": 0.9529997834,
-          "damageCap": 24998.94737,
+          "multiplier": 0.9529997834091402,
+          "damageCap": 24998.947368421053,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
           "modifier": "Opener",
-          "multiplier": 4.873294347,
-          "damageCap": 24998.94737,
+          "multiplier": 4.8732943469785575,
+          "damageCap": 24998.947368421053,
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "Combo Details",
-          "modifier": "Modifier",
-          "multiplier": "Ultrasight",
-          "damageCap": "Cast Time",
-          "cooldown": "Ultrasight/s",
-          "classification": "DPS",
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "Combo",
-          "modifier": "XYY",
-          "multiplier": 1.8,
-          "damageCap": 3.826666667,
-          "cooldown": 0.4703832753,
-          "classification": 12281.44599,
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "Combo",
-          "modifier": "XYY",
-          "multiplier": 1.7,
-          "damageCap": 3.466666667,
-          "cooldown": 0.4903846154,
-          "classification": 10527.98077,
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "Combo",
-          "modifier": "XXYY",
-          "multiplier": 2.6,
-          "damageCap": 3.86,
-          "cooldown": 0.6735751295,
-          "classification": 31338.51468,
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "Combo",
-          "modifier": "XXYY",
-          "multiplier": 2.5,
-          "damageCap": 3.5,
-          "cooldown": 0.7142857143,
-          "classification": 32704.7619,
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "Combo",
-          "modifier": "XXXYY",
-          "multiplier": 3.8,
-          "damageCap": 4.406666667,
-          "cooldown": 0.8623298033,
-          "classification": 25073.55626,
-          "contribution": "8 arrows. 3.68s without dodge cancel",
-          "notes": null
-        },
-        {
-          "skill": "Combo",
-          "modifier": "XXXYY",
-          "multiplier": 4,
-          "damageCap": 4.766666667,
-          "cooldown": 0.8391608392,
-          "classification": 25907.1618,
-          "contribution": null,
-          "notes": null
-        },
-        {
-          "skill": "Combo",
-          "modifier": "XXXYY",
-          "multiplier": 4.1,
-          "damageCap": 5.126666667,
-          "cooldown": 0.799739922,
-          "classification": 25355.81364,
-          "contribution": "5.3s without dodge cancel",
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -10117,7 +10902,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10127,7 +10913,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10137,7 +10924,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10147,7 +10935,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10157,7 +10946,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10167,7 +10957,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10177,7 +10968,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10187,7 +10979,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10197,7 +10990,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -10207,7 +11001,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10217,7 +11012,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10227,7 +11023,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10237,7 +11034,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10247,7 +11045,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10257,7 +11056,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10267,7 +11067,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10277,7 +11078,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10287,7 +11089,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10297,7 +11100,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10307,7 +11111,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10317,7 +11122,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10327,7 +11133,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10337,7 +11144,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10347,7 +11155,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10357,7 +11166,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10367,7 +11177,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10377,7 +11188,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神近戰",
@@ -10387,7 +11199,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神遠程",
@@ -10397,7 +11210,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -10407,7 +11221,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -10417,7 +11232,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -10427,7 +11243,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -10437,7 +11254,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -10447,7 +11265,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -10457,7 +11276,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -10467,7 +11287,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段A",
@@ -10477,7 +11298,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10487,7 +11309,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10497,7 +11320,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10507,7 +11331,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10517,7 +11342,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10527,7 +11353,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10537,7 +11364,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10547,7 +11375,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10557,7 +11386,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10567,7 +11397,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段B",
@@ -10577,7 +11408,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10587,7 +11419,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10597,7 +11430,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10607,7 +11441,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10617,7 +11452,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10627,7 +11463,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10637,7 +11474,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10647,7 +11485,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10657,7 +11496,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10667,7 +11507,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10677,7 +11518,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10687,7 +11529,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10697,7 +11540,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段C",
@@ -10707,7 +11551,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10717,7 +11562,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10727,7 +11573,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10737,7 +11584,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10747,7 +11595,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10757,7 +11606,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10767,7 +11617,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10777,7 +11628,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10787,7 +11639,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10797,7 +11650,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10807,7 +11661,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10817,7 +11672,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10827,7 +11683,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10837,7 +11694,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連段D",
@@ -10847,7 +11705,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神終擊",
@@ -10857,7 +11716,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神終擊",
@@ -10867,7 +11727,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "劍神終擊",
@@ -10877,7 +11738,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -10887,7 +11749,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -10897,7 +11760,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -10907,7 +11771,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -10917,7 +11782,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -10927,7 +11793,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -10937,7 +11804,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -10947,7 +11815,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -10957,7 +11826,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoLi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -10967,7 +11837,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -10977,7 +11848,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -10987,7 +11859,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "橫掃千星",
@@ -10997,7 +11870,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 15,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "橫掃千星",
@@ -11007,7 +11881,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "橫掃千星",
@@ -11017,7 +11892,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "橫掃千星",
@@ -11027,7 +11903,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "橫掃千星",
@@ -11037,7 +11914,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "橫掃千星",
@@ -11047,7 +11925,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "橫掃千星",
@@ -11057,7 +11936,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "滅裂星劍",
@@ -11067,7 +11947,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 40,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "滅裂星劍",
@@ -11077,7 +11958,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "滅裂星劍",
@@ -11087,7 +11969,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "滅裂星劍",
@@ -11097,7 +11980,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "滅裂星劍",
@@ -11107,7 +11991,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "滅裂星劍",
@@ -11117,7 +12002,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "滅裂星劍",
@@ -11127,7 +12013,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "滅裂星劍",
@@ -11137,7 +12024,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "無限創制",
@@ -11147,7 +12035,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 30,
           "classification": "SkRa",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "無限創制",
@@ -11157,7 +12046,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空魂劍欲",
@@ -11167,7 +12057,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 120,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空魂劍欲",
@@ -11177,7 +12068,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃滅震擊",
@@ -11187,7 +12079,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": 20,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "閃滅震擊",
@@ -11197,7 +12090,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     },
@@ -11205,7 +12099,7 @@ const RELINK_DAMAGE_CALCULATOR = {
       "id": "id",
       "nameZh": "伊度",
       "imageUrl": "https://i.imgur.com/vMskV4b.png",
-      "warpathCondition": null,
+      "warpathCondition": "S2",
       "warpathBonus": 0.1,
       "skillRows": [
         {
@@ -11216,7 +12110,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -11226,7 +12121,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -11236,7 +12132,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊",
@@ -11246,7 +12143,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "突進攻擊",
@@ -11256,7 +12154,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "突進攻擊",
@@ -11266,7 +12165,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊",
@@ -11276,7 +12176,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊",
@@ -11286,7 +12187,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊",
@@ -11296,7 +12198,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊",
@@ -11306,7 +12209,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoCh",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊",
@@ -11316,7 +12220,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊",
@@ -11326,7 +12231,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -11336,7 +12242,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -11346,7 +12253,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技",
@@ -11356,7 +12264,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "No",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊",
@@ -11366,7 +12275,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFi",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衆神意志．重連刃",
@@ -11376,37 +12286,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "縛破",
           "modifier": "Melee Hit",
-          "multiplier": 3.333333333,
+          "multiplier": 3.3333333333333335,
           "damageCap": 59999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "縛破",
           "modifier": "Projectile",
-          "multiplier": 6.666666667,
+          "multiplier": 6.666666666666667,
           "damageCap": 59999,
           "cooldown": null,
           "classification": "RaSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "諸神黃昏．型態",
           "modifier": null,
-          "multiplier": 3.083333333,
+          "multiplier": 3.0833333333333335,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "召禍",
@@ -11416,67 +12330,74 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放",
           "modifier": "Uncharged",
-          "multiplier": 3.333333333,
+          "multiplier": 3.3333333333333335,
           "damageCap": 199999,
           "cooldown": null,
           "classification": "ChSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放",
           "modifier": "1 Charge",
-          "multiplier": 7.916666667,
+          "multiplier": 7.916666666666667,
           "damageCap": 279999,
           "cooldown": null,
           "classification": "ChSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放",
           "modifier": "2 Charge",
-          "multiplier": 18.33333333,
+          "multiplier": 18.333333333333336,
           "damageCap": 359999,
           "cooldown": null,
           "classification": "ChSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放",
           "modifier": "Max Charge",
-          "multiplier": 39.16666667,
+          "multiplier": 39.16666666666667,
           "damageCap": 439999,
           "cooldown": null,
           "classification": "ChSk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲",
           "modifier": "1st Hit",
-          "multiplier": 1.583333333,
+          "multiplier": 1.5833333333333333,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲",
           "modifier": "2nd Hit",
-          "multiplier": 1.833333333,
+          "multiplier": 1.8333333333333335,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲",
@@ -11486,17 +12407,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲",
           "modifier": "4th Hit",
-          "multiplier": 4.166666667,
+          "multiplier": 4.166666666666667,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "龍人化",
@@ -11506,7 +12429,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "龍人化",
@@ -11516,7 +12440,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (龍人化)",
@@ -11526,7 +12451,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (龍人化)",
@@ -11536,7 +12462,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (龍人化)",
@@ -11546,7 +12473,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (龍人化)",
@@ -11556,7 +12484,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "光彈射擊 (龍人化)",
@@ -11566,7 +12495,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "光彈射擊 (龍人化)",
@@ -11576,7 +12506,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "光彈射擊 (龍人化)",
@@ -11586,7 +12517,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "光彈射擊 (龍人化)",
@@ -11596,7 +12528,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "光彈射擊 (龍人化)",
@@ -11606,7 +12539,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaFiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊 (龍人化)",
@@ -11616,7 +12550,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (龍人化)",
@@ -11626,7 +12561,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (龍人化)",
@@ -11636,7 +12572,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (龍人化)",
@@ -11646,7 +12583,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊 (龍人化)",
@@ -11656,7 +12594,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊 (龍人化)",
@@ -11666,27 +12605,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衆神意志．重連刃 (龍人化)",
           "modifier": "1st Hit",
-          "multiplier": 3.333333333,
+          "multiplier": 3.3333333333333335,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "RaSkS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衆神意志．重連刃 (龍人化)",
           "modifier": "2nd Hit",
-          "multiplier": 3.333333333,
+          "multiplier": 3.3333333333333335,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "RaSkS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衆神意志．重連刃 (龍人化)",
@@ -11696,27 +12638,30 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "RaSkS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "召禍 (龍人化)",
           "modifier": "Each Hit",
-          "multiplier": 16.66666667,
+          "multiplier": 16.666666666666668,
           "damageCap": 99999,
           "cooldown": null,
           "classification": "RaSk2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (龍人化)",
           "modifier": "Each Hit",
-          "multiplier": 6.416666667,
+          "multiplier": 6.416666666666667,
           "damageCap": 54999,
           "cooldown": null,
           "classification": "Sk",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神威一體 (龍人化)",
@@ -11726,7 +12671,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神威一體 (龍人化)",
@@ -11736,7 +12682,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神威一體 (龍人化)",
@@ -11746,7 +12693,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoRaSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (神威一體)",
@@ -11756,7 +12704,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (神威一體)",
@@ -11766,7 +12715,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (神威一體)",
@@ -11776,7 +12726,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "攻擊 (神威一體)",
@@ -11786,7 +12737,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "突進攻擊 (神威一體)",
@@ -11796,7 +12748,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "突進攻擊 (神威一體)",
@@ -11806,7 +12759,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊 (神威一體)",
@@ -11816,7 +12770,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊 (神威一體)",
@@ -11826,7 +12781,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊 (神威一體)",
@@ -11836,7 +12792,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊 (神威一體)",
@@ -11846,7 +12803,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連續斬擊 (神威一體)",
@@ -11856,7 +12814,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoChFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終結 (神威一體)",
@@ -11866,7 +12825,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終結 (神威一體)",
@@ -11876,7 +12836,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終結 (神威一體)",
@@ -11886,7 +12847,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終結 (神威一體)",
@@ -11896,7 +12858,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終結 (神威一體)",
@@ -11906,7 +12869,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連技終結 (神威一體)",
@@ -11916,7 +12880,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "擊飛攻擊 (神威一體)",
@@ -11926,7 +12891,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (神威一體)",
@@ -11936,7 +12902,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (神威一體)",
@@ -11946,7 +12913,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "空中連技 (神威一體)",
@@ -11956,7 +12924,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "落下攻擊 (神威一體)",
@@ -11966,17 +12935,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoFiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衆神意志．重連刃 (神威一體)",
           "modifier": "Each Hit",
-          "multiplier": 3.666666667,
+          "multiplier": 3.666666666666667,
           "damageCap": 39999,
           "cooldown": null,
           "classification": "RaSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "衆神意志．重連刃 (神威一體)",
@@ -11986,87 +12957,96 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "RaSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "縛破 (神威一體)",
           "modifier": "Melee Hit",
-          "multiplier": 5.083333333,
+          "multiplier": 5.083333333333333,
           "damageCap": 79999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "縛破 (神威一體)",
           "modifier": "Projectile",
-          "multiplier": 10.83333333,
+          "multiplier": 10.833333333333334,
           "damageCap": 79999,
           "cooldown": null,
           "classification": "RaSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "縛破 (神威一體)",
           "modifier": "Melee Hit",
-          "multiplier": 6.666666667,
+          "multiplier": 6.666666666666667,
           "damageCap": 59999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "縛破 (神威一體)",
           "modifier": "Projectile",
-          "multiplier": 12.91666667,
+          "multiplier": 12.916666666666668,
           "damageCap": 59999,
           "cooldown": null,
           "classification": "RaSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "諸神黃昏．型態 (神威一體)",
           "modifier": null,
-          "multiplier": 2.833333333,
+          "multiplier": 2.8333333333333335,
           "damageCap": 24999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "諸神黃昏．型態 (神威一體)",
           "modifier": null,
-          "multiplier": 3.708333333,
+          "multiplier": 3.7083333333333335,
           "damageCap": 19999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "召禍 (神威一體)",
           "modifier": null,
-          "multiplier": 16.66666667,
+          "multiplier": 16.666666666666668,
           "damageCap": 134999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "召禍 (神威一體)",
           "modifier": null,
-          "multiplier": 21.66666667,
+          "multiplier": 21.666666666666668,
           "damageCap": 99999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放 (神威一體)",
@@ -12076,17 +13056,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "ChSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放 (神威一體)",
           "modifier": "1 Charge",
-          "multiplier": 11.66666667,
+          "multiplier": 11.666666666666668,
           "damageCap": 419999,
           "cooldown": null,
           "classification": "ChSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放 (神威一體)",
@@ -12096,37 +13078,41 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "ChSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放 (神威一體)",
           "modifier": "Max Charge",
-          "multiplier": 46.66666667,
+          "multiplier": 46.66666666666667,
           "damageCap": 649999,
           "cooldown": null,
           "classification": "ChSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放 (神威一體)",
           "modifier": "Uncharged",
-          "multiplier": 6.666666667,
+          "multiplier": 6.666666666666667,
           "damageCap": 199999,
           "cooldown": null,
           "classification": "ChSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放 (神威一體)",
           "modifier": "1 Charge",
-          "multiplier": 15.41666667,
+          "multiplier": 15.416666666666668,
           "damageCap": 199999,
           "cooldown": null,
           "classification": "ChSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放 (神威一體)",
@@ -12136,17 +13122,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "ChSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "神能解放 (神威一體)",
           "modifier": "Max Charge",
-          "multiplier": 46.66666667,
+          "multiplier": 46.66666666666667,
           "damageCap": 199999,
           "cooldown": null,
           "classification": "ChSkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (神威一體)",
@@ -12156,7 +13144,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (神威一體)",
@@ -12166,7 +13155,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (神威一體)",
@@ -12176,7 +13166,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (神威一體)",
@@ -12186,47 +13177,52 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (神威一體)",
           "modifier": "1st Hit",
-          "multiplier": 3.166666667,
+          "multiplier": 3.1666666666666665,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (神威一體)",
           "modifier": "2nd Hit",
-          "multiplier": 3.666666667,
+          "multiplier": 3.666666666666667,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (神威一體)",
           "modifier": "3rd Hit",
-          "multiplier": 6.166666667,
+          "multiplier": 6.166666666666667,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "永欲 (神威一體)",
           "modifier": "4th Hit",
-          "multiplier": 7.833333333,
+          "multiplier": 7.833333333333334,
           "damageCap": 34999,
           "cooldown": null,
           "classification": "SkSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊",
@@ -12236,7 +13232,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoLiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (龍人化)",
@@ -12246,7 +13243,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoLiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (神威一體)",
@@ -12256,7 +13254,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoLiS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "連結攻擊 (神威一體)",
@@ -12266,7 +13265,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "NoLiSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -12276,7 +13276,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -12286,7 +13287,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -12296,7 +13298,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -12306,7 +13309,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義",
@@ -12316,7 +13320,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (龍人化)",
@@ -12326,7 +13331,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SbS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (龍人化)",
@@ -12336,7 +13342,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (龍人化)",
@@ -12346,7 +13353,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (龍人化)",
@@ -12356,7 +13364,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (龍人化)",
@@ -12366,7 +13375,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (神威一體)",
@@ -12376,7 +13386,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "SbSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (神威一體)",
@@ -12386,7 +13397,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (神威一體)",
@@ -12396,7 +13408,8 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (神威一體)",
@@ -12406,17 +13419,19 @@ const RELINK_DAMAGE_CALCULATOR = {
           "cooldown": null,
           "classification": "Sb",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         },
         {
           "skill": "奧義 (神威一體)",
           "modifier": null,
-          "multiplier": 19.16666667,
+          "multiplier": 19.166666666666668,
           "damageCap": 89999,
           "cooldown": null,
           "classification": "SbSpS2",
           "contribution": null,
-          "notes": null
+          "notes": null,
+          "baseRatio": null
         }
       ]
     }

@@ -9,6 +9,9 @@ const CHARACTER_BASE_STATS = {
   "蘇恩": { attack: 10324, critRate: 50, critDamage: 100 },
 };
 const CHARACTER_EXTRA_DEFAULTS = {
+  "團長": [
+    ["Class Lv", 0],
+  ],
   "瑟塔": [
     ["阿爾貝斯．菲爾瑪雷?", true],
     ["戰氣?", true],
@@ -16,8 +19,20 @@ const CHARACTER_EXTRA_DEFAULTS = {
   "伊歐": [
     ["重力場", true],
   ],
+  "蘿賽塔": [
+    ["薔薇Lv", 0],
+  ],
+  "剛特克澤": [
+    ["古今無雙劉Lv", 0],
+  ],
+  "娜魯梅亞": [
+    ["蝴蝶數量", 0],
+  ],
   "蘇恩": [
     ["觸發專屬?", true],
+  ],
+  "席耶提": [
+    ["劍神召喚?", true],
   ],
 };
 const VERIFIED_CHARACTERS = new Set([
@@ -425,6 +440,10 @@ function hasMainSigil(name) {
   return state.build.some((slot) => slot.main === name && (Number(slot.level) || 0) > 0);
 }
 
+function sigilAwakeningActive() {
+  return hasMainSigil("專屬");
+}
+
 function hasBuildTrait(name) {
   return state.build.some((slot) =>
     slotLevel(slot) > 0 && (slot.main === name || slot.sub === name)
@@ -456,6 +475,14 @@ function effectiveAttack(levels) {
   const attackBase = state.base.attack + limitAttack + traitPercent(levels, "攻擊力");
   const buildBerserker = hasBuildTrait("狂戰士") ? traitPercent(levels, "狂戰士") : 0;
   const weaponCatastrophe = !buildBerserker && effectiveTerminusActive() ? 0.5 : 0;
+  const character = getCharacter();
+  const rosettaRoseLevel = Math.min(Number(state.characterExtras["薔薇Lv"]) || 0, 4);
+  const rosettaBonus = character?.nameZh === "蘿賽塔"
+    ? (sigilAwakeningActive() ? 0.13 : 0.03) + rosettaRoseLevel * 0.03 + (characterWarpathActive() ? 0.15 : 0)
+    : 0;
+  const seofonBonus = character?.nameZh === "席耶提" && sigilAwakeningActive() && (state.characterExtras["劍神召喚?"] ?? true) ? 0.3 : 0;
+  const ghandagozaLevel = Math.min(Number(state.characterExtras["古今無雙劉Lv"]) || 0, 10);
+  const ghandagozaFactor = character?.nameZh === "剛特克澤" && ghandagozaLevel >= 1 ? 1 + 0.035 * ghandagozaLevel : 1;
   return Math.max(0, attackBase)
     * (1 + traitPercent(levels, "暴君"))
     * staminaEnmityFactor(levels)
@@ -465,8 +492,14 @@ function effectiveAttack(levels) {
     * (1 + traitPercent(levels, "弱化狀態特攻"))
     * (1 + otherPercent("攻擊力強化"))
     * (1 + otherPercent("防禦下降"))
+    * (1 + rosettaBonus + seofonBonus)
+    * ghandagozaFactor
     * (flightActive() ? 0.5 : 1)
     * (state.other["Link Time?"] ? 1.2 : 1);
+}
+
+function characterWarpathActive() {
+  return hasBuildTrait("戰氣") && (state.characterExtras["戰氣?"] ?? true);
 }
 
 function finalAttackForEcho(levels) {
@@ -525,8 +558,18 @@ function classificationCapBonus(row, levels) {
   if (type.includes("Sb")) {
     bonus += limitPercent("奧義傷害上限") + masteryCap + (eternalClassCapActive() ? 0.2 : 0);
   }
-  if (getCharacter()?.nameZh === "瑟塔" && type.includes("Sp")) bonus += 0.18;
-  if (hasMainSigil("專屬") && row?.skill === "星夢之術" && row?.modifier !== "I") bonus += 0.5;
+  const characterName = getCharacter()?.nameZh;
+  const skill = String(row?.skill ?? "");
+  const modifier = String(row?.modifier ?? "");
+  if (characterName === "帕西瓦爾" && sigilAwakeningActive() && skill.includes("征戰")) bonus += 0.5;
+  if (characterName === "剛特克澤" && sigilAwakeningActive() && skill.includes("正拳擊")) bonus += 0.5;
+  if (characterName === "卡塔莉娜" && sigilAwakeningActive() && type.includes("Sp")) bonus += 0.15;
+  if (characterName === "菲莉" && sigilAwakeningActive() && skill.includes("猛襲") && modifier.includes("猛襲")) bonus += 0.45;
+  if (characterName === "伊度" && sigilAwakeningActive() && type.includes("Sp")) bonus += 0.3;
+  if (characterName === "瑟塔" && type.includes("Sp")) bonus += 0.18;
+  if (characterName === "齊格菲" && modifier.includes("just")) bonus += 0.2;
+  if (characterName === "拉卡姆" && sigilAwakeningActive() && skill.includes("靶心狙擊")) bonus += 0.25;
+  if (sigilAwakeningActive() && skill === "星夢之術" && row?.modifier !== "I") bonus += 0.5;
   if (getCharacter()?.nameZh === "范恩" && type.includes("S2") && state.other["Link Time?"]) bonus += 0.8;
   return bonus;
 }
@@ -566,13 +609,13 @@ function rowMultiplierBonus(row, levels) {
   if (type.includes("Sk")) bonus *= 1 + ((1 + traitPercent(levels, "技能傷害")) * (1 + limitPercent("技能給予傷害") + 0.2) - 1);
   if (type.includes("Th")) bonus *= 1 + traitPercent(levels, "投擲");
   if (getCharacter()?.nameZh === "瑟塔" && state.characterExtras["阿爾貝斯．菲爾瑪雷?"]) {
-    bonus *= 1.3 + (hasMainSigil("專屬") ? 0.25 : 0);
+    bonus *= 1.3 + (sigilAwakeningActive() ? 0.25 : 0);
   }
-  if (getCharacter()?.nameZh === "蘭斯洛特" && hasMainSigil("專屬")) {
+  if (getCharacter()?.nameZh === "蘭斯洛特" && sigilAwakeningActive()) {
     if (String(row?.skill ?? "").includes("雙劍亂舞")) bonus *= 1.5;
     if (state.other["連技加成?"]) bonus *= 1.5;
   }
-  if (getCharacter()?.nameZh === "尤金" && hasMainSigil("專屬") && row?.skill === "榴彈") {
+  if (getCharacter()?.nameZh === "尤金" && sigilAwakeningActive() && row?.skill === "榴彈") {
     bonus *= 2;
   }
   if (!type.includes("Sb")) bonus *= 1 + (state.other["弱點部位攻擊?"] ? 0.7 + traitPercent(levels, "弱點攻擊") : 0) + (state.other["背後部位攻擊?"] ? 0.2 + traitPercent(levels, "弱點攻擊") : 0);
@@ -601,6 +644,22 @@ function echoDamage(row, levels, rawNormal, rawCrit, finalCap, elementalFactor) 
   return (echoCrit * echoCritRate + echoNormal * (1 - echoCritRate)) * echoPercent;
 }
 
+function yodarhaMultiplierBonus() {
+  return getCharacter()?.nameZh === "尤達爾拉哈" && sigilAwakeningActive() && state.other["連技加成?"] ? 0.3 : 0;
+}
+
+function characterEnhancedDamage() {
+  const characterName = getCharacter()?.nameZh;
+  if (characterName === "蘇恩" && sigilAwakeningActive() && (state.characterExtras["觸發專屬?"] ?? true)) return 0.1;
+  if (characterName === "團長" && sigilAwakeningActive()) {
+    const classLevel = Number(state.characterExtras["Class Lv"]) || 0;
+    if (classLevel >= 4) return 0.1;
+    if (classLevel === 3) return 0.07;
+    if (classLevel === 2) return 0.05;
+  }
+  return 0;
+}
+
 function calculate(row) {
   const levels = getTraitLevels();
   const multiplier = Number(row?.multiplier) || 0;
@@ -627,14 +686,15 @@ function calculate(row) {
   const critRate = type.includes("Oc") || zetaGuaranteedCrit(levels) ? 1 : critRateValue(levels);
   const critDamage = 1 + state.base.critDamage / 100 + traitPercent(levels, "暴擊傷害");
   const basePower = attack * (1 + damageBonus(levels));
+  const effectiveMultiplier = multiplier + yodarhaMultiplierBonus();
   const multiplierBoost = multiplier <= 0 ? 0 : rowMultiplierBonus(row, levels);
   const capBonus = classificationCapBonus(row, levels);
   const elementalFactor = hasTrait(levels, "有利屬性轉換") ? 1.2 : 1;
-  const enhancedDamage = getCharacter()?.nameZh === "蘇恩" && hasMainSigil("專屬") && (state.characterExtras["觸發專屬?"] ?? true) ? 0.1 : 0;
+  const enhancedDamage = characterEnhancedDamage();
   const specialDamage = type.includes("Fl") ? 0 : enhancedDamage + characterWarpathBonus(levels, row);
   const finalCap = type.includes("Fl") ? baseCap : baseCap * (1 + capBonus) * elementalFactor * (1 + specialDamage);
-  const rawNormal = basePower * multiplier * multiplierBoost;
-  const rawCrit = (type.includes("Nc") ? basePower : basePower * critDamage) * multiplier * multiplierBoost;
+  const rawNormal = basePower * effectiveMultiplier * multiplierBoost;
+  const rawCrit = (type.includes("Nc") ? basePower : basePower * critDamage) * effectiveMultiplier * multiplierBoost;
   const uncappedNormal = Math.floor(rawNormal * elementalFactor) * (1 + specialDamage);
   const uncappedCrit = Math.floor(rawCrit * elementalFactor) * (1 + specialDamage);
   const normal = Math.min(uncappedNormal, finalCap);
@@ -698,7 +758,7 @@ function calculatorOverview() {
       ["技能傷害上限", calculatorPercentCell(limitPercent("技能傷害上限") + masteryCap + (eternalClassCapActive() ? 0.2 : 0) + traitPercent(levels, "貝塔"))],
       ["奧義傷害上限", calculatorPercentCell(limitPercent("奧義傷害上限") + masteryCap + (eternalClassCapActive() ? 0.2 : 0))],
       ["弱點", calculatorPercentCell((state.other["弱點部位攻擊?"] ? 0.7 + traitPercent(levels, "弱點攻擊") : 0) + (state.other["背後部位攻擊?"] ? 0.2 + traitPercent(levels, "弱點攻擊") : 0))],
-      ["特殊傷害加成", calculatorPercentCell(getCharacter()?.nameZh === "蘇恩" && hasMainSigil("專屬") && (state.characterExtras["觸發專屬?"] ?? true) ? 0.1 : 0)],
+      ["特殊傷害加成", calculatorPercentCell(characterEnhancedDamage())],
       ["狀態", getCharacter()?.warpathCondition ?? ""],
     ],
   };
