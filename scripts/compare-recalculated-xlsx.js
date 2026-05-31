@@ -162,7 +162,7 @@ async function extractWebRows(snapshot) {
     const page = await browser.newPage({ viewport: { width: 1720, height: 1000 } });
     const pageErrors = [];
     page.on("pageerror", (error) => pageErrors.push(error.message));
-    await page.goto(`file:///${ROOT.replace(/\\/g, "/")}/index.html?compare=${Date.now()}`);
+    await page.goto(`file:///${ROOT.replace(/\\/g, "/")}/damage/index.html?compare=${Date.now()}`);
     await page.waitForLoadState("load");
     await page.waitForTimeout(250);
     const rows = await page.evaluate((input) => {

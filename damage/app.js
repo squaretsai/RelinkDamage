@@ -363,9 +363,14 @@ function addTraitLevel(levels, name, level) {
   levels[name] = (levels[name] ?? 0) + amount;
 }
 
+function isEquippedSlot(slot) {
+  return Boolean(slot?.main && slot.main !== NONE && slot.main !== "N/A" && (Number(slot.level) || 0) > 0);
+}
+
 function getTraitLevels() {
   const rawLevels = {};
   for (const slot of state.build) {
+    if (!isEquippedSlot(slot)) continue;
     const boostedLevel = (Number(slot.level) || 0) + (state.weapon.sigilBooster ? 1 : 0);
     addTraitLevel(rawLevels, slot.main, boostedLevel);
     if (!mainOnlyTraitNames.has(slot.sub)) {
@@ -421,7 +426,7 @@ function hasMainSigil(name) {
 
 function hasBuildTrait(name) {
   return state.build.some((slot) =>
-    (slot.main === name || slot.sub === name) && (Number(slot.level) || 0) > 0
+    isEquippedSlot(slot) && (slot.main === name || slot.sub === name)
   );
 }
 
@@ -789,6 +794,7 @@ function renderSigilSlots() {
 }
 
 function renderWeaponGrid() {
+  const eternal = isEternalCharacter();
   els.weaponGrid.innerHTML = `
     ${state.weapon.traits
       .map((trait, index) => `
@@ -804,8 +810,8 @@ function renderWeaponGrid() {
       <span>滿覺醒：因子等級 +1</span>
     </label>
     <label class="toggle">
-      <input id="terminusInput" type="checkbox"${state.weapon.terminus ? " checked" : ""} />
-      <span>究極武器：上限 +20%</span>
+      <input id="terminusInput" type="checkbox"${eternal || state.weapon.terminus ? " checked" : ""}${eternal ? " disabled" : ""} />
+      <span>${eternal ? "十天眾武器：上限 +20%（固定）" : "究極武器：上限 +20%"}</span>
     </label>
   `;
 }
@@ -1113,6 +1119,28 @@ els.sigilSlots.addEventListener("input", (event) => {
   slot.main = slotElement.querySelector(".sigil-main").value;
   slot.sub = slotElement.querySelector(".sigil-sub").value;
   slot.level = Math.max(0, Math.min(getTraitLevelCap(slot.main), numberInput(slotElement.querySelector(".sigil-level"), 0)));
+  if (!isEquippedSlot(slot)) {
+    slot.main = NONE;
+    slot.sub = NONE;
+    slot.level = 0;
+  }
+  renderSigilSlots();
+  render();
+});
+
+els.sigilSlots.addEventListener("change", (event) => {
+  if (!event.target.matches(".sigil-main, .sigil-sub")) return;
+  const slotElement = event.target.closest(".sigil-slot");
+  if (!slotElement) return;
+  const index = Number(slotElement.dataset.slot);
+  const slot = state.build[index];
+  slot.main = slotElement.querySelector(".sigil-main").value;
+  slot.sub = slotElement.querySelector(".sigil-sub").value;
+  slot.level = Math.max(0, Math.min(getTraitLevelCap(slot.main), numberInput(slotElement.querySelector(".sigil-level"), 0)));
+  if (slot.main === NONE || slot.main === "N/A") {
+    slot.sub = NONE;
+    slot.level = 0;
+  }
   renderSigilSlots();
   render();
 });
