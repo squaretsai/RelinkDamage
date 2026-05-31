@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>蘇恩手操攻略整理</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f3ee;
+      --paper: #fffdf8;
+      --ink: #24211d;
+      --muted: #6b6258;
+      --line: #ded4c8;
+      --accent: #b43f35;
+      --accent-2: #1f6f78;
+      --good: #2f6b45;
+      --warn: #9a641b;
+      --shadow: 0 12px 28px rgba(44, 35, 26, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", Arial, sans-serif;
+      background:
+        linear-gradient(180deg, rgba(180, 63, 53, 0.08), transparent 280px),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      letter-spacing: 0;
+    }
+
+    main {
+      width: min(1080px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+
+    header {
+      padding: 26px 0 18px;
+      border-bottom: 2px solid var(--line);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 6vw, 46px);
+      line-height: 1.12;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 20px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    section.full {
+      grid-column: 1 / -1;
+    }
+
+    section.half {
+      grid-column: span 6;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      color: var(--accent-2);
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: var(--ink);
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    .callout {
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: rgba(180, 63, 53, 0.08);
+      border-radius: 6px;
+      margin: 12px 0;
+      font-weight: 700;
+    }
+
+    .mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 4px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    th,
+    td {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #efe7dc;
+      color: #3a3028;
+      font-weight: 700;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    code,
+    pre {
+      font-family: Consolas, "Cascadia Mono", "Courier New", monospace;
+    }
+
+    pre {
+      margin: 12px 0;
+      padding: 14px;
+      overflow-x: auto;
+      background: #2a2520;
+      color: #fff8ef;
+      border-radius: 8px;
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .tag-good {
+      color: var(--good);
+      font-weight: 700;
+    }
+
+    .tag-warn {
+      color: var(--warn);
+      font-weight: 700;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .sources li {
+      margin: 8px 0;
+    }
+
+    @media (max-width: 780px) {
+      main {
+        width: min(100% - 18px, 1080px);
+        padding-top: 16px;
+      }
+
+      section {
+        padding: 16px;
+      }
+
+      section.half {
+        grid-column: 1 / -1;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 9px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>蘇恩手操攻略整理</h1>
+      <p class="subtitle">整理方向：手操連段效益、技能選擇、畢業因子、加護、界限突破，以及 AI 使用評價。內容依 Maygi 蘇恩指南、Relink Wiki 技能資料、GameFAQs 專屬因子表與傷害計算機資料整理。</p>
+      <div class="mini">
+        <span class="pill">角色：蘇恩 / Tweyen</span>
+        <span class="pill">定位：遠程蓄力、多重鎖定、弱體爆發</span>
+        <span class="pill">推薦：手操高於 AI</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="full">
+        <h2>快速結論</h2>
+        <div class="callout">蘇恩的核心不是亂射，而是「技能疊 Ultrasight → 滿層多重鎖定 → 空窗依距離選連段」。熟練後打大體型王很舒服，AI 則比較難發揮完整價值。</div>
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>重點</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>主輸出</td>
+              <td>滿 Ultrasight 的多重鎖定射擊</td>
+            </tr>
+            <tr>
+              <td>次輸出</td>
+              <td>蓄力連段終結、致命一擊、殺戮之雨、散環</td>
+            </tr>
+            <tr>
+              <td>主要資源</td>
+              <td>Ultrasight 等級</td>
+            </tr>
+            <tr>
+              <td>操作重點</td>
+              <td>用技能快速堆 Ultrasight，滿層後多重鎖定，空窗用連段補傷害與資源</td>
+            </tr>
+            <tr>
+              <td>適合目標</td>
+              <td>大體型、動作不太亂的王，例如貝西摩斯</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="full">
+        <h2>連段效益</h2>
+        <p>以下用 <code>X</code> 表示普攻，<code>Y</code> 表示終結。Maygi 指南的重點是：第一段普攻蓄力效率較差，後面段數與終結比較值得蓄力，終結盡量蓄滿。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>連段</th>
+              <th>用途</th>
+              <th>實戰判斷</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>XYY</code></td>
+              <td>位移、補一點 Ultrasight</td>
+              <td>不是主 DPS，用來調位置或差一點滿層時補資源</td>
+            </tr>
+            <tr>
+              <td><code>XXYY</code></td>
+              <td>近距離輸出</td>
+              <td>貼近王且箭雨命中率高時，輸出很好</td>
+            </tr>
+            <tr>
+              <td><code>XXXYY</code></td>
+              <td>泛用主力</td>
+              <td>距離較遠、王會動、想穩定累積 Ultrasight 時優先</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre>近距離能吃滿箭：XXYY
+距離不穩或王會動：XXXYY
+只要移動或補一點資源：XYY</pre>
+        <p>多重鎖定、終結、致命一擊後可以用閃避取消，主要價值是縮短硬直、修正站位，讓下一輪連段或技能更快接上。</p>
+      </section>
+
+      <section class="half">
+        <h2>推薦技能</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>技能</th>
+              <th>推薦度</th>
+              <th>用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>絕騎 / Peerless Eye</td>
+              <td class="tag-good">必帶</td>
+              <td>讓 Ultrasight 累積效率大幅提高，是爆發核心</td>
+            </tr>
+            <tr>
+              <td>腐化 / Depravity</td>
+              <td class="tag-good">必帶</td>
+              <td>快速疊 Ultrasight，附多種弱體與 DOT</td>
+            </tr>
+            <tr>
+              <td>致命一擊 / Clincher</td>
+              <td class="tag-good">必帶</td>
+              <td>高傷害技能，敵人弱體越多越痛</td>
+            </tr>
+            <tr>
+              <td>殺戮之雨 / Lethal Rain</td>
+              <td>泛用第四格</td>
+              <td>傷害與暈眩都好，穩定泛用</td>
+            </tr>
+            <tr>
+              <td>散環 / Wheel of Death</td>
+              <td>大型王可用</td>
+              <td>貼近大王時價值高，貝西摩斯可考慮</td>
+            </tr>
+            <tr>
+              <td>二王的鬥諍 / Two-Crown's Strife</td>
+              <td>長戰可用</td>
+              <td>大爆發，但限制多、冷卻長</td>
+            </tr>
+            <tr>
+              <td>共鳴虹光 / Merculight</td>
+              <td>防禦向</td>
+              <td>攻擊上升與鏡像，輸出向通常不優先</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="half">
+        <h2>技能組合</h2>
+        <h3>泛用輸出</h3>
+        <pre>絕騎
+腐化
+致命一擊
+殺戮之雨</pre>
+        <h3>打大體型王</h3>
+        <pre>絕騎
+腐化
+致命一擊
+散環</pre>
+        <h3>長戰爆發</h3>
+        <pre>絕騎
+腐化
+致命一擊
+二王的鬥諍</pre>
+      </section>
+
+      <section class="full">
+        <h2>基本循環</h2>
+        <pre>開場：絕騎
+→ 腐化 / 致命一擊 / 第四技能堆 Ultrasight
+→ Ultrasight 滿後打多重鎖定
+→ 空窗用 XXYY 或 XXXYY
+→ 技能好了再堆 Ultrasight
+→ 重複</pre>
+        <h3>Link Time 思路</h3>
+        <pre>多重鎖定
+→ 閃避取消
+→ 技能或連段補 Ultrasight
+→ 再多重鎖定</pre>
+        <p>實戰上不必死背固定迴圈，重點是保持「滿層多重鎖定」的頻率，並用距離合適的連段填空窗。</p>
+      </section>
+
+      <section class="full">
+        <h2>專屬因子</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>因子</th>
+              <th>效果</th>
+              <th>建議</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>二王境界 / Two-Crown Boundary</td>
+              <td>HP 變 45000，攻擊 +50%，傷害上限 +100%</td>
+              <td class="tag-good">必帶</td>
+            </tr>
+            <tr>
+              <td>戰氣 / Dark Huntress's Warpath</td>
+              <td>蓄力變快，蓄力攻擊強化傷害 +20%，暈眩提升，機率上弱體</td>
+              <td class="tag-good">手操強烈推薦</td>
+            </tr>
+            <tr>
+              <td>Dark Huntress's Volley</td>
+              <td>滿 Ultrasight 蓄滿多重鎖定後，強化傷害 +10%，機率獲得追擊 buff</td>
+              <td>推薦</td>
+            </tr>
+            <tr>
+              <td>Dark Huntress's Surge</td>
+              <td>普攻射速 +10%，射擊時移動速度 +15%</td>
+              <td>可選，偏手感與 QOL</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre>格子緊：
+必帶 Boundary + 戰氣
+推薦 Volley
+Surge 可有可無</pre>
+      </section>
+
+      <section class="full">
+        <h2>畢業因子方向</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>類型</th>
+              <th>推薦</th>
+              <th>理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>上限</td>
+              <td>傷害上限 65，之後看 Alpha / Beta / Gamma</td>
+              <td>先讓主輸出有天花板，再依計算機補路西法因子</td>
+            </tr>
+            <tr>
+              <td>基礎輸出</td>
+              <td>暴君、蓄力攻擊、技能傷害、渾身或捨身</td>
+              <td>蘇恩很多傷害來源需要先推到上限</td>
+            </tr>
+            <tr>
+              <td>蘇恩特別重要</td>
+              <td>技能加速、怒濤、快速蓄力</td>
+              <td>提高技能循環、資源累積與蓄力手感</td>
+            </tr>
+            <tr>
+              <td>追加傷害</td>
+              <td>追擊、有利屬性轉換、狂戰士追擊</td>
+              <td>追擊與有利屬性很強；狂戰士追擊要看面板攻擊是否能觸發</td>
+            </tr>
+            <tr>
+              <td>功能</td>
+              <td>明鏡止水、藥水持有、自動復活、暈眩</td>
+              <td>高難與刷關穩定度用</td>
+            </tr>
+            <tr>
+              <td>可選</td>
+              <td>連技終結</td>
+              <td>如果你的終結段沒碰上限，可作為補傷害選項</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Maygi 指南特別提到：蘇恩 DOT 有一定占比，而 DOT 比較看面板攻擊，所以 <strong>暴君很有價值</strong>。如果傷害計算機顯示沒碰上限，先補實際傷害；碰上限後再補 Alpha / Beta / Gamma。</p>
+        <h3>一句話配裝方向</h3>
+        <pre>Boundary
+戰氣
+Volley 或 Awakening+
+傷害上限
+暴君
+快速蓄力
+技能加速
+怒濤
+追擊
+有利屬性轉換
+Gamma / Alpha / Beta 依計算機
+藥水 / 自動復活 / 暈眩補穩定</pre>
+      </section>
+
+      <section class="half">
+        <h2>加護</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>加護</th>
+              <th>評價</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>暈眩 Lv20</td>
+              <td class="tag-good">很推薦，蘇恩不一定需要爆擊主加護</td>
+            </tr>
+            <tr>
+              <td>爆擊率 Lv20</td>
+              <td>泛用安全，如果爆率沒滿就用</td>
+            </tr>
+            <tr>
+              <td>攻擊力 / 暴君 / 渾身 / 蓄力攻擊副詞條</td>
+              <td>用來補到上限</td>
+            </tr>
+            <tr>
+              <td>技能加速 / 怒濤 / 快速蓄力</td>
+              <td class="tag-good">很適合蘇恩</td>
+            </tr>
+            <tr>
+              <td>追擊</td>
+              <td>畢業副詞條</td>
+            </tr>
+            <tr>
+              <td>藥水 / 自動復活</td>
+              <td>高難保險</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>理想方向</h3>
+        <pre>暈眩 Lv20
++ 追擊 / 快速蓄力 / 技能加速 / 怒濤 / 攻擊系副詞條</pre>
+      </section>
+
+      <section class="half">
+        <h2>界限突破</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>優先</th>
+              <th>詞條</th>
+              <th>理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>普通攻擊傷害上限</td>
+              <td>連段與多重鎖定相關輸出吃得到</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>攻擊力 +1000</td>
+              <td>蘇恩 DOT 也吃面板攻擊，很有價值</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>爆擊率</td>
+              <td>如果加護或因子已補滿，可降低優先</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>技能傷害上限</td>
+              <td>致命一擊、殺戮之雨、散環等技能吃得到</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="full">
+        <h2>AI 評價</h2>
+        <p>蘇恩是 <span class="tag-warn">手操價值遠高於 AI</span> 的角色。AI 不會像玩家一樣穩定管理 Ultrasight、距離、蓄力、多重鎖定與閃避取消，因此很難打出手操上限。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>用途</th>
+              <th>評價</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>手操刷貝西摩斯</td>
+              <td>可練，遠程安全，大體型王相性佳</td>
+            </tr>
+            <tr>
+              <td>手操高難</td>
+              <td>可用，但需要熟悉蓄力、距離與技能節奏</td>
+            </tr>
+            <tr>
+              <td>AI 隊友</td>
+              <td>不太推薦當主力，穩定性與輸出都不如頂級 AI</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="full">
+        <h2>來源</h2>
+        <ul class="sources">
+          <li><a href="https://www.reddit.com/r/GranblueFantasyRelink/comments/1cmw5n2/tldr_tweyen_guide/">Maygi 蘇恩 TLDR 指南</a></li>
+          <li><a href="https://relink.gbf.wiki/Tweyen">Relink Wiki 蘇恩頁</a></li>
+          <li><a href="https://relink.gbf.wiki/Tweyen/Skill_Data">Relink Wiki 蘇恩技能倍率表</a></li>
+          <li><a href="https://gamefaqs.gamespot.com/ps5/308486-granblue-fantasy-relink/faqs/82470/character-specific-sigils">GameFAQs 角色專屬因子表</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
