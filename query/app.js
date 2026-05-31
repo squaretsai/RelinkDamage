@@ -28,6 +28,50 @@ const els = {
   dropFilterInputs: [...document.querySelectorAll("#dropFilters input")],
 };
 
+const QUEST_TARGET_BY_ID = {
+  401306: "獸人頭目",
+  402302: "沙漠巨像",
+  404313: "火山巨像",
+  405206: "伽藍薩",
+  405207: "瑪姬拉芙莉爾",
+  405208: "伊度",
+  406337: "伊度",
+  406338: "巴哈姆特系",
+  407101: "伊度 / 巴哈姆特系",
+  407318: "原初巴哈姆特",
+  407320: "路西法",
+  407321: "路西法 Zero",
+  407322: "貝西摩斯",
+};
+
+const QUEST_TARGET_RULES = [
+  [/伊度|general investigation: id|id bears/i, "伊度"],
+  [/伽藍薩|gallanza/i, "伽藍薩"],
+  [/瑪姬拉芙|maglielle/i, "瑪姬拉芙莉爾"],
+  [/白狼|silver wolf|wolf/i, "白狼兵團"],
+  [/刃重|veil/i, "刃重眾"],
+  [/神狼/i, "神狼"],
+  [/嵐神|furycane|storm/i, "嵐神"],
+  [/炎神|fire/i, "炎神"],
+  [/雷電|thunder/i, "雷電系目標"],
+  [/霧冰|frost|rime|ice/i, "冰霜系目標"],
+  [/地絕|earth|grounded/i, "大地系目標"],
+  [/紅蓮|conflagration|blazing/i, "火焰系目標"],
+  [/巨像|golem/i, "巨像"],
+  [/鎧甲|armor/i, "鎧甲"],
+  [/哥布林|goblin/i, "哥布林"],
+  [/史萊姆|slime/i, "史萊姆"],
+  [/獅鷲|griffin/i, "獅鷲獸"],
+  [/眼球|eye/i, "眼球"],
+  [/骸骨|corpse|bone/i, "骸骨系目標"],
+  [/吐息|wings/i, "龍"],
+  [/戰艦|automagod|machine/i, "機械系目標"],
+  [/魔種|forest|seed/i, "魔物群"],
+  [/奈落|abyss/i, "奈落系目標"],
+  [/巴哈姆特|bahamut/i, "巴哈姆特系"],
+  [/路西法|lucilius|zero|final vision/i, "路西法"],
+];
+
 function normalizeText(value) {
   return String(value ?? "").trim().toLowerCase();
 }
@@ -59,6 +103,15 @@ function sigilIconPath(sigil) {
 
 function candidateSearchText(parts) {
   return normalizeText(parts.filter(Boolean).join(" "));
+}
+
+function questTarget(entry) {
+  const explicit = QUEST_TARGET_BY_ID[String(entry.questId ?? "")];
+  if (explicit) return explicit;
+
+  const text = [entry.questZh, entry.questEn, ...(entry.questAliases ?? [])].filter(Boolean).join(" ");
+  const rule = QUEST_TARGET_RULES.find(([pattern]) => pattern.test(text));
+  return rule?.[1] ?? "待補";
 }
 
 function scoreSuggestion(candidate, tokens) {
@@ -139,7 +192,7 @@ function buildDropSuggestions() {
       candidates.push({
         type: "任務",
         label: questName,
-        meta: [entry.difficultyZh, entry.questEn].filter(Boolean).join(" / "),
+        meta: [entry.difficultyZh, questTarget(entry), entry.questEn].filter(Boolean).join(" / "),
         value: questName,
         priority: entry.questZh ? 20 : 8,
         searchText: candidateSearchText([
@@ -147,6 +200,7 @@ function buildDropSuggestions() {
           entry.questEn,
           entry.questId,
           entry.difficulty,
+          questTarget(entry),
           ...(entry.questAliases ?? []),
         ]),
       });
@@ -440,6 +494,7 @@ function dropSearchText(item) {
       entry.questId,
       entry.difficulty,
       entry.sourceZh,
+      questTarget(entry),
       ...(entry.questAliases ?? []),
     ]),
   ].join(" "));
@@ -508,6 +563,7 @@ function renderDropCard(item, entries) {
 function renderDropEntry(entry) {
   const questName = entry.questZh || entry.questEn;
   const questEn = entry.questZh ? entry.questEn : "";
+  const target = questTarget(entry);
   const detail = [
     entry.sourceZh,
     entry.rank ? `Rank ${entry.rank}` : "",
@@ -520,6 +576,10 @@ function renderDropEntry(entry) {
       <div>
         <div class="quest-name">${escapeHtml(questName)}</div>
         <div class="quest-en">${escapeHtml(questEn)}</div>
+      </div>
+      <div class="drop-target">
+        <span>主要目標</span>
+        <strong class="${target === "待補" ? "needs-review" : ""}">${escapeHtml(target)}</strong>
       </div>
       <div class="drop-difficulty">${escapeHtml(entry.difficultyZh)}</div>
       <div class="drop-detail">${escapeHtml(detail)}</div>
