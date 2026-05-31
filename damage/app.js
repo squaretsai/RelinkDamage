@@ -886,8 +886,8 @@ function traitRowClass(name) {
   return "trait-kind-none";
 }
 
-function liveTraitLevel(name, levels, fallback = 0) {
-  return levels[name] ?? (typeof fallback === "number" ? fallback : 0);
+function liveTraitLevel(name, levels) {
+  return levels[name] ?? 0;
 }
 
 function renderTraitTable(title, rows, levels) {
