@@ -486,6 +486,12 @@ function critRateValue(levels) {
   );
 }
 
+function zetaGuaranteedCrit(levels) {
+  return getCharacter()?.nameZh === "瑟塔"
+    && hasTrait(levels, "戰氣")
+    && ((state.characterExtras["阿爾貝斯．菲爾瑪雷?"] ?? false) || (state.characterExtras["戰氣?"] ?? false));
+}
+
 function characterWarpathBonus(levels, row) {
   const character = getCharacter();
   if (!hasTrait(levels, "戰氣")) return 0;
@@ -618,7 +624,7 @@ function calculate(row) {
   }
   const attack = effectiveAttack(levels);
   const type = String(row?.classification ?? "");
-  const critRate = type.includes("Oc") ? 1 : critRateValue(levels);
+  const critRate = type.includes("Oc") || zetaGuaranteedCrit(levels) ? 1 : critRateValue(levels);
   const critDamage = 1 + state.base.critDamage / 100 + traitPercent(levels, "暴擊傷害");
   const basePower = attack * (1 + damageBonus(levels));
   const multiplierBoost = multiplier <= 0 ? 0 : rowMultiplierBonus(row, levels);
