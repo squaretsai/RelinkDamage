@@ -163,10 +163,30 @@ function loadApp() {
       return elements.get(selector);
     },
     addEventListener() {},
+    createElement() {
+      return fakeElement();
+    },
+    body: {
+      append() {},
+    },
   };
   const context = {
     console,
     document,
+    window: {
+      setTimeout() {
+        return 0;
+      },
+      clearTimeout() {},
+      addEventListener() {},
+      removeEventListener() {},
+    },
+    localStorage: {
+      getItem() {
+        return "";
+      },
+      setItem() {},
+    },
     RELINK_DAMAGE_CALCULATOR: null,
   };
   const dataScript = fs.readFileSync(path.join(ROOT, "damage", "data", "damage-calculator.js"), "utf8");

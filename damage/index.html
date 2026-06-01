@@ -29,6 +29,45 @@
           <img id="characterAvatar" class="hero-avatar" alt="" />
         </section>
 
+        <section class="panel preset-panel">
+          <div class="preset-main">
+            <div>
+              <h3>雲端配置</h3>
+              <p id="presetStatus">尚未設定 Google Drive 存檔。</p>
+            </div>
+            <label class="preset-name">
+              <span>存檔名稱</span>
+              <input id="presetNameInput" type="text" placeholder="例如：蘇恩 95% 暴擊配置" autocomplete="off" />
+            </label>
+            <label class="preset-select">
+              <span>讀取配置</span>
+              <select id="presetSelect"></select>
+            </label>
+            <div class="preset-actions">
+              <button id="savePresetButton" type="button">儲存</button>
+              <button id="loadPresetButton" type="button">讀取</button>
+              <button id="deletePresetButton" type="button">刪除</button>
+              <button id="refreshPresetButton" type="button">刷新</button>
+              <button id="presetSettingsButton" type="button">設定</button>
+            </div>
+          </div>
+          <div id="presetSettings" class="preset-settings" hidden>
+            <label>
+              <span>Apps Script Web App URL</span>
+              <input id="presetEndpointInput" type="url" placeholder="https://script.google.com/macros/s/..." autocomplete="off" />
+            </label>
+            <label>
+              <span>安全碼</span>
+              <input id="presetSecretInput" type="password" autocomplete="off" />
+            </label>
+            <div class="preset-actions">
+              <button id="savePresetSettingsButton" type="button">儲存設定</button>
+              <button id="testPresetSettingsButton" type="button">測試連線</button>
+              <a id="openPresetFolderLink" href="#" target="_blank" rel="noreferrer" hidden>開啟雲端資料夾</a>
+            </div>
+          </div>
+        </section>
+
         <section class="layout">
           <section class="panel build-panel">
             <div class="panel-head">
@@ -191,7 +230,7 @@
       </main>
     </div>
 
-    <script src="./data/damage-calculator.js?v=20260531-6"></script>
-    <script src="./app.js?v=20260531-6"></script>
+    <script src="./data/damage-calculator.js?v=20260601-1"></script>
+    <script src="./app.js?v=20260601-1"></script>
   </body>
 </html>

@@ -1,5 +1,9 @@
 const DATA = RELINK_DAMAGE_CALCULATOR;
 const NONE = "None";
+const PRESET_STORAGE_KEYS = {
+  endpoint: "relinkDamagePresetEndpoint",
+  secret: "relinkDamagePresetSecret",
+};
 const ZETA_DEFAULT_VERIFICATION = {
   checked: 49,
   matched: 49,
@@ -126,6 +130,20 @@ const els = {
   traitSummary: document.querySelector("#traitSummary"),
   rowCount: document.querySelector("#rowCount"),
   skillTable: document.querySelector("#skillTable"),
+  presetStatus: document.querySelector("#presetStatus"),
+  presetName: document.querySelector("#presetNameInput"),
+  presetSelect: document.querySelector("#presetSelect"),
+  savePreset: document.querySelector("#savePresetButton"),
+  loadPreset: document.querySelector("#loadPresetButton"),
+  deletePreset: document.querySelector("#deletePresetButton"),
+  refreshPreset: document.querySelector("#refreshPresetButton"),
+  presetSettingsButton: document.querySelector("#presetSettingsButton"),
+  presetSettings: document.querySelector("#presetSettings"),
+  presetEndpoint: document.querySelector("#presetEndpointInput"),
+  presetSecret: document.querySelector("#presetSecretInput"),
+  savePresetSettings: document.querySelector("#savePresetSettingsButton"),
+  testPresetSettings: document.querySelector("#testPresetSettingsButton"),
+  openPresetFolder: document.querySelector("#openPresetFolderLink"),
 };
 
 function makeDefaultBuild() {
@@ -190,6 +208,80 @@ function makeCharacterExtraState(character = defaultCharacter) {
   return result;
 }
 
+function currentPresetPayload(name) {
+  const character = getCharacter();
+  return {
+    version: 1,
+    name,
+    savedAt: new Date().toISOString(),
+    characterId: state.characterId,
+    characterName: character?.nameZh ?? "",
+    selectedRowIndex: state.selectedRowIndex,
+    filters: {
+      search: state.search,
+      skillFilter: state.skillFilter,
+      damagePercentMin: state.damagePercentMin,
+      damagePercentMax: state.damagePercentMax,
+      tableMode: state.tableMode,
+    },
+    base: cloneJson(state.base),
+    build: cloneJson(state.build),
+    weapon: cloneJson(state.weapon),
+    limitBreak: cloneJson(state.limitBreak),
+    other: cloneJson(state.other),
+    characterExtras: cloneJson(state.characterExtras),
+  };
+}
+
+function normalizeBuild(build) {
+  const rows = Array.isArray(build) ? build : [];
+  return Array.from({ length: 12 }, (_, index) => ({
+    main: rows[index]?.main || NONE,
+    level: Number(rows[index]?.level) || 0,
+    sub: rows[index]?.sub || NONE,
+  }));
+}
+
+function normalizeWeapon(weapon) {
+  const fallback = makeWeaponState();
+  return {
+    traits: Array.from({ length: 3 }, (_, index) => ({
+      trait: weapon?.traits?.[index]?.trait || fallback.traits[index]?.trait || NONE,
+      level: Number(weapon?.traits?.[index]?.level) || fallback.traits[index]?.level || 0,
+    })),
+    sigilBooster: Boolean(weapon?.sigilBooster),
+    terminus: Boolean(weapon?.terminus),
+  };
+}
+
+function applyPresetPayload(preset) {
+  const character = DATA.characters.find((item) => item.id === preset?.characterId || item.nameZh === preset?.characterName);
+  if (character) {
+    state.characterId = character.id;
+    applyCharacterBaseDefaults();
+  }
+
+  const filters = preset?.filters ?? {};
+  state.search = filters.search ?? "";
+  state.skillFilter = filters.skillFilter ?? "";
+  state.damagePercentMin = filters.damagePercentMin ?? "";
+  state.damagePercentMax = filters.damagePercentMax ?? "";
+  state.tableMode = filters.tableMode === "compact" ? "compact" : "full";
+  state.selectedRowIndex = Number(preset?.selectedRowIndex) || 0;
+
+  state.base = { ...state.base, ...(preset?.base ?? {}) };
+  state.build = normalizeBuild(preset?.build);
+  state.weapon = normalizeWeapon(preset?.weapon);
+  state.limitBreak = { ...makeLimitBreakState(), ...(preset?.limitBreak ?? {}) };
+  state.other = { ...makeOtherState(), ...(preset?.other ?? {}) };
+  state.characterExtras = { ...makeCharacterExtraState(getCharacter()), ...(preset?.characterExtras ?? {}) };
+
+  syncBaseInputs();
+  renderShell();
+  renderCharacters();
+  render();
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replace(/&/g, "&amp;")
@@ -234,6 +326,10 @@ function sameJson(left, right) {
   return JSON.stringify(left) === JSON.stringify(right);
 }
 
+function cloneJson(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
 function isDefaultZetaState() {
   return state.characterId === "zeta"
     && sameJson(state.build, makeDefaultBuild())
@@ -265,6 +361,207 @@ function damagePercentClass(value) {
   if (percent >= 60) return "cap-60";
   if (percent >= 40) return "cap-40";
   return "cap-low";
+}
+
+function presetConfig() {
+  return {
+    endpoint: localStorage.getItem(PRESET_STORAGE_KEYS.endpoint) || "",
+    secret: localStorage.getItem(PRESET_STORAGE_KEYS.secret) || "",
+  };
+}
+
+function setPresetStatus(message, isError = false) {
+  if (!els.presetStatus) return;
+  els.presetStatus.textContent = message;
+  els.presetStatus.dataset.status = isError ? "error" : "ok";
+}
+
+function setPresetBusy(busy) {
+  for (const button of [els.savePreset, els.loadPreset, els.deletePreset, els.refreshPreset, els.testPresetSettings]) {
+    if (button) button.disabled = busy;
+  }
+}
+
+function initPresetUi() {
+  const config = presetConfig();
+  els.presetEndpoint.value = config.endpoint;
+  els.presetSecret.value = config.secret;
+  if (config.endpoint && config.secret) {
+    setPresetStatus("Google Drive 存檔已設定。");
+    refreshPresetList();
+  } else {
+    setPresetStatus("尚未設定 Google Drive 存檔。");
+  }
+}
+
+function cloudPresetRequest(action, payload = {}) {
+  const config = presetConfig();
+  if (!config.endpoint || !config.secret) {
+    return Promise.reject(new Error("請先設定 Apps Script Web App URL 與安全碼。"));
+  }
+
+  const requestId = `preset-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  return new Promise((resolve, reject) => {
+    let settled = false;
+    const frameName = `relink_preset_frame_${requestId.replace(/[^a-z0-9_]/gi, "_")}`;
+    const iframe = document.createElement("iframe");
+    iframe.name = frameName;
+    iframe.hidden = true;
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = config.endpoint;
+    form.target = frameName;
+    form.hidden = true;
+
+    const fields = {
+      action,
+      secret: config.secret,
+      requestId,
+      payload: JSON.stringify(payload),
+    };
+    for (const [name, value] of Object.entries(fields)) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      form.append(input);
+    }
+
+    const cleanup = () => {
+      window.removeEventListener("message", onMessage);
+      form.remove();
+      iframe.remove();
+    };
+    const finish = (callback, value) => {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      callback(value);
+    };
+    const timer = window.setTimeout(() => finish(reject, new Error("Google Drive 存檔連線逾時。")), 20000);
+    const onMessage = (event) => {
+      const data = event.data;
+      if (!data || data.source !== "relink-presets" || data.requestId !== requestId) return;
+      window.clearTimeout(timer);
+      if (data.ok) finish(resolve, data);
+      else finish(reject, new Error(data.error || "Google Drive 存檔失敗。"));
+    };
+
+    window.addEventListener("message", onMessage);
+    document.body.append(iframe, form);
+    form.submit();
+  });
+}
+
+function updatePresetFolderLink(folderUrl) {
+  if (!folderUrl) return;
+  els.openPresetFolder.href = folderUrl;
+  els.openPresetFolder.hidden = false;
+}
+
+async function refreshPresetList() {
+  const config = presetConfig();
+  if (!config.endpoint || !config.secret) {
+    setPresetStatus("尚未設定 Google Drive 存檔。");
+    return;
+  }
+  const character = getCharacter();
+  try {
+    setPresetBusy(true);
+    const result = await cloudPresetRequest("list", {
+      characterId: state.characterId,
+      characterName: character?.nameZh ?? "",
+    });
+    const presets = result.presets ?? [];
+    els.presetSelect.innerHTML = presets.length
+      ? presets.map((preset) => `<option value="${escapeHtml(preset.fileId)}">${escapeHtml(preset.name)}</option>`).join("")
+      : `<option value="">此角色尚無雲端配置</option>`;
+    updatePresetFolderLink(result.folderUrl);
+    setPresetStatus(`已讀取 ${character?.nameZh ?? "目前角色"} 的 ${presets.length} 個雲端配置。`);
+  } catch (error) {
+    setPresetStatus(error.message, true);
+  } finally {
+    setPresetBusy(false);
+  }
+}
+
+async function saveCurrentPreset() {
+  const name = els.presetName.value.trim();
+  if (!name) {
+    setPresetStatus("請先輸入存檔名稱。", true);
+    els.presetName.focus();
+    return;
+  }
+  const character = getCharacter();
+  try {
+    setPresetBusy(true);
+    const result = await cloudPresetRequest("save", {
+      characterId: state.characterId,
+      characterName: character?.nameZh ?? "",
+      name,
+      preset: currentPresetPayload(name),
+    });
+    updatePresetFolderLink(result.folderUrl);
+    setPresetStatus(`已儲存「${name}」。`);
+    await refreshPresetList();
+  } catch (error) {
+    setPresetStatus(error.message, true);
+  } finally {
+    setPresetBusy(false);
+  }
+}
+
+async function loadSelectedPreset() {
+  const fileId = els.presetSelect.value;
+  if (!fileId) {
+    setPresetStatus("目前沒有可讀取的配置。", true);
+    return;
+  }
+  try {
+    setPresetBusy(true);
+    const result = await cloudPresetRequest("load", { fileId });
+    applyPresetPayload(result.preset);
+    els.presetName.value = result.preset?.name ?? "";
+    setPresetStatus(`已讀取「${result.preset?.name ?? "配置"}」。`);
+    await refreshPresetList();
+  } catch (error) {
+    setPresetStatus(error.message, true);
+  } finally {
+    setPresetBusy(false);
+  }
+}
+
+async function deleteSelectedPreset() {
+  const fileId = els.presetSelect.value;
+  if (!fileId) {
+    setPresetStatus("目前沒有可刪除的配置。", true);
+    return;
+  }
+  try {
+    setPresetBusy(true);
+    await cloudPresetRequest("delete", { fileId });
+    setPresetStatus("已刪除雲端配置。");
+    await refreshPresetList();
+  } catch (error) {
+    setPresetStatus(error.message, true);
+  } finally {
+    setPresetBusy(false);
+  }
+}
+
+async function testPresetConnection() {
+  try {
+    setPresetBusy(true);
+    const result = await cloudPresetRequest("ping");
+    updatePresetFolderLink(result.folderUrl);
+    setPresetStatus("Google Drive 存檔連線成功。");
+    await refreshPresetList();
+  } catch (error) {
+    setPresetStatus(error.message, true);
+  } finally {
+    setPresetBusy(false);
+  }
 }
 
 function excelPercentCell(value, unsupportedText = "不估算") {
@@ -1134,6 +1431,7 @@ els.characterPickerMenu.addEventListener("click", (event) => {
   renderCharacters();
   renderCharacterExtras();
   render();
+  refreshPresetList();
 });
 
 document.addEventListener("click", (event) => {
@@ -1268,6 +1566,29 @@ els.resetBuildButton.addEventListener("click", () => {
   render();
 });
 
+els.presetSettingsButton.addEventListener("click", () => {
+  els.presetSettings.hidden = !els.presetSettings.hidden;
+});
+
+els.savePresetSettings.addEventListener("click", () => {
+  localStorage.setItem(PRESET_STORAGE_KEYS.endpoint, els.presetEndpoint.value.trim());
+  localStorage.setItem(PRESET_STORAGE_KEYS.secret, els.presetSecret.value.trim());
+  setPresetStatus("已儲存 Google Drive 存檔設定。");
+  refreshPresetList();
+});
+
+els.testPresetSettings.addEventListener("click", () => {
+  localStorage.setItem(PRESET_STORAGE_KEYS.endpoint, els.presetEndpoint.value.trim());
+  localStorage.setItem(PRESET_STORAGE_KEYS.secret, els.presetSecret.value.trim());
+  testPresetConnection();
+});
+
+els.savePreset.addEventListener("click", saveCurrentPreset);
+els.loadPreset.addEventListener("click", loadSelectedPreset);
+els.deletePreset.addEventListener("click", deleteSelectedPreset);
+els.refreshPreset.addEventListener("click", refreshPresetList);
+
 syncBaseInputs();
 renderShell();
 render();
+initPresetUi();

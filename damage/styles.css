@@ -324,6 +324,101 @@ select {
   box-shadow: var(--shadow);
 }
 
+.preset-panel {
+  margin-top: 14px;
+  padding: 12px;
+}
+
+.preset-main {
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) minmax(190px, 260px) minmax(190px, 260px) auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.preset-main h3 {
+  margin: 0;
+}
+
+.preset-main p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.preset-name,
+.preset-select,
+.preset-settings label {
+  display: grid;
+  gap: 4px;
+}
+
+.preset-name span,
+.preset-select span,
+.preset-settings span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.preset-name input,
+.preset-select select,
+.preset-settings input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: var(--text);
+  background: var(--panel);
+  outline: none;
+}
+
+.preset-name input:focus,
+.preset-select select:focus,
+.preset-settings input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(22, 130, 120, 0.14);
+}
+
+.preset-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.preset-actions button,
+.preset-actions a {
+  border: 1px solid rgba(22, 130, 120, 0.35);
+  border-radius: 7px;
+  padding: 6px 9px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.preset-actions button:hover,
+.preset-actions a:hover {
+  border-color: rgba(22, 130, 120, 0.58);
+}
+
+.preset-settings {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(180px, 240px) auto;
+  gap: 10px;
+  align-items: end;
+  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.preset-settings[hidden] {
+  display: none;
+}
+
 .build-panel,
 .side-panel,
 .result-panel,
@@ -1218,6 +1313,16 @@ select {
   .side-panel .config-column:nth-child(3) .form-grid.compact {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .preset-main,
+  .preset-settings {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .preset-main > div:first-child,
+  .preset-actions {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 1780px) and (min-width: 1181px) {
@@ -1284,6 +1389,16 @@ select {
   .base-grid.compact,
   .toggle-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .preset-main,
+  .preset-settings {
+    grid-template-columns: 1fr;
+  }
+
+  .preset-main > div:first-child,
+  .preset-actions {
+    grid-column: auto;
   }
 
   .skill-header {
