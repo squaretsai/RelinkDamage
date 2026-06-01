@@ -137,6 +137,7 @@ select {
 
 .field input,
 .sigil-slot select,
+.sigil-picker-toggle,
 .sigil-slot input {
   width: 100%;
   min-width: 0;
@@ -156,6 +157,7 @@ select {
 
 .field input:focus,
 .sigil-slot select:focus,
+.sigil-picker-toggle:focus,
 .sigil-slot input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(22, 130, 120, 0.14);
@@ -534,6 +536,7 @@ select {
 }
 
 .weapon-row select,
+.weapon-row .sigil-picker-toggle,
 .weapon-row input {
   width: 100%;
   min-width: 0;
@@ -597,9 +600,104 @@ select {
 }
 
 .sigil-slot select,
+.sigil-picker-toggle,
 .sigil-slot input {
   padding: 4px 6px;
   font-size: 13px;
+}
+
+.sigil-picker {
+  position: relative;
+  min-width: 0;
+}
+
+.sigil-picker-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  height: 27px;
+  color: var(--text);
+  background: var(--panel);
+  outline: none;
+  text-align: left;
+}
+
+.sigil-picker-toggle span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sigil-picker-toggle::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--muted);
+}
+
+.sigil-picker.open .sigil-picker-toggle::after {
+  transform: rotate(180deg);
+}
+
+.sigil-picker-menu {
+  position: absolute;
+  z-index: 80;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  display: none;
+  max-height: 260px;
+  overflow: auto;
+  border: 1px solid rgba(22, 130, 120, 0.25);
+  border-radius: 7px;
+  padding: 4px;
+  background: var(--panel);
+  box-shadow: 0 14px 34px rgba(20, 35, 32, 0.18);
+}
+
+.sigil-picker.open .sigil-picker-menu {
+  display: grid;
+  gap: 2px;
+}
+
+.sigil-picker-option {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 6px;
+  align-items: center;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 3px 5px;
+  color: var(--text);
+  background: transparent;
+  font-size: 12px;
+  text-align: left;
+}
+
+.sigil-picker-option:hover,
+.sigil-picker-option.selected {
+  border-color: rgba(22, 130, 120, 0.24);
+  background: var(--accent-soft);
+}
+
+.sigil-picker-option img {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.sigil-picker-option span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .form-grid {
@@ -1380,7 +1478,7 @@ select {
     grid-column: 2;
   }
 
-  .sigil-sub {
+  .sigil-sub-picker {
     grid-column: 3 / -1;
   }
 

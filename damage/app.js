@@ -1066,13 +1066,30 @@ function renderCalculatorGrid() {
   `;
 }
 
-function optionList(selectedName) {
-  return sigils
+function sigilPicker(selectedName, inputClass, ariaLabel) {
+  const safeSelected = selectedName || NONE;
+  const options = sigils
     .map((sigil) => {
-      const selected = sigil.name === selectedName ? " selected" : "";
-      return `<option value="${escapeHtml(sigil.name)}"${selected}>${escapeHtml(sigil.name)}</option>`;
+      const selected = sigil.name === safeSelected ? " selected" : "";
+      return `
+        <button class="sigil-picker-option${selected}" type="button" role="option" data-value="${escapeHtml(sigil.name)}" aria-selected="${sigil.name === safeSelected}">
+          <img src="${escapeHtml(sigilIcon(sigil.name))}" alt="" loading="lazy" />
+          <span>${escapeHtml(sigil.name)}</span>
+        </button>
+      `;
     })
     .join("");
+  return `
+    <div class="sigil-picker ${inputClass}-picker">
+      <input class="${inputClass}" type="hidden" value="${escapeHtml(safeSelected)}" />
+      <button class="sigil-picker-toggle" type="button" aria-label="${escapeHtml(ariaLabel)}" aria-expanded="false">
+        <span>${escapeHtml(safeSelected)}</span>
+      </button>
+      <div class="sigil-picker-menu" role="listbox">
+        ${options}
+      </div>
+    </div>
+  `;
 }
 
 function renderCharacters() {
@@ -1126,10 +1143,10 @@ function renderSigilSlots() {
         <div class="sigil-slot" data-slot="${index}">
           <span class="slot-number">${index + 1}</span>
           <img class="sigil-icon main-sigil-icon" src="${escapeHtml(sigilIcon(slot.main))}" alt="" loading="lazy" />
-          <select class="sigil-main" aria-label="主因子">${optionList(slot.main)}</select>
+          ${sigilPicker(slot.main, "sigil-main", "主因子")}
           <input class="sigil-level" type="number" min="0" max="${max}" step="1" value="${escapeHtml(slot.level)}" aria-label="等級" />
           <img class="sigil-icon sub-sigil-icon" src="${escapeHtml(sigilIcon(slot.sub))}" alt="" loading="lazy" />
-          <select class="sigil-sub" aria-label="副詞條">${optionList(slot.sub)}</select>
+          ${sigilPicker(slot.sub, "sigil-sub", "副詞條")}
         </div>
       `;
     })
@@ -1154,7 +1171,7 @@ function renderWeaponGrid() {
       .map((trait, index) => `
         <div class="weapon-row" data-weapon-slot="${index}">
           <img class="sigil-icon" src="${escapeHtml(sigilIcon(trait.trait))}" alt="" loading="lazy" />
-          <select class="weapon-trait" aria-label="武器加護">${optionList(trait.trait)}</select>
+          ${sigilPicker(trait.trait, "weapon-trait", "武器加護")}
           <input class="weapon-level" type="number" min="0" max="${getTraitLevelCap(trait.trait)}" step="1" value="${escapeHtml(trait.level)}" aria-label="等級" />
         </div>
       `)
@@ -1401,6 +1418,55 @@ function render() {
   renderVerificationNote();
 }
 
+function closeSigilPickers(except = null) {
+  document.querySelectorAll(".sigil-picker.open").forEach((picker) => {
+    if (picker === except) return;
+    picker.classList.remove("open");
+    picker.querySelector(".sigil-picker-toggle")?.setAttribute("aria-expanded", "false");
+  });
+}
+
+function syncSigilSlot(slotElement, ensureLevel = false) {
+  const index = Number(slotElement.dataset.slot);
+  const slot = state.build[index];
+  slot.main = slotElement.querySelector(".sigil-main").value || NONE;
+  slot.sub = slotElement.querySelector(".sigil-sub").value || NONE;
+  slot.level = Math.max(0, Math.min(getTraitLevelCap(slot.main), numberInput(slotElement.querySelector(".sigil-level"), 0)));
+  if (ensureLevel && (slot.main !== NONE || slot.sub !== NONE) && slot.level <= 0) {
+    slot.level = Math.min(15, getTraitLevelCap(slot.main !== NONE ? slot.main : slot.sub));
+  }
+}
+
+function syncWeaponRow(weaponRow) {
+  const index = Number(weaponRow.dataset.weaponSlot);
+  const weaponTrait = state.weapon.traits[index];
+  weaponTrait.trait = weaponRow.querySelector(".weapon-trait").value || NONE;
+  weaponTrait.level = Math.max(0, Math.min(getTraitLevelCap(weaponTrait.trait), numberInput(weaponRow.querySelector(".weapon-level"), 0)));
+}
+
+function commitSigilPickerChoice(option) {
+  const picker = option.closest(".sigil-picker");
+  const input = picker?.querySelector("input");
+  if (!picker || !input) return;
+  input.value = option.dataset.value || NONE;
+  closeSigilPickers();
+
+  const slotElement = picker.closest(".sigil-slot");
+  if (slotElement) {
+    syncSigilSlot(slotElement, true);
+    renderSigilSlots();
+    render();
+    return;
+  }
+
+  const weaponRow = picker.closest(".weapon-row");
+  if (weaponRow) {
+    syncWeaponRow(weaponRow);
+    renderWeaponGrid();
+    render();
+  }
+}
+
 els.characterPickerButton.addEventListener("click", () => {
   const open = els.characterPickerMenu.classList.toggle("open");
   els.characterPickerButton.setAttribute("aria-expanded", String(open));
@@ -1423,9 +1489,33 @@ els.characterPickerMenu.addEventListener("click", (event) => {
 });
 
 document.addEventListener("click", (event) => {
+  const toggle = event.target.closest(".sigil-picker-toggle");
+  if (toggle) {
+    const picker = toggle.closest(".sigil-picker");
+    const willOpen = !picker.classList.contains("open");
+    closeSigilPickers(picker);
+    picker.classList.toggle("open", willOpen);
+    toggle.setAttribute("aria-expanded", String(willOpen));
+    return;
+  }
+
+  const option = event.target.closest(".sigil-picker-option");
+  if (option) {
+    commitSigilPickerChoice(option);
+    return;
+  }
+
+  if (!event.target.closest(".sigil-picker")) {
+    closeSigilPickers();
+  }
+
   if (event.target.closest(".character-picker")) return;
   els.characterPickerMenu.classList.remove("open");
   els.characterPickerButton.setAttribute("aria-expanded", "false");
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeSigilPickers();
 });
 
 els.search.addEventListener("input", (event) => {
@@ -1469,11 +1559,7 @@ for (const input of [els.attack, els.critRate, els.critDamage, els.manualDamage]
 els.sigilSlots.addEventListener("input", (event) => {
   const slotElement = event.target.closest(".sigil-slot");
   if (!slotElement) return;
-  const index = Number(slotElement.dataset.slot);
-  const slot = state.build[index];
-  slot.main = slotElement.querySelector(".sigil-main").value;
-  slot.sub = slotElement.querySelector(".sigil-sub").value;
-  slot.level = Math.max(0, Math.min(getTraitLevelCap(slot.main), numberInput(slotElement.querySelector(".sigil-level"), 0)));
+  syncSigilSlot(slotElement);
   renderSigilSlots();
   render();
 });
@@ -1482,14 +1568,7 @@ els.sigilSlots.addEventListener("change", (event) => {
   if (!event.target.matches(".sigil-main, .sigil-sub")) return;
   const slotElement = event.target.closest(".sigil-slot");
   if (!slotElement) return;
-  const index = Number(slotElement.dataset.slot);
-  const slot = state.build[index];
-  slot.main = slotElement.querySelector(".sigil-main").value;
-  slot.sub = slotElement.querySelector(".sigil-sub").value;
-  slot.level = Math.max(0, Math.min(getTraitLevelCap(slot.main), numberInput(slotElement.querySelector(".sigil-level"), 0)));
-  if ((slot.main !== NONE || slot.sub !== NONE) && slot.level <= 0) {
-    slot.level = Math.min(15, getTraitLevelCap(slot.main !== NONE ? slot.main : slot.sub));
-  }
+  syncSigilSlot(slotElement, true);
   renderSigilSlots();
   render();
 });
@@ -1497,10 +1576,7 @@ els.sigilSlots.addEventListener("change", (event) => {
 els.weaponGrid.addEventListener("input", (event) => {
   const weaponRow = event.target.closest(".weapon-row");
   if (weaponRow) {
-    const index = Number(weaponRow.dataset.weaponSlot);
-    const weaponTrait = state.weapon.traits[index];
-    weaponTrait.trait = weaponRow.querySelector(".weapon-trait").value;
-    weaponTrait.level = Math.max(0, Math.min(getTraitLevelCap(weaponTrait.trait), numberInput(weaponRow.querySelector(".weapon-level"), 0)));
+    syncWeaponRow(weaponRow);
     renderWeaponGrid();
     render();
     return;
