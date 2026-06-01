@@ -18,7 +18,16 @@ function setupRelinkPresetStore() {
 }
 
 function doPost(e) {
+  return handleRequest_(e);
+}
+
+function doGet(e) {
+  return handleRequest_(e);
+}
+
+function handleRequest_(e) {
   const requestId = (e.parameter.requestId || "").trim();
+  const callback = (e.parameter.callback || "").trim();
   try {
     verifySecret_(e.parameter.secret);
     const action = (e.parameter.action || "").trim();
@@ -27,12 +36,12 @@ function doPost(e) {
     return htmlResponse_(requestId, {
       ok: true,
       ...result,
-    });
+    }, callback);
   } catch (error) {
     return htmlResponse_(requestId, {
       ok: false,
       error: String(error && error.message ? error.message : error),
-    });
+    }, callback);
   }
 }
 
@@ -156,13 +165,19 @@ function safeName_(value) {
   return name.slice(0, 80) || "未命名";
 }
 
-function htmlResponse_(requestId, body) {
+function htmlResponse_(requestId, body, callback) {
   const message = {
     source: "relink-presets",
     requestId,
     ...body,
   };
   const json = JSON.stringify(message).replace(/</g, "\\u003c");
+  const cb = String(callback || "");
+  if (cb && /^[A-Za-z_$][0-9A-Za-z_$]*$/.test(cb)) {
+    return ContentService
+      .createTextOutput(cb + "(" + json + ");")
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
   return HtmlService
     .createHtmlOutput("<!doctype html><meta charset=\"utf-8\"><script>parent.postMessage(" + json + ", \"*\");</script>")
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);

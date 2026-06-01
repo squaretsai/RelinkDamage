@@ -403,35 +403,19 @@ function cloudPresetRequest(action, payload = {}) {
   const requestId = `preset-${Date.now()}-${Math.random().toString(36).slice(2)}`;
   return new Promise((resolve, reject) => {
     let settled = false;
-    const frameName = `relink_preset_frame_${requestId.replace(/[^a-z0-9_]/gi, "_")}`;
-    const iframe = document.createElement("iframe");
-    iframe.name = frameName;
-    iframe.hidden = true;
-
-    const form = document.createElement("form");
-    form.method = "POST";
-    form.action = config.endpoint;
-    form.target = frameName;
-    form.hidden = true;
-
-    const fields = {
-      action,
-      secret: config.secret,
-      requestId,
-      payload: JSON.stringify(payload),
-    };
-    for (const [name, value] of Object.entries(fields)) {
-      const input = document.createElement("input");
-      input.type = "hidden";
-      input.name = name;
-      input.value = value;
-      form.append(input);
-    }
+    const callbackName = `__relinkPreset_${requestId.replace(/[^a-z0-9_]/gi, "_")}`;
+    const script = document.createElement("script");
+    const url = new URL(config.endpoint);
+    url.searchParams.set("action", action);
+    url.searchParams.set("secret", config.secret);
+    url.searchParams.set("requestId", requestId);
+    url.searchParams.set("callback", callbackName);
+    url.searchParams.set("payload", JSON.stringify(payload));
+    script.src = url.toString();
 
     const cleanup = () => {
-      window.removeEventListener("message", onMessage);
-      form.remove();
-      iframe.remove();
+      delete window[callbackName];
+      script.remove();
     };
     const finish = (callback, value) => {
       if (settled) return;
@@ -440,17 +424,16 @@ function cloudPresetRequest(action, payload = {}) {
       callback(value);
     };
     const timer = window.setTimeout(() => finish(reject, new Error("Google Drive 存檔連線逾時。")), 20000);
-    const onMessage = (event) => {
-      const data = event.data;
-      if (!data || data.source !== "relink-presets" || data.requestId !== requestId) return;
+    window[callbackName] = (data) => {
       window.clearTimeout(timer);
       if (data.ok) finish(resolve, data);
       else finish(reject, new Error(data.error || "Google Drive 存檔失敗。"));
     };
-
-    window.addEventListener("message", onMessage);
-    document.body.append(iframe, form);
-    form.submit();
+    script.addEventListener("error", () => {
+      window.clearTimeout(timer);
+      finish(reject, new Error("無法連到 Apps Script。請確認 Web App URL 與部署權限。"));
+    });
+    document.body.append(script);
   });
 }
 
@@ -469,6 +452,7 @@ async function refreshPresetList() {
   const character = getCharacter();
   try {
     setPresetBusy(true);
+    setPresetStatus("正在讀取雲端配置...");
     const result = await cloudPresetRequest("list", {
       characterId: state.characterId,
       characterName: character?.nameZh ?? "",
@@ -496,6 +480,7 @@ async function saveCurrentPreset() {
   const character = getCharacter();
   try {
     setPresetBusy(true);
+    setPresetStatus(`正在儲存「${name}」...`);
     const result = await cloudPresetRequest("save", {
       characterId: state.characterId,
       characterName: character?.nameZh ?? "",
@@ -520,6 +505,7 @@ async function loadSelectedPreset() {
   }
   try {
     setPresetBusy(true);
+    setPresetStatus("正在讀取雲端配置...");
     const result = await cloudPresetRequest("load", { fileId });
     applyPresetPayload(result.preset);
     els.presetName.value = result.preset?.name ?? "";
@@ -540,6 +526,7 @@ async function deleteSelectedPreset() {
   }
   try {
     setPresetBusy(true);
+    setPresetStatus("正在刪除雲端配置...");
     await cloudPresetRequest("delete", { fileId });
     setPresetStatus("已刪除雲端配置。");
     await refreshPresetList();
@@ -553,6 +540,7 @@ async function deleteSelectedPreset() {
 async function testPresetConnection() {
   try {
     setPresetBusy(true);
+    setPresetStatus("正在測試 Google Drive 存檔連線...");
     const result = await cloudPresetRequest("ping");
     updatePresetFolderLink(result.folderUrl);
     setPresetStatus("Google Drive 存檔連線成功。");
