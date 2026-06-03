@@ -10644,7 +10644,7 @@ const RELINK_DAMAGE_CALCULATOR = {
           "baseRatio": null
         },
         {
-          "skill": "腐化",
+          "skill": "墮落箭雨",
           "modifier": "Per hit",
           "multiplier": 0.5321554958358832,
           "damageCap": 3998.8505747126437,
@@ -10710,7 +10710,7 @@ const RELINK_DAMAGE_CALCULATOR = {
           "baseRatio": null
         },
         {
-          "skill": "殺戮之雨",
+          "skill": "致命箭雨",
           "modifier": "Per hit",
           "multiplier": 2.5942580421999306,
           "damageCap": 19998.850574712644,
@@ -10721,7 +10721,7 @@ const RELINK_DAMAGE_CALCULATOR = {
           "baseRatio": null
         },
         {
-          "skill": "散環",
+          "skill": "圓弧散射",
           "modifier": "Per hit",
           "multiplier": 1.0377032168799722,
           "damageCap": 7998.850574712644,
@@ -10743,7 +10743,7 @@ const RELINK_DAMAGE_CALCULATOR = {
           "baseRatio": null
         },
         {
-          "skill": "二王的鬥諍",
+          "skill": "二王之淨",
           "modifier": "Initial Hit",
           "multiplier": 53.441715669318576,
           "damageCap": 599998.8505747126,
@@ -10754,7 +10754,7 @@ const RELINK_DAMAGE_CALCULATOR = {
           "baseRatio": null
         },
         {
-          "skill": "二王的鬥諍",
+          "skill": "二王之淨",
           "modifier": "Follow-up",
           "multiplier": 4.73884469041854,
           "damageCap": 49998.85057471265,
@@ -10766,7 +10766,7 @@ const RELINK_DAMAGE_CALCULATOR = {
         },
         {
           "skill": "殲雷鳴箭",
-          "modifier": "腐化",
+          "modifier": "墮落箭雨",
           "multiplier": 0,
           "damageCap": 1999,
           "cooldown": null,
@@ -10777,7 +10777,7 @@ const RELINK_DAMAGE_CALCULATOR = {
         },
         {
           "skill": "殲雷鳴箭",
-          "modifier": "散環",
+          "modifier": "圓弧散射",
           "multiplier": 0,
           "damageCap": 3999,
           "cooldown": null,
@@ -10788,7 +10788,7 @@ const RELINK_DAMAGE_CALCULATOR = {
         },
         {
           "skill": "殲雷鳴箭",
-          "modifier": "殺戮之雨",
+          "modifier": "致命箭雨",
           "multiplier": 0,
           "damageCap": 9999,
           "cooldown": null,
@@ -10821,7 +10821,7 @@ const RELINK_DAMAGE_CALCULATOR = {
         },
         {
           "skill": "殲雷鳴箭",
-          "modifier": "二王的鬥諍",
+          "modifier": "二王之淨",
           "multiplier": 0,
           "damageCap": 299999,
           "cooldown": null,

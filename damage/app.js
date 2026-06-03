@@ -50,7 +50,29 @@ const VERIFIED_CHARACTERS = new Set([
 ]);
 
 const sigils = DATA.sigils ?? [];
+const DISPLAY_ONLY_TRAITS = new Set([
+  "防禦性能",
+  "逆襲（防禦）",
+  "淨癒再生",
+]);
 const sigilByName = new Map(sigils.map((sigil) => [sigil.name, sigil]));
+
+function ensureDisplayOnlyTrait(name, maxLevel = 15) {
+  if (sigilByName.has(name)) return name;
+  const template = sigilByName.get(NONE) ?? {};
+  const sigil = {
+    name,
+    icon: template.icon,
+    iconLocal: template.iconLocal,
+    color: "Blue",
+    secondaryRule: "OrangeGrayCritRedPurpleBlueNone",
+    maxLevel,
+    displayOnly: true,
+  };
+  sigils.push(sigil);
+  sigilByName.set(name, sigil);
+  return name;
+}
 const mainOnlyTraitNames = new Set(
   [
     ...(DATA.calculator?.damageTraits ?? []),
@@ -293,6 +315,206 @@ function escapeHtml(value) {
 
 function normalizeText(value) {
   return String(value ?? "").trim().toLowerCase();
+}
+
+function jsurlParse(source) {
+  const text = String(source ?? "");
+  let index = 0;
+
+  function decodeToken(token) {
+    return token
+      .replace(/!|(\*\*[0-9a-fA-F]{4})|(\*[0-9a-fA-F]{2})/g, (match) => {
+        if (match === "!") return "$";
+        if (match.startsWith("**")) return String.fromCharCode(Number.parseInt(match.slice(2), 16));
+        return String.fromCharCode(Number.parseInt(match.slice(1), 16));
+      });
+  }
+
+  function readToken() {
+    const start = index;
+    while (index < text.length && text[index] !== "~" && text[index] !== ")") index += 1;
+    return decodeToken(text.slice(start, index));
+  }
+
+  function parseValue() {
+    if (text[index] !== "~") throw new Error("不是有效的 logsdata");
+    index += 1;
+    const marker = text[index];
+    if (marker === "'") {
+      index += 1;
+      return readToken();
+    }
+    if (marker === "(") {
+      index += 1;
+      if (text[index] === "~") {
+        const result = [];
+        while (index < text.length && text[index] !== ")") {
+          if (text[index] === "~" && text[index + 1] === ")") {
+            index += 1;
+            break;
+          }
+          result.push(parseValue());
+        }
+        if (text[index] === ")") index += 1;
+        return result;
+      }
+      const result = {};
+      while (index < text.length && text[index] !== ")") {
+        if (text[index] === "~") index += 1;
+        const key = readToken();
+        if (!key && text[index] === ")") break;
+        result[key] = parseValue();
+      }
+      if (text[index] === ")") index += 1;
+      return result;
+    }
+    const raw = readToken();
+    if (raw === "true") return true;
+    if (raw === "false") return false;
+    if (raw === "null") return null;
+    const number = Number(raw);
+    return Number.isFinite(number) ? number : raw;
+  }
+
+  return parseValue();
+}
+
+function hashKey(value) {
+  if (value === null || value === undefined || value === "" || value === 2289754288) return "";
+  if (typeof value === "number") return (value >>> 0).toString(16).padStart(8, "0");
+  const text = String(value).replace(/^0x/i, "").trim().toLowerCase();
+  if (/^[0-9a-f]{1,8}$/.test(text)) return text.padStart(8, "0");
+  return "";
+}
+
+function logsMapText(group, id) {
+  const key = hashKey(id);
+  return key ? window.GBFR_LOGS_MAP?.[group]?.[key]?.text ?? "" : "";
+}
+
+function localTraitName(name) {
+  const text = String(name ?? "").trim();
+  if (!text || text === "None") return NONE;
+  const aliases = {
+    爆擊機率: "暴擊機率",
+    暈厥: "暈眩",
+    昏厥: "暈眩",
+    連擊加成: "連技加成",
+    連擊終擊: "連技終擊",
+    連技終結: "連技終擊",
+    連攜攻擊: "聯手攻擊",
+    連結攻擊: "聯手攻擊",
+    "Alpha": "阿爾法",
+    "Beta": "貝塔",
+    "Gamma": "伽馬",
+    "α": "阿爾法",
+    "β": "貝塔",
+    "γ": "伽馬",
+    Ain: "盡涯",
+    Boundary: "盡涯",
+  };
+  const normalized = aliases[text] ?? text.replace(/\s*[+＋]\s*$/, "");
+  if (sigilByName.has(normalized)) return normalized;
+  if (/阿爾法.*符碼/.test(normalized)) return "阿爾法";
+  if (/貝塔.*符碼/.test(normalized)) return "貝塔";
+  if (/伽馬.*符碼|伽瑪.*符碼/.test(normalized)) return "伽馬";
+  if (/魔眼的萬箭|萬箭$/.test(normalized)) return "專屬";
+  if (/的覺醒$/.test(normalized)) return "專屬";
+  if (/戰氣$/.test(normalized)) return "戰氣";
+  if (/Ain|Boundary|境界|盡涯|二王$/i.test(normalized)) return "盡涯";
+  if (DISPLAY_ONLY_TRAITS.has(normalized)) return ensureDisplayOnlyTrait(normalized);
+  return NONE;
+}
+
+function localCharacterFromLogs(logsData) {
+  const logsName = window.GBFR_LOGS_MAP?.characters?.[logsData?.characterType] ?? "";
+  const candidates = [
+    logsName,
+    logsData?.characterName,
+    logsData?.displayName,
+    logsData?.characterType === "Pl0000" || logsData?.characterType === "Pl0100" ? "團長" : "",
+  ]
+    .filter(Boolean)
+    .map((name) => (name === "葛蘭" || name === "吉塔" ? "團長" : name));
+  return DATA.characters.find((character) => candidates.includes(character.nameZh)) ?? null;
+}
+
+function localLimitBreakLabel(name) {
+  const aliases = {
+    一般攻擊的傷害上限: "一般傷害上限",
+    技能的傷害上限: "技能傷害上限",
+    奧義的傷害上限: "奧義傷害上限",
+    技能的給予傷害: "技能給予傷害",
+    奧義的給予傷害: "奧義給予傷害",
+    爆擊機率: "暴擊機率",
+  };
+  const text = aliases[String(name ?? "").trim()] ?? String(name ?? "").trim();
+  return Object.prototype.hasOwnProperty.call(makeLimitBreakState(), text) ? text : "";
+}
+
+function logsTraitSlot(firstTraitId, secondTraitId, level) {
+  return {
+    main: localTraitName(logsMapText("traits", firstTraitId)),
+    level: Number(level) || 0,
+    sub: localTraitName(logsMapText("traits", secondTraitId)),
+  };
+}
+
+function presetFromLogsData(logsData) {
+  const character = localCharacterFromLogs(logsData) ?? getCharacter();
+  const weaponInfo = logsData?.weaponInfo ?? {};
+  const limitBreak = makeLimitBreakState();
+  for (const item of logsData?.overmasteryInfo?.overmasteries ?? []) {
+    const label = localLimitBreakLabel(logsMapText("overmasteries", item.id));
+    if (!label) continue;
+    const raw = Number(item.value) || 0;
+    limitBreak[label] = label === "攻擊力" || raw > 1 ? raw : raw * 100;
+  }
+
+  return {
+    version: 1,
+    name: `GBFR Logs ${logsData?.displayName || character?.nameZh || "Build"} ${new Date().toLocaleString("zh-TW", { hour12: false })}`,
+    savedAt: new Date().toISOString(),
+    characterId: character?.id ?? state.characterId,
+    characterName: character?.nameZh ?? "",
+    selectedRowIndex: 0,
+    filters: {
+      search: "",
+      skillFilter: "",
+      damagePercentMin: "",
+      damagePercentMax: "",
+      tableMode: state.tableMode,
+    },
+    build: Array.from({ length: 12 }, (_, index) => {
+      const sigil = logsData?.sigils?.[index] ?? {};
+      return logsTraitSlot(sigil.firstTraitId, sigil.secondTraitId, sigil.sigilLevel ?? sigil.firstTraitLevel);
+    }),
+    weapon: {
+      traits: [
+        { trait: localTraitName(logsMapText("traits", weaponInfo.trait1Id)), level: Number(weaponInfo.trait1Level) || 0 },
+        { trait: localTraitName(logsMapText("traits", weaponInfo.trait2Id)), level: Number(weaponInfo.trait2Level) || 0 },
+        { trait: localTraitName(logsMapText("traits", weaponInfo.trait3Id)), level: Number(weaponInfo.trait3Level) || 0 },
+      ],
+      sigilBooster: Number(weaponInfo.awakeningLevel) >= 10,
+      terminus: Number(weaponInfo.awakeningLevel) >= 10,
+    },
+    limitBreak,
+  };
+}
+
+function importLogsDataFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const encoded = params.get("logsdata");
+  if (!encoded) return;
+  try {
+    const logsData = jsurlParse(encoded);
+    const preset = presetFromLogsData(logsData);
+    applyPresetPayload(preset);
+    if (els.presetName) els.presetName.value = preset.name;
+    setPresetStatus("已匯入 GBFR Logs build，可以按「儲存到雲端」保留。");
+  } catch (error) {
+    setPresetStatus(`GBFR Logs 匯入失敗：${error.message}`);
+  }
 }
 
 function numberInput(element, fallback = 0) {
@@ -1656,3 +1878,4 @@ syncBaseInputs();
 renderShell();
 render();
 initPresetUi();
+importLogsDataFromUrl();
