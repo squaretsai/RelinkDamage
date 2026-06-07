@@ -1097,10 +1097,26 @@ function finalAttackForEcho(levels) {
 }
 
 function critRateValue(levels) {
-  return Math.max(
-    0,
-    Math.min(1, state.base.critRate / 100 + (state.other["Link Time?"] ? 0.05 : 0) + (isEternalCharacter() ? 0.1 : 0) + traitPercent(levels, "暴擊機率") + limitPercent("暴擊機率")),
-  );
+  return critRateBreakdown(levels).total;
+}
+
+function critRateBreakdown(levels) {
+  const parts = [
+    ["基礎", state.base.critRate / 100],
+    ["因子", traitPercent(levels, "暴擊機率")],
+    ["突破", limitPercent("暴擊機率")],
+  ];
+  if (isEternalCharacter()) parts.push(["十天", 0.1]);
+  if (state.other["Link Time?"]) parts.push(["Link", 0.05]);
+
+  const uncappedTotal = parts.reduce((sum, [, value]) => sum + value, 0);
+  const total = Math.max(0, Math.min(1, uncappedTotal));
+  const text = parts
+    .filter(([, value]) => Math.abs(value) > 0.000001)
+    .map(([label, value]) => `${label} ${excelPercentCell(value, "0%")}`)
+    .join(" + ") || "0%";
+
+  return { total, uncappedTotal, text };
 }
 
 function zetaGuaranteedCrit(levels) {
@@ -1311,6 +1327,7 @@ function calculate(row) {
 function calculatorOverview() {
   const levels = getTraitLevels();
   const attack = effectiveAttack(levels);
+  const critRate = critRateBreakdown(levels);
   const critDamage = 1 + state.base.critDamage / 100 + traitPercent(levels, "暴擊傷害");
   const baseDamage = attack * (1 + damageBonus(levels));
   const totalDamageCap = traitPercent(levels, "傷害上限")
@@ -1321,6 +1338,8 @@ function calculatorOverview() {
   return {
     top: [
       ["傷害上限", calculatorPercentCell(totalDamageCap)],
+      ["配裝暴擊率", calculatorPercentCell(critRate.total)],
+      ["暴擊組成", critRate.text],
       ["基礎傷害", formatPreciseNumber(baseDamage)],
       ["暴擊傷害", formatPreciseNumber(baseDamage * critDamage)],
       ["Raw Attack", formatPreciseNumber(attack)],
