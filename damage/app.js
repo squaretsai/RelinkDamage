@@ -11,6 +11,7 @@ const ZETA_DEFAULT_VERIFICATION = {
 };
 const CHARACTER_BASE_STATS = {
   "蘇恩": { attack: 10324, critRate: 50, critDamage: 100 },
+  "聖德芬": { attack: 10324, critRate: 60, critDamage: 100 },
 };
 const CHARACTER_EXTRA_DEFAULTS = {
   "團長": [
@@ -37,6 +38,9 @@ const CHARACTER_EXTRA_DEFAULTS = {
   ],
   "席耶提": [
     ["劍神召喚?", true],
+  ],
+  "聖德芬": [
+    ["觸發專屬?", true],
   ],
 };
 const VERIFIED_CHARACTERS = new Set([
@@ -1035,7 +1039,7 @@ function hasBuildTrait(name) {
 }
 
 function isEternalCharacter() {
-  return ["席耶提", "蘇恩"].includes(getCharacter()?.nameZh);
+  return ["席耶提", "蘇恩", "聖德芬"].includes(getCharacter()?.nameZh);
 }
 
 function hasBoundarySigil() {
@@ -1106,7 +1110,9 @@ function critRateBreakdown(levels) {
     ["因子", traitPercent(levels, "暴擊機率")],
     ["突破", limitPercent("暴擊機率")],
   ];
-  if (isEternalCharacter()) parts.push(["十天", 0.1]);
+  if (isEternalCharacter()) {
+    parts.push([getCharacter()?.nameZh === "聖德芬" ? "特殊" : "十天", 0.1]);
+  }
   if (state.other["Link Time?"]) parts.push(["Link", 0.05]);
 
   const uncappedTotal = parts.reduce((sum, [, value]) => sum + value, 0);
@@ -1251,6 +1257,7 @@ function yodarhaMultiplierBonus() {
 function characterEnhancedDamage() {
   const characterName = getCharacter()?.nameZh;
   if (characterName === "蘇恩" && sigilAwakeningActive() && (state.characterExtras["觸發專屬?"] ?? true)) return 0.1;
+  if (characterName === "聖德芬" && sigilAwakeningActive() && (state.characterExtras["觸發專屬?"] ?? true)) return 0.1;
   if (characterName === "團長" && sigilAwakeningActive()) {
     const classLevel = Number(state.characterExtras["Class Lv"]) || 0;
     if (classLevel >= 4) return 0.1;
@@ -1343,7 +1350,7 @@ function calculatorOverview() {
       ["基礎傷害", formatPreciseNumber(baseDamage)],
       ["暴擊傷害", formatPreciseNumber(baseDamage * critDamage)],
       ["Raw Attack", formatPreciseNumber(attack)],
-      ["十天?", formatBoolean(["席耶提", "蘇恩"].includes(getCharacter()?.nameZh))],
+      ["特殊角色?", formatBoolean(["席耶提", "蘇恩", "聖德芬"].includes(getCharacter()?.nameZh))],
       ["Echo", formatPreciseNumber(estimateEchoPercent(levels) > 0 ? 1 : 0, 0)],
     ],
     boosts: [
@@ -1500,7 +1507,7 @@ function renderWeaponGrid() {
     </label>
     <label class="toggle">
       <input id="terminusInput" type="checkbox"${eternal || state.weapon.terminus ? " checked" : ""}${eternal ? " disabled" : ""} />
-      <span>${eternal ? "十天眾武器：上限 +20%（固定）" : "究極武器：上限 +20%"}</span>
+      <span>${eternal ? "特殊武器：上限 +20%（固定）" : "究極武器：上限 +20%"}</span>
     </label>
   `;
 }

@@ -5,8 +5,8 @@ const RELINK_DAMAGE_CALCULATOR = {
     "sourceUrl": "https://docs.google.com/spreadsheets/d/1nbvm1pTgPGxpjqDkI5R_NP63Xpl_klB75LAUOrRKQCc/edit?gid=1519714141#gid=1519714141",
     "sourceFile": "imports/maygi-damage-calculator.xlsx",
     "generatedAt": "2026-05-30T21:56:01.813096+00:00",
-    "characterCount": 21,
-    "skillRowCount": 1178,
+    "characterCount": 22,
+    "skillRowCount": 1179,
     "notes": [
       "保留來源試算表的角色技能倍率、DMG Cap、因子清單、因子圖示與等級曲線。",
       "目前網站端會即時計算配裝因子等級與基礎估算；Google Sheet 的完整公式仍需逐段移植。"
@@ -10883,6 +10883,26 @@ const RELINK_DAMAGE_CALCULATOR = {
           "classification": "Sb",
           "contribution": null,
           "notes": null,
+          "baseRatio": null
+        }
+      ]
+    },
+    {
+      "id": "sandalphon",
+      "nameZh": "聖德芬",
+      "imageUrl": "https://i.imgur.com/ymvvOeh.png",
+      "warpathCondition": null,
+      "warpathBonus": 0,
+      "skillRows": [
+        {
+          "skill": "Lightstep",
+          "modifier": "",
+          "multiplier": 0.52,
+          "damageCap": 19999,
+          "cooldown": null,
+          "classification": "NoRa",
+          "contribution": null,
+          "notes": "參考 relink-damage/arveoncode；目前公開資料只提供這一筆聖德芬技能倍率。",
           "baseRatio": null
         }
       ]
