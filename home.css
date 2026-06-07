@@ -157,6 +157,22 @@ h1 {
   font-size: 28px;
 }
 
+.tool-card strong em {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  margin-left: 8px;
+  padding: 0 8px;
+  border: 1px solid rgba(243, 179, 66, 0.48);
+  border-radius: 999px;
+  color: #9b6500;
+  background: rgba(255, 242, 212, 0.82);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
 .tool-card span:last-child {
   color: var(--muted);
   font-size: 16px;
@@ -166,6 +182,15 @@ h1 {
 .tool-card.primary {
   border-color: #8ed2ca;
   background: linear-gradient(180deg, rgba(238, 250, 247, 0.94), rgba(255, 255, 255, 0.92));
+}
+
+.tool-card.local {
+  border-color: #d8d6b7;
+  background: linear-gradient(180deg, rgba(255, 251, 238, 0.94), rgba(255, 255, 255, 0.9));
+}
+
+.tool-card.local .tool-kicker {
+  color: #9b6500;
 }
 
 @media (max-width: 760px) {
