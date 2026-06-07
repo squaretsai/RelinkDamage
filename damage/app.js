@@ -104,6 +104,7 @@ const state = {
   limitBreak: makeLimitBreakState(),
   other: makeOtherState(),
   characterExtras: makeCharacterExtraState(),
+  presetList: [],
 };
 
 const els = {
@@ -161,10 +162,14 @@ const els = {
   refreshPreset: document.querySelector("#refreshPresetButton"),
   presetSettingsButton: document.querySelector("#presetSettingsButton"),
   presetSettings: document.querySelector("#presetSettings"),
+  presetDeletePanel: document.querySelector("#presetDeletePanel"),
+  presetDeleteList: document.querySelector("#presetDeleteList"),
   presetEndpoint: document.querySelector("#presetEndpointInput"),
   presetSecret: document.querySelector("#presetSecretInput"),
   savePresetSettings: document.querySelector("#savePresetSettingsButton"),
   testPresetSettings: document.querySelector("#testPresetSettingsButton"),
+  cancelPresetDelete: document.querySelector("#cancelPresetDeleteButton"),
+  confirmPresetDelete: document.querySelector("#confirmPresetDeleteButton"),
   openPresetFolder: document.querySelector("#openPresetFolderLink"),
 };
 
@@ -599,7 +604,15 @@ function setPresetStatus(message, isError = false) {
 }
 
 function setPresetBusy(busy) {
-  for (const button of [els.savePreset, els.loadPreset, els.deletePreset, els.refreshPreset, els.testPresetSettings]) {
+  for (const button of [
+    els.savePreset,
+    els.loadPreset,
+    els.deletePreset,
+    els.refreshPreset,
+    els.testPresetSettings,
+    els.cancelPresetDelete,
+    els.confirmPresetDelete,
+  ]) {
     if (button) button.disabled = busy;
   }
 }
@@ -665,6 +678,52 @@ function updatePresetFolderLink(folderUrl) {
   els.openPresetFolder.hidden = false;
 }
 
+function formatPresetUpdatedAt(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return date.toLocaleString("zh-TW", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+function renderPresetDeleteList() {
+  if (!els.presetDeleteList) return;
+  const presets = state.presetList ?? [];
+  if (!presets.length) {
+    els.presetDeleteList.innerHTML = `<p class="preset-delete-empty">此角色目前沒有可刪除的雲端配置。</p>`;
+    return;
+  }
+  els.presetDeleteList.innerHTML = presets
+    .map((preset) => {
+      const updatedAt = formatPresetUpdatedAt(preset.updatedAt);
+      const meta = updatedAt ? `更新：${updatedAt}` : "雲端配置";
+      return `
+        <label class="preset-delete-item">
+          <input type="checkbox" value="${escapeHtml(preset.fileId)}" data-name="${escapeHtml(preset.name)}" />
+          <span class="preset-delete-meta">
+            <strong>${escapeHtml(preset.name)}</strong>
+            <small>${escapeHtml(meta)}</small>
+          </span>
+        </label>
+      `;
+    })
+    .join("");
+}
+
+function openPresetDeletePanel() {
+  if (!state.presetList.length) {
+    setPresetStatus("目前沒有可刪除的雲端配置。", true);
+    return;
+  }
+  els.presetDeletePanel.hidden = false;
+  renderPresetDeleteList();
+  setPresetStatus("請勾選要刪除的雲端配置。");
+}
+
 async function refreshPresetList() {
   const config = presetConfig();
   if (!config.endpoint || !config.secret) {
@@ -680,9 +739,15 @@ async function refreshPresetList() {
       characterName: character?.nameZh ?? "",
     });
     const presets = result.presets ?? [];
+    const previousFileId = els.presetSelect.value;
+    state.presetList = presets;
     els.presetSelect.innerHTML = presets.length
       ? presets.map((preset) => `<option value="${escapeHtml(preset.fileId)}">${escapeHtml(preset.name)}</option>`).join("")
       : `<option value="">此角色尚無雲端配置</option>`;
+    if (previousFileId && presets.some((preset) => preset.fileId === previousFileId)) {
+      els.presetSelect.value = previousFileId;
+    }
+    renderPresetDeleteList();
     updatePresetFolderLink(result.folderUrl);
     setPresetStatus(`已讀取 ${character?.nameZh ?? "目前角色"} 的 ${presets.length} 個雲端配置。`);
   } catch (error) {
@@ -741,17 +806,29 @@ async function loadSelectedPreset() {
 }
 
 async function deleteSelectedPreset() {
-  const fileId = els.presetSelect.value;
-  if (!fileId) {
-    setPresetStatus("目前沒有可刪除的配置。", true);
+  openPresetDeletePanel();
+}
+
+async function deleteCheckedPresets() {
+  const checked = Array.from(els.presetDeleteList?.querySelectorAll("input[type='checkbox']:checked") ?? []);
+  if (!checked.length) {
+    setPresetStatus("請先勾選要刪除的雲端配置。", true);
     return;
   }
+  const names = checked.map((input) => input.dataset.name || "未命名配置");
+  const confirmed = window.confirm(`確定刪除 ${checked.length} 個雲端配置？\n\n${names.join("\n")}`);
+  if (!confirmed) return;
   try {
     setPresetBusy(true);
-    setPresetStatus("正在刪除雲端配置...");
-    await cloudPresetRequest("delete", { fileId });
-    setPresetStatus("已刪除雲端配置。");
+    setPresetStatus(`正在刪除 ${checked.length} 個雲端配置...`);
+    for (const input of checked) {
+      await cloudPresetRequest("delete", { fileId: input.value });
+    }
+    setPresetStatus(`已刪除 ${checked.length} 個雲端配置。`);
     await refreshPresetList();
+    if (!state.presetList.length) {
+      els.presetDeletePanel.hidden = true;
+    }
   } catch (error) {
     setPresetStatus(error.message, true);
   } finally {
@@ -1873,6 +1950,10 @@ els.savePreset.addEventListener("click", saveCurrentPreset);
 els.loadPreset.addEventListener("click", loadSelectedPreset);
 els.deletePreset.addEventListener("click", deleteSelectedPreset);
 els.refreshPreset.addEventListener("click", refreshPresetList);
+els.cancelPresetDelete.addEventListener("click", () => {
+  els.presetDeletePanel.hidden = true;
+});
+els.confirmPresetDelete.addEventListener("click", deleteCheckedPresets);
 
 syncBaseInputs();
 renderShell();

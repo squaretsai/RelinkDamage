@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Relink 傷害計算</title>
-    <link rel="stylesheet" href="./styles.css?v=20260601-3" />
+    <link rel="stylesheet" href="./styles.css?v=20260607-1" />
   </head>
   <body>
     <nav class="site-nav" aria-label="全站導覽">
@@ -46,7 +46,7 @@
             <div class="preset-actions">
               <button id="savePresetButton" type="button">儲存</button>
               <button id="loadPresetButton" type="button">讀取</button>
-              <button id="deletePresetButton" type="button">刪除</button>
+              <button id="deletePresetButton" type="button">選擇刪除</button>
               <button id="refreshPresetButton" type="button">刷新</button>
               <button id="presetSettingsButton" type="button">設定</button>
             </div>
@@ -64,6 +64,19 @@
               <button id="savePresetSettingsButton" type="button">儲存設定</button>
               <button id="testPresetSettingsButton" type="button">測試連線</button>
               <a id="openPresetFolderLink" href="#" target="_blank" rel="noreferrer" hidden>開啟雲端資料夾</a>
+            </div>
+          </div>
+          <div id="presetDeletePanel" class="preset-delete-panel" hidden>
+            <div class="preset-delete-head">
+              <div>
+                <h4>選擇刪除</h4>
+                <p>勾選不要保留的雲端配置，再按刪除勾選。</p>
+              </div>
+              <button id="cancelPresetDeleteButton" type="button">收起</button>
+            </div>
+            <div id="presetDeleteList" class="preset-delete-list"></div>
+            <div class="preset-actions preset-delete-actions">
+              <button id="confirmPresetDeleteButton" type="button">刪除勾選</button>
             </div>
           </div>
         </section>
@@ -232,6 +245,6 @@
 
     <script src="./data/damage-calculator.js?v=20260604-2"></script>
     <script src="./data/gbfr-logs-map.js?v=20260604-1"></script>
-    <script src="./app.js?v=20260604-1"></script>
+    <script src="./app.js?v=20260607-1"></script>
   </body>
 </html>

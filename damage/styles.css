@@ -421,6 +421,83 @@ select {
   display: none;
 }
 
+.preset-delete-panel {
+  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.preset-delete-panel[hidden] {
+  display: none;
+}
+
+.preset-delete-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 8px;
+}
+
+.preset-delete-head h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.preset-delete-head p,
+.preset-delete-empty {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.preset-delete-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 6px;
+}
+
+.preset-delete-item {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 7px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 7px 8px;
+  background: rgba(244, 250, 247, 0.8);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.preset-delete-item input {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--accent);
+}
+
+.preset-delete-meta {
+  display: grid;
+  min-width: 0;
+}
+
+.preset-delete-meta strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.preset-delete-meta small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.preset-delete-actions {
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
 .build-panel,
 .side-panel,
 .result-panel,
